@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
+		ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* ViewController.swift */; };
+		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
+		ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */; };
+		ACF44A560000054000B9A67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A550000054000B9A67C /* Assets.xcassets */; };
+		ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A570000054000B9A67C /* LaunchScreen.storyboard */; };
+		ACF44A640000054100B9A67C /* nursery_rhymesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A630000054100B9A67C /* nursery_rhymesTests.swift */; };
+		ACF44A6F0000054100B9A67C /* nursery_rhymesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACF44A600000054100B9A67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACF44A400000053B00B9A67C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACF44A470000053C00B9A67C;
+			remoteInfo = "nursery-rhymes";
+		};
+		ACF44A6B0000054100B9A67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACF44A400000053B00B9A67C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACF44A470000053C00B9A67C;
+			remoteInfo = "nursery-rhymes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACF44A4D0000054000B9A67C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACF44A500000054000B9A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACF44A530000054000B9A67C /* nursery_rhymes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nursery_rhymes.xcdatamodel; sourceTree = "<group>"; };
+		ACF44A550000054000B9A67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACF44A580000054000B9A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACF44A5A0000054100B9A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF44A5F0000054100B9A67C /* nursery-rhymesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nursery-rhymesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF44A630000054100B9A67C /* nursery_rhymesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nursery_rhymesTests.swift; sourceTree = "<group>"; };
+		ACF44A650000054100B9A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF44A6A0000054100B9A67C /* nursery-rhymesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nursery-rhymesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nursery_rhymesUITests.swift; sourceTree = "<group>"; };
+		ACF44A700000054100B9A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACF44A450000053C00B9A67C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A5C0000054100B9A67C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A670000054100B9A67C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACF44A3F0000053B00B9A67C = {
+			isa = PBXGroup;
+			children = (
+				ACF44A4A0000054000B9A67C /* nursery-rhymes */,
+				ACF44A620000054100B9A67C /* nursery-rhymesTests */,
+				ACF44A6D0000054100B9A67C /* nursery-rhymesUITests */,
+				ACF44A490000054000B9A67C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACF44A490000054000B9A67C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACF44A480000054000B9A67C /* nursery-rhymes.app */,
+				ACF44A5F0000054100B9A67C /* nursery-rhymesTests.xctest */,
+				ACF44A6A0000054100B9A67C /* nursery-rhymesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACF44A4A0000054000B9A67C /* nursery-rhymes */ = {
+			isa = PBXGroup;
+			children = (
+				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
+				ACF44A4D0000054000B9A67C /* ViewController.swift */,
+				ACF44A4F0000054000B9A67C /* Main.storyboard */,
+				ACF44A550000054000B9A67C /* Assets.xcassets */,
+				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
+				ACF44A5A0000054100B9A67C /* Info.plist */,
+				ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */,
+			);
+			path = "nursery-rhymes";
+			sourceTree = "<group>";
+		};
+		ACF44A620000054100B9A67C /* nursery-rhymesTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACF44A630000054100B9A67C /* nursery_rhymesTests.swift */,
+				ACF44A650000054100B9A67C /* Info.plist */,
+			);
+			path = "nursery-rhymesTests";
+			sourceTree = "<group>";
+		};
+		ACF44A6D0000054100B9A67C /* nursery-rhymesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */,
+				ACF44A700000054100B9A67C /* Info.plist */,
+			);
+			path = "nursery-rhymesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACF44A470000053C00B9A67C /* nursery-rhymes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF44A730000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymes" */;
+			buildPhases = (
+				ACF44A440000053C00B9A67C /* Sources */,
+				ACF44A450000053C00B9A67C /* Frameworks */,
+				ACF44A460000053C00B9A67C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nursery-rhymes";
+			productName = "nursery-rhymes";
+			productReference = ACF44A480000054000B9A67C /* nursery-rhymes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACF44A5E0000054100B9A67C /* nursery-rhymesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF44A760000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesTests" */;
+			buildPhases = (
+				ACF44A5B0000054100B9A67C /* Sources */,
+				ACF44A5C0000054100B9A67C /* Frameworks */,
+				ACF44A5D0000054100B9A67C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACF44A610000054100B9A67C /* PBXTargetDependency */,
+			);
+			name = "nursery-rhymesTests";
+			productName = "nursery-rhymesTests";
+			productReference = ACF44A5F0000054100B9A67C /* nursery-rhymesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACF44A690000054100B9A67C /* nursery-rhymesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF44A790000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesUITests" */;
+			buildPhases = (
+				ACF44A660000054100B9A67C /* Sources */,
+				ACF44A670000054100B9A67C /* Frameworks */,
+				ACF44A680000054100B9A67C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACF44A6C0000054100B9A67C /* PBXTargetDependency */,
+			);
+			name = "nursery-rhymesUITests";
+			productName = "nursery-rhymesUITests";
+			productReference = ACF44A6A0000054100B9A67C /* nursery-rhymesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACF44A400000053B00B9A67C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Team8343;
+				TargetAttributes = {
+					ACF44A470000053C00B9A67C = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					ACF44A5E0000054100B9A67C = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ACF44A470000053C00B9A67C;
+					};
+					ACF44A690000054100B9A67C = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ACF44A470000053C00B9A67C;
+					};
+				};
+			};
+			buildConfigurationList = ACF44A430000053B00B9A67C /* Build configuration list for PBXProject "nursery-rhymes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACF44A3F0000053B00B9A67C;
+			productRefGroup = ACF44A490000054000B9A67C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACF44A470000053C00B9A67C /* nursery-rhymes */,
+				ACF44A5E0000054100B9A67C /* nursery-rhymesTests */,
+				ACF44A690000054100B9A67C /* nursery-rhymesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACF44A460000053C00B9A67C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
+				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
+				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A5D0000054100B9A67C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A680000054100B9A67C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACF44A440000053C00B9A67C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */,
+				ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */,
+				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A5B0000054100B9A67C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF44A640000054100B9A67C /* nursery_rhymesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF44A660000054100B9A67C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF44A6F0000054100B9A67C /* nursery_rhymesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACF44A610000054100B9A67C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACF44A470000053C00B9A67C /* nursery-rhymes */;
+			targetProxy = ACF44A600000054100B9A67C /* PBXContainerItemProxy */;
+		};
+		ACF44A6C0000054100B9A67C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACF44A470000053C00B9A67C /* nursery-rhymes */;
+			targetProxy = ACF44A6B0000054100B9A67C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACF44A4F0000054000B9A67C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACF44A500000054000B9A67C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACF44A570000054000B9A67C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACF44A580000054000B9A67C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACF44A710000054100B9A67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACF44A720000054100B9A67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACF44A740000054100B9A67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "nursery-rhymes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ACF44A750000054100B9A67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "nursery-rhymes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ACF44A770000054100B9A67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "nursery-rhymesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nursery-rhymes.app/nursery-rhymes";
+			};
+			name = Debug;
+		};
+		ACF44A780000054100B9A67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "nursery-rhymesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nursery-rhymes.app/nursery-rhymes";
+			};
+			name = Release;
+		};
+		ACF44A7A0000054100B9A67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "nursery-rhymesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "nursery-rhymes";
+			};
+			name = Debug;
+		};
+		ACF44A7B0000054100B9A67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "nursery-rhymesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "nursery-rhymes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACF44A430000053B00B9A67C /* Build configuration list for PBXProject "nursery-rhymes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF44A710000054100B9A67C /* Debug */,
+				ACF44A720000054100B9A67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACF44A730000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF44A740000054100B9A67C /* Debug */,
+				ACF44A750000054100B9A67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ACF44A760000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF44A770000054100B9A67C /* Debug */,
+				ACF44A780000054100B9A67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ACF44A790000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF44A7A0000054100B9A67C /* Debug */,
+				ACF44A7B0000054100B9A67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACF44A530000054000B9A67C /* nursery_rhymes.xcdatamodel */,
+			);
+			currentVersion = ACF44A530000054000B9A67C /* nursery_rhymes.xcdatamodel */;
+			path = nursery_rhymes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ACF44A400000053B00B9A67C /* Project object */;
+}
