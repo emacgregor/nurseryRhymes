@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         m.readFile(fileName: "V_21_WillieBoy")
         
         //print(m.collections[0][0])
-        rhymeText.text = m.collections[0][0]
+        rhymeText.text = m.getRhymeText(rawText: (m.collections["Volland"]?["Willie Boy"])!)
     }
 
     override func didReceiveMemoryWarning() {

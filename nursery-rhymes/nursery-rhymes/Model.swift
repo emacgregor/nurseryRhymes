@@ -11,11 +11,10 @@ import Foundation
 class Model {
     static var model: Model = Model()
     
-    var collections: [[String]]
+    var collections: [String: [String: String]]
     
     init() {
-        collections = [[]]
-        
+        collections = [String: [String: String]]()
     }
     
     func readFile(fileName: String) {
@@ -24,12 +23,27 @@ class Model {
             print(path)
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                self.collections[0][0] = txtData
+                self.collections["Volland"]?["Willie Boy"] = txtData
                 //print(txtData)
             } catch let error as NSError {
                 print(error)
             }
         }
+    }
+    
+    func getRhymeText(rawText: String) -> String {
+        var result = String()
+        
+        let lines = rawText.characters.split(separator: "\n")
+        for line in lines {
+            let words = line.split(separator: " ")
+            
+            var word = String(words[1])
+            let end = word.index(word.endIndex, offsetBy: -1)
+            word = word.substring(to: end)
+            result.append(word)
+        }
+        return result
     }
     
     static func getModel() -> Model {
