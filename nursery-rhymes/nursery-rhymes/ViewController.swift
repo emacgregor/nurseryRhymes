@@ -10,25 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var m = Model()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Running")
         
-        if let path = Bundle.main.path(forResource: "V_21_WillieBoy", ofType: "txt")
-        {
-            print(path)
-            do {
-                //let txtData = try Data(contentsOfFile: URL(fileURLWithPath: path), options: .alwaysMapped)
-                
-                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                //self.collections[0][0] = txtData
-                print(txtData)
-            } catch let error as NSError {
-                print(error)
-            }
-        }
-
+        m = Model.getModel()
+        m.readFile(fileName: "V_21_WillieBoy")
+        
+        print(m.collections[0][0])
     }
 
     override func didReceiveMemoryWarning() {
