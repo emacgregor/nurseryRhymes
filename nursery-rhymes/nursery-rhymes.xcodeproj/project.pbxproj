@@ -19,6 +19,7 @@
 		49A6950221F56DFC002C984A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6950121F56DFC002C984A /* CustomCell.swift */; };
 		AC69EADB0000316C00BD009C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADA0000316C00BD009C /* CollectionViewController.swift */; };
 		AC69EADD0000346600BD009C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADC0000346600BD009C /* LoginViewController.swift */; };
+		AC69EADF0000415700BD009C /* FileNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC69EADE0000415700BD009C /* FileNames.txt */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
 		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
 		ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */; };
@@ -61,6 +62,7 @@
 		49A6950121F56DFC002C984A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		AC69EADA0000316C00BD009C /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AC69EADC0000346600BD009C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AC69EADE0000415700BD009C /* FileNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FileNames.txt; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF44A500000054000B9A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				ACF44A5A0000054100B9A67C /* Info.plist */,
 				ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */,
 				ACF44A7C0000085F00B9A67C /* Model.swift */,
+				AC69EADE0000415700BD009C /* FileNames.txt */,
 			);
 			path = "nursery-rhymes";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
 				49A6950021F56CE5002C984A /* pandaprofile.png in Resources */,
+				AC69EADF0000415700BD009C /* FileNames.txt in Resources */,
 				ACF44A8100000B5200B9A67C /* transcripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

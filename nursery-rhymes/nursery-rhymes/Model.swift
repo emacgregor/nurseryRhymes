@@ -19,9 +19,9 @@ class Model {
     }
     
     func readFile(fileName: String) {
-        if let path = Bundle.main.path(forResource: fileName, ofType: "txt")
+        if let path = Bundle.main.path(forResource: fileName, ofType: "txt", inDirectory: "transcripts")
         {
-            print(path)
+            //print(path)
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
                 self.collections["Volland"]?["Willie Boy"] = txtData
@@ -29,6 +29,8 @@ class Model {
             } catch let error as NSError {
                 print(error)
             }
+        } else {
+            print("File not found: transcripts/"+fileName+".txt")
         }
     }
     
