@@ -343,6 +343,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ony-Ya-1N0" kind="show" id="WwG-t0-kY4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH1-r4-WOZ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="33" y="430" width="309" height="30"/>
