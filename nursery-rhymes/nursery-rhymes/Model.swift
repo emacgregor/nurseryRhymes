@@ -21,9 +21,13 @@ class Model {
     func readFile(fileName: String) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "txt")
         {
-            let txtData = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-            {
-                
+            do {
+                //let txtData = try Data(contentsOfFile: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                self.collections[0][0] = txtData
+                print(txtData)
+            } catch let error as NSError {
+                print(error)
             }
         }
     }
