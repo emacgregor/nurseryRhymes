@@ -20,9 +20,7 @@ class Model {
         fileNameList = [String]()
         
         readFileNameList()
-        for var fileName in self.fileNameList {
-            let end = fileName.index(fileName.endIndex, offsetBy: -4)
-            fileName = fileName.substring(to: end)
+        for fileName in self.fileNameList {
             readFile(fileName: fileName, collectionName: "Volland")
         }
     }
@@ -32,7 +30,10 @@ class Model {
         {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                for line in txtData.characters.split(separator: "\n") {
+                for fileName in txtData.characters.split(separator: "\n") {
+                    var line = String(fileName)
+                    let end = line.index(line.endIndex, offsetBy: -4)
+                    line = line.substring(to: end)
                     self.fileNameList.append(String(line))
                 }
             } catch let error as NSError {
@@ -73,6 +74,15 @@ class Model {
             result.append(" ")
         }
         return result
+    }
+    
+    func getRhymeName(fileName: String) -> String {
+        let start = fileName.index((fileName.startIndex), offsetBy: 4)
+        let end = fileName.index((fileName.endIndex), offsetBy: 0)
+        let fileName = String(fileName)
+        var stripped = fileName?.substring(from: start)
+        stripped = fileName?.substring(to: end)
+        return stripped!
     }
     
     static func getModel() -> Model {
