@@ -77,8 +77,8 @@ class Model {
     }
     
     func getRhymeName(fileName: String) -> String {
-        let splitted = String(fileName)?.split(separator: "_")
-        let result = splitted![2]
+        let splitted = fileName.characters.split(separator: "_")
+        let result = splitted[2]
         return String(result)
     }
     
