@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var m = Model()
+    @IBOutlet weak var rhymeText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,8 @@ class ViewController: UIViewController {
         m = Model.getModel()
         m.readFile(fileName: "V_21_WillieBoy")
         
-        print(m.collections[0][0])
+        //print(m.collections[0][0])
+        rhymeText.text = m.collections[0][0]
     }
 
     override func didReceiveMemoryWarning() {
