@@ -1,0 +1,16 @@
+Word: Little, start_time: 0.1, end_time: 0.8
+Word: Tommy, start_time: 0.8, end_time: 1.2
+Word: Tittle, start_time: 1.2, end_time: 1.5
+Word: Mouse, start_time: 1.5, end_time: 1.7000000000000002
+Word: lived, start_time: 1.7000000000000002, end_time: 2.7
+Word: in, start_time: 2.7, end_time: 3.0
+Word: a, start_time: 3.0, end_time: 3.0
+Word: little, start_time: 3.0, end_time: 3.2
+Word: house, start_time: 3.2, end_time: 3.9
+Word: he, start_time: 3.9, end_time: 4.8
+Word: caught, start_time: 4.8, end_time: 5.1
+Word: fishes, start_time: 5.1, end_time: 5.7
+Word: in, start_time: 5.7, end_time: 6.1
+Word: other, start_time: 6.1, end_time: 6.5
+Word: men, start_time: 6.5, end_time: 6.8
+Word: stitches, start_time: 6.8, end_time: 7.5

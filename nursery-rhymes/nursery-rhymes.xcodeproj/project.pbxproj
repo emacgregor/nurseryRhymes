@@ -15,6 +15,8 @@
 		ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A570000054000B9A67C /* LaunchScreen.storyboard */; };
 		ACF44A640000054100B9A67C /* nursery_rhymesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A630000054100B9A67C /* nursery_rhymesTests.swift */; };
 		ACF44A6F0000054100B9A67C /* nursery_rhymesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */; };
+		ACF44A7D0000085F00B9A67C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A7C0000085F00B9A67C /* Model.swift */; };
+		ACF44A8100000B5200B9A67C /* transcripts in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A8000000B5200B9A67C /* transcripts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		ACF44A6A0000054100B9A67C /* nursery-rhymesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nursery-rhymesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nursery_rhymesUITests.swift; sourceTree = "<group>"; };
 		ACF44A700000054100B9A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF44A7C0000085F00B9A67C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ACF44A8000000B5200B9A67C /* transcripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = transcripts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		ACF44A4A0000054000B9A67C /* nursery-rhymes */ = {
 			isa = PBXGroup;
 			children = (
+				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
 				ACF44A4D0000054000B9A67C /* ViewController.swift */,
 				ACF44A4F0000054000B9A67C /* Main.storyboard */,
@@ -106,6 +111,7 @@
 				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
 				ACF44A5A0000054100B9A67C /* Info.plist */,
 				ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */,
+				ACF44A7C0000085F00B9A67C /* Model.swift */,
 			);
 			path = "nursery-rhymes";
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
+				ACF44A8100000B5200B9A67C /* transcripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +272,7 @@
 				ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */,
 				ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */,
 				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
+				ACF44A7D0000085F00B9A67C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
