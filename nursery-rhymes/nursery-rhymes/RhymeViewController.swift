@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RhymeViewController: UIViewController {
 
     var m = Model()
     @IBOutlet weak var rhymeText: UILabel!

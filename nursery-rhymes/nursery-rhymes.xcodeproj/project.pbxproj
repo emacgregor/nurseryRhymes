@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		49A694E621F54933002C984A /* V_21_WillieBoy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 49A694E521F547C5002C984A /* V_21_WillieBoy.txt */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
-		ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* ViewController.swift */; };
+		ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* RhymeViewController.swift */; };
 		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
 		ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */; };
 		ACF44A560000054000B9A67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A550000054000B9A67C /* Assets.xcassets */; };
@@ -18,6 +18,7 @@
 		ACF44A6F0000054100B9A67C /* nursery_rhymesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A6E0000054100B9A67C /* nursery_rhymesUITests.swift */; };
 		ACF44A7D0000085F00B9A67C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A7C0000085F00B9A67C /* Model.swift */; };
 		ACF44A8100000B5200B9A67C /* transcripts in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A8000000B5200B9A67C /* transcripts */; };
+		ACF44A850000259400B9A67C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A840000259400B9A67C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		49A694E521F547C5002C984A /* V_21_WillieBoy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = V_21_WillieBoy.txt; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACF44A4D0000054000B9A67C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACF44A4D0000054000B9A67C /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		ACF44A500000054000B9A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF44A530000054000B9A67C /* nursery_rhymes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nursery_rhymes.xcdatamodel; sourceTree = "<group>"; };
 		ACF44A550000054000B9A67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		ACF44A700000054100B9A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF44A7C0000085F00B9A67C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ACF44A8000000B5200B9A67C /* transcripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = transcripts; sourceTree = "<group>"; };
+		ACF44A840000259400B9A67C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 		ACF44A4A0000054000B9A67C /* nursery-rhymes */ = {
 			isa = PBXGroup;
 			children = (
+				ACF44A840000259400B9A67C /* HomeViewController.swift */,
 				49A694E521F547C5002C984A /* V_21_WillieBoy.txt */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
-				ACF44A4D0000054000B9A67C /* ViewController.swift */,
+				ACF44A4D0000054000B9A67C /* RhymeViewController.swift */,
 				ACF44A4F0000054000B9A67C /* Main.storyboard */,
 				ACF44A550000054000B9A67C /* Assets.xcassets */,
 				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
@@ -273,7 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */,
+				ACF44A850000259400B9A67C /* HomeViewController.swift in Sources */,
+				ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */,
 				ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */,
 				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
 				ACF44A7D0000085F00B9A67C /* Model.swift in Sources */,

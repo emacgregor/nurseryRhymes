@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UZ7-Sz-QO0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UZ7-Sz-QO0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rhyme View Controller-->
         <scene sceneID="Plt-VB-0av">
             <objects>
-                <viewController id="UZ7-Sz-QO0" customClass="ViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UZ7-Sz-QO0" customClass="RhymeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lmu-GT-jka"/>
                         <viewControllerLayoutGuide type="bottom" id="2T5-Q5-pyX"/>
@@ -60,6 +60,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="-145.27736131934034"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="34E-GR-DUU">
+            <objects>
+                <viewController id="lzf-Ak-gJG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hv2-1b-5Od"/>
+                        <viewControllerLayoutGuide type="bottom" id="hI6-t9-Wc2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xss-kB-oBO" customClass="HomeViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeL-IH-zOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="-896"/>
         </scene>
     </scenes>
 </document>
