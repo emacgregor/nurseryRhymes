@@ -12,19 +12,40 @@ class Model {
     static var model: Model = Model()
     
     var collections: [String: [String: String]]
+    var fileNameList: [String]
     
     init() {
         collections = [String: [String: String]]()
         collections["Volland"] = [String: String]()
+        fileNameList = [String]()
+        
+        readFileNameList()
+        for fileName in fileNameList {
+            readFile(fileName: fileName, collectionName: "Volland")
+        }
     }
     
-    func readFile(fileName: String) {
+    func readFileNameList() {
+        if let path = Bundle.main.path(forResource: "FileNames", ofType: "txt")
+        {
+            do {
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                self.fileNameList.append(txtData)
+            } catch let error as NSError {
+                print(error)
+            }
+        } else {
+            print("File not found: FileNames.txt")
+        }
+    }
+    
+    func readFile(fileName: String, collectionName: String) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "txt", inDirectory: "transcripts")
         {
             //print(path)
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                self.collections["Volland"]?["Willie Boy"] = txtData
+                self.collections[collectionName]?[fileName] = txtData
                 //print(txtData)
             } catch let error as NSError {
                 print(error)
