@@ -61,12 +61,12 @@ def transcribe_file_with_word_time_offsets(speech_file,language):
             #    start_time.seconds + start_time.nanos * 1e-9,
             #    end_time.seconds + end_time.nanos * 1e-9))
         print (transcript)
-        #Name is modified to be a text file. 7 is length of 'Rhymes/' and -4 is 'flac/'
-        name = 'transcripts/' + speech_file[7:-4] + 'txt'
+        #Name is modified to be a text file. 6 is length of 'flacs/' and -4 is 'flac'
+        name = 'transcripts/' + speech_file[6:-4] + 'txt'
         with open(name, "w") as f:
             f.write(transcript)
 
-files = sorted(os.listdir('Rhymes/'))
+files = sorted(os.listdir('flacs/'))
 for f in tqdm(files):
-    name = "Rhymes/" + f
+    name = "flacs/" + f
     transcribe_file_with_word_time_offsets(name, "en-US")
