@@ -66,6 +66,12 @@ def transcribe_file_with_word_time_offsets(speech_file,language):
         with open(name, "w") as f:
             f.write(transcript)
 
+for filename in os.listdir('mp3s/'):
+    if (filename.endswith(".mp3")): #or .avi, .mpeg, whatever.
+        print (filename)
+        command = 'ffmpeg -i mp3s/' + filename + ' -ac 1 flacs/' + filename[0:-3] + 'flac'
+        os.system(command)
+
 files = sorted(os.listdir('flacs/'))
 for f in tqdm(files):
     name = "flacs/" + f

@@ -1,5 +1,5 @@
-Word: cockadoodledoo, start_time: 0.30000000000000004, end_time: 1.5
-Word: my, start_time: 1.5, end_time: 2.6
+Word: cockadoodledoo, start_time: 0.30000000000000004, end_time: 1.6
+Word: my, start_time: 1.6, end_time: 2.6
 Word: mistress, start_time: 2.6, end_time: 3.1
 Word: has, start_time: 3.1, end_time: 3.2
 Word: lost, start_time: 3.2, end_time: 3.7
