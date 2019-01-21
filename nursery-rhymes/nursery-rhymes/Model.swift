@@ -20,7 +20,9 @@ class Model {
         fileNameList = [String]()
         
         readFileNameList()
-        for fileName in fileNameList {
+        for var fileName in self.fileNameList {
+            let end = fileName.index(fileName.endIndex, offsetBy: -4)
+            fileName = fileName.substring(to: end)
             readFile(fileName: fileName, collectionName: "Volland")
         }
     }
@@ -30,7 +32,9 @@ class Model {
         {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                self.fileNameList.append(txtData)
+                for line in txtData.characters.split(separator: "\n") {
+                    self.fileNameList.append(String(line))
+                }
             } catch let error as NSError {
                 print(error)
             }

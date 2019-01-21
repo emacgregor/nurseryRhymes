@@ -11,18 +11,11 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var m = Model()
-    @IBOutlet weak var rhymeText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("Running")
-        
         m = Model.getModel()
-        m.readFile(fileName: "V_21_WillieBoy")
-        
-        //print(m.collections[0][0])
-        rhymeText.text = m.getRhymeText(rawText: m.collections["Volland"]!["Willie Boy"]!)
+
     }
     
     override func didReceiveMemoryWarning() {
