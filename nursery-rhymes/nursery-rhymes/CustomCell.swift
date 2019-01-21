@@ -12,6 +12,7 @@ import UIKit
 class CustomCell: UITableViewCell {
     var message: String?
     var mainImage: UIImage?
+    var fileName: String?
     
     var messageView : UITextView = {
         var textView = UITextView()

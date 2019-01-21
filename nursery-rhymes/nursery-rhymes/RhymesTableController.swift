@@ -10,6 +10,7 @@ import UIKit
 struct cellData {
     let image: UIImage?
     let message: String?
+    let fileName: String?
 }
 class RhymesTableController : UITableViewController {
     var data = [cellData]()
@@ -20,9 +21,8 @@ class RhymesTableController : UITableViewController {
         let name = "pandaprofile.png"
         let img = UIImage(named: name)
         data = []
-        //[cellData(image: img, message: "hello")]
         for (fileName, _) in m.collections["Volland"]! {
-            data.append(cellData(image: img, message: m.getRhymeName(fileName: fileName)))
+            data.append(cellData(image: img, message: m.getRhymeName(fileName: fileName), fileName: fileName))
         }
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -38,6 +38,19 @@ class RhymesTableController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return  data.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "cellSegue", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? RhymeViewController {
+           let cellIndex = tableView.indexPathForSelectedRow?.row
+            vc.fileName = data[cellIndex!].fileName!
+        }
     }
     
 }

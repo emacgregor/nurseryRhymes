@@ -9,15 +9,16 @@
 import UIKit
 
 class RhymeViewController: UIViewController {
-
+var fileName = String()
     var m = Model()
     @IBOutlet weak var rhymeText: UILabel!
-    
+    override func viewWillAppear(_ animated: Bool) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model.getModel()
         
-        rhymeText.text = m.getRhymeText(rawText: m.collections["Volland"]!["V_21_WillieBoy"]!)
+        rhymeText.text = m.getRhymeText(rawText: m.collections["Volland"]![fileName]!)
     }
 
     override func didReceiveMemoryWarning() {
