@@ -14,15 +14,21 @@ struct cellData {
 class RhymesTableController : UITableViewController {
     var data = [cellData]()
     override func viewDidLoad() {
-        let img = UIImage(named: "pandaprofile")
+        let name = "pandaprofile.png"
+        let img = UIImage(named: name)
         data = [cellData.init(image: img, message: "hello")]
+        
+        self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
+        cell.mainImage = data[indexPath.row].image
+        cell.message = data[indexPath.row].message
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+       return  data.count
     }
     
 }

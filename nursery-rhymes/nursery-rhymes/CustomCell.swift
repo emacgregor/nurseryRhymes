@@ -35,7 +35,19 @@ class CustomCell: UITableViewCell {
         mainImageView.widthAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         
         messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
-        
+        messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        messageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let messsage = message {
+            messageView.text = message
+        }
+        if let image = mainImage {
+            mainImageView.image = image
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
