@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		49A694E621F54933002C984A /* V_21_WillieBoy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 49A694E521F547C5002C984A /* V_21_WillieBoy.txt */; };
 		49A694EE21F559BB002C984A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694ED21F559BB002C984A /* RoundButton.swift */; };
+		49A694F021F56012002C984A /* CategoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694EF21F56012002C984A /* CategoryTableController.swift */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
 		ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* RhymeViewController.swift */; };
 		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		49A694E521F547C5002C984A /* V_21_WillieBoy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = V_21_WillieBoy.txt; sourceTree = "<group>"; };
 		49A694ED21F559BB002C984A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		49A694EF21F56012002C984A /* CategoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableController.swift; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF44A4D0000054000B9A67C /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
 				ACF44A4D0000054000B9A67C /* RhymeViewController.swift */,
 				ACF44A4F0000054000B9A67C /* Main.storyboard */,
+				49A694EF21F56012002C984A /* CategoryTableController.swift */,
 				ACF44A550000054000B9A67C /* Assets.xcassets */,
 				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
 				ACF44A5A0000054100B9A67C /* Info.plist */,
@@ -281,6 +284,7 @@
 			files = (
 				49A694EE21F559BB002C984A /* RoundButton.swift in Sources */,
 				ACF44A850000259400B9A67C /* HomeViewController.swift in Sources */,
+				49A694F021F56012002C984A /* CategoryTableController.swift in Sources */,
 				ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */,
 				ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */,
 				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
