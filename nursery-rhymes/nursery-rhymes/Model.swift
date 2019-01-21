@@ -15,6 +15,7 @@ class Model {
     
     init() {
         collections = [String: [String: String]]()
+        collections["Volland"] = [String: String]()
     }
     
     func readFile(fileName: String) {
@@ -42,6 +43,7 @@ class Model {
             let end = word.index(word.endIndex, offsetBy: -1)
             word = word.substring(to: end)
             result.append(word)
+            result.append(" ")
         }
         return result
     }
