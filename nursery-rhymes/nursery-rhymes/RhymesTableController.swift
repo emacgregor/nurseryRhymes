@@ -7,6 +7,22 @@
 //
 
 import UIKit
+struct cellData {
+    let image: UIImage?
+    let message: String?
+}
 class RhymesTableController : UITableViewController {
+    var data = [cellData]()
+    override func viewDidLoad() {
+        let img = UIImage(named: "pandaprofile")
+        data = [cellData.init(image: img, message: "hello")]
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
 }

@@ -15,6 +15,7 @@
 		49A694F821F566C6002C984A /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F721F566C6002C984A /* AnalyticsViewController.swift */; };
 		49A694FA21F566D4002C984A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F921F566D4002C984A /* QuizViewController.swift */; };
 		49A694FC21F5678E002C984A /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694FB21F5678E002C984A /* RhymeViewController.swift */; };
+		49A6950021F56CE5002C984A /* pandaprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A694FF21F56CE5002C984A /* pandaprofile.png */; };
 		AC69EADB0000316C00BD009C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADA0000316C00BD009C /* CollectionViewController.swift */; };
 		AC69EADD0000346600BD009C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADC0000346600BD009C /* LoginViewController.swift */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		49A694F721F566C6002C984A /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		49A694F921F566D4002C984A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		49A694FB21F5678E002C984A /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
+		49A694FF21F56CE5002C984A /* pandaprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pandaprofile.png; sourceTree = "<group>"; };
 		AC69EADA0000316C00BD009C /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AC69EADC0000346600BD009C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,17 +129,18 @@
 				49A694E521F547C5002C984A /* V_21_WillieBoy.txt */,
 				49A694ED21F559BB002C984A /* RoundButton.swift */,
 				49A694FB21F5678E002C984A /* RhymeViewController.swift */,
+				49A694FF21F56CE5002C984A /* pandaprofile.png */,
+				ACF44A550000054000B9A67C /* Assets.xcassets */,
+				49A694F121F5659C002C984A /* RhymesTableController.swift */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
 				ACF44A4F0000054000B9A67C /* Main.storyboard */,
-				49A694F121F5659C002C984A /* RhymesTableController.swift */,
 				AC69EADC0000346600BD009C /* LoginViewController.swift */,
 				49A694F321F56698002C984A /* RegisterViewController.swift */,
 				49A694F521F566B7002C984A /* SettingsViewController.swift */,
 				49A694F721F566C6002C984A /* AnalyticsViewController.swift */,
 				49A694F921F566D4002C984A /* QuizViewController.swift */,
 				AC69EADA0000316C00BD009C /* CollectionViewController.swift */,
-				ACF44A550000054000B9A67C /* Assets.xcassets */,
 				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
 				ACF44A5A0000054100B9A67C /* Info.plist */,
 				ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */,
@@ -275,6 +278,7 @@
 				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
+				49A6950021F56CE5002C984A /* pandaprofile.png in Resources */,
 				ACF44A8100000B5200B9A67C /* transcripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
