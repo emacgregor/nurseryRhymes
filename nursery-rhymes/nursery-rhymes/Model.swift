@@ -77,12 +77,9 @@ class Model {
     }
     
     func getRhymeName(fileName: String) -> String {
-        let start = fileName.index((fileName.startIndex), offsetBy: 4)
-        let end = fileName.index((fileName.endIndex), offsetBy: 0)
-        let fileName = String(fileName)
-        var stripped = fileName?.substring(from: start)
-        stripped = fileName?.substring(to: end)
-        return stripped!
+        let splitted = String(fileName)?.split(separator: "_")
+        let result = splitted![2]
+        return String(result)
     }
     
     static func getModel() -> Model {

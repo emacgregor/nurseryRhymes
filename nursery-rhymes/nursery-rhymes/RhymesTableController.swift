@@ -13,11 +13,17 @@ struct cellData {
 }
 class RhymesTableController : UITableViewController {
     var data = [cellData]()
+    
+    var m = Model.getModel()
+    
     override func viewDidLoad() {
         let name = "pandaprofile.png"
         let img = UIImage(named: name)
-        data = [cellData.init(image: img, message: "hello")]
-        
+        data = []
+        //[cellData(image: img, message: "hello")]
+        for (fileName, _) in m.collections["Volland"]! {
+            data.append(cellData(image: img, message: m.getRhymeName(fileName: fileName)))
+        }
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
