@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A694E621F54933002C984A /* V_21_WillieBoy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 49A694E521F547C5002C984A /* V_21_WillieBoy.txt */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
 		ACF44A4E0000054000B9A67C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* ViewController.swift */; };
 		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49A694E521F547C5002C984A /* V_21_WillieBoy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = V_21_WillieBoy.txt; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF44A4D0000054000B9A67C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		ACF44A4A0000054000B9A67C /* nursery-rhymes */ = {
 			isa = PBXGroup;
 			children = (
+				49A694E521F547C5002C984A /* V_21_WillieBoy.txt */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
 				ACF44A4D0000054000B9A67C /* ViewController.swift */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A694E621F54933002C984A /* V_21_WillieBoy.txt in Resources */,
 				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
@@ -517,6 +521,7 @@
 				ACF44A750000054100B9A67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACF44A760000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				ACF44A780000054100B9A67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACF44A790000054100B9A67C /* Build configuration list for PBXNativeTarget "nursery-rhymesUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +539,7 @@
 				ACF44A7B0000054100B9A67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
