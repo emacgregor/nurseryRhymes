@@ -21,16 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-UT-pbk">
-                                <rect key="frame" x="36" y="104" width="308" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQF-DT-GLF">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQF-DT-GLF">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="Duc-nZ-Wkl">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="5Rx-c9-8ch">
@@ -50,21 +42,39 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV1-Mw-fy9" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="36" y="551" width="308" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV1-Mw-fy9" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="33" y="577" width="309" height="30"/>
+                                <state key="normal" title="Save and Exit"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-UT-pbk">
+                                <rect key="frame" x="33" y="103" width="309" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="lxp-Y3-IrM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bQF-DT-GLF" firstAttribute="centerX" secondItem="tAk-UT-pbk" secondAttribute="centerX" id="BGj-PG-NQg"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="leading" secondItem="aV1-Mw-fy9" secondAttribute="leading" id="IGl-zy-D0t"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leadingMargin" constant="17" id="LN4-E8-bKT"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="trailing" secondItem="aV1-Mw-fy9" secondAttribute="trailing" id="Odm-sK-Jqp"/>
+                            <constraint firstItem="aV1-Mw-fy9" firstAttribute="top" secondItem="tAk-UT-pbk" secondAttribute="bottom" constant="54" id="XQ9-bb-XG6"/>
+                            <constraint firstItem="bQF-DT-GLF" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leading" id="ftH-FW-5sg"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="centerX" secondItem="0xN-aa-wf0" secondAttribute="centerX" id="h5f-zv-NJH"/>
+                            <constraint firstItem="bQF-DT-GLF" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" constant="8" id="jvJ-De-omU"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="top" secondItem="0xN-aa-wf0" secondAttribute="top" constant="103" id="tea-cQ-Evg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="rhymeText" destination="tAk-UT-pbk" id="wqy-iy-qbt"/>
