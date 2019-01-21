@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		49A694E621F54933002C984A /* V_21_WillieBoy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 49A694E521F547C5002C984A /* V_21_WillieBoy.txt */; };
 		49A694EE21F559BB002C984A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694ED21F559BB002C984A /* RoundButton.swift */; };
-		49A694F021F56012002C984A /* CategoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694EF21F56012002C984A /* CategoryTableController.swift */; };
 		49A694F221F5659C002C984A /* RhymesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F121F5659C002C984A /* RhymesTableController.swift */; };
+		49A694F421F56698002C984A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F321F56698002C984A /* RegisterViewController.swift */; };
+		49A694F621F566B7002C984A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F521F566B7002C984A /* SettingsViewController.swift */; };
+		49A694F821F566C6002C984A /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F721F566C6002C984A /* AnalyticsViewController.swift */; };
+		49A694FA21F566D4002C984A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F921F566D4002C984A /* QuizViewController.swift */; };
+		49A694FC21F5678E002C984A /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694FB21F5678E002C984A /* RhymeViewController.swift */; };
 		AC69EADB0000316C00BD009C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADA0000316C00BD009C /* CollectionViewController.swift */; };
 		AC69EADD0000346600BD009C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADC0000346600BD009C /* LoginViewController.swift */; };
 		ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4B0000054000B9A67C /* AppDelegate.swift */; };
-		ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A4D0000054000B9A67C /* RhymeViewController.swift */; };
 		ACF44A510000054000B9A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A4F0000054000B9A67C /* Main.storyboard */; };
 		ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */; };
 		ACF44A560000054000B9A67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF44A550000054000B9A67C /* Assets.xcassets */; };
@@ -46,13 +49,16 @@
 /* Begin PBXFileReference section */
 		49A694E521F547C5002C984A /* V_21_WillieBoy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = V_21_WillieBoy.txt; sourceTree = "<group>"; };
 		49A694ED21F559BB002C984A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		49A694EF21F56012002C984A /* CategoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableController.swift; sourceTree = "<group>"; };
 		49A694F121F5659C002C984A /* RhymesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesTableController.swift; sourceTree = "<group>"; };
+		49A694F321F56698002C984A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		49A694F521F566B7002C984A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		49A694F721F566C6002C984A /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		49A694F921F566D4002C984A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		49A694FB21F5678E002C984A /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		AC69EADA0000316C00BD009C /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AC69EADC0000346600BD009C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF44A480000054000B9A67C /* nursery-rhymes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nursery-rhymes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF44A4B0000054000B9A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACF44A4D0000054000B9A67C /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		ACF44A500000054000B9A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF44A530000054000B9A67C /* nursery_rhymes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nursery_rhymes.xcdatamodel; sourceTree = "<group>"; };
 		ACF44A550000054000B9A67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,14 +126,17 @@
 				ACF44A840000259400B9A67C /* HomeViewController.swift */,
 				49A694E521F547C5002C984A /* V_21_WillieBoy.txt */,
 				49A694ED21F559BB002C984A /* RoundButton.swift */,
+				49A694FB21F5678E002C984A /* RhymeViewController.swift */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
-				ACF44A4D0000054000B9A67C /* RhymeViewController.swift */,
 				ACF44A4F0000054000B9A67C /* Main.storyboard */,
 				49A694F121F5659C002C984A /* RhymesTableController.swift */,
 				AC69EADC0000346600BD009C /* LoginViewController.swift */,
+				49A694F321F56698002C984A /* RegisterViewController.swift */,
+				49A694F521F566B7002C984A /* SettingsViewController.swift */,
+				49A694F721F566C6002C984A /* AnalyticsViewController.swift */,
+				49A694F921F566D4002C984A /* QuizViewController.swift */,
 				AC69EADA0000316C00BD009C /* CollectionViewController.swift */,
-				49A694EF21F56012002C984A /* CategoryTableController.swift */,
 				ACF44A550000054000B9A67C /* Assets.xcassets */,
 				ACF44A570000054000B9A67C /* LaunchScreen.storyboard */,
 				ACF44A5A0000054100B9A67C /* Info.plist */,
@@ -292,15 +301,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A694EE21F559BB002C984A /* RoundButton.swift in Sources */,
+				49A694FA21F566D4002C984A /* QuizViewController.swift in Sources */,
+				49A694F421F56698002C984A /* RegisterViewController.swift in Sources */,
 				ACF44A850000259400B9A67C /* HomeViewController.swift in Sources */,
-				49A694F021F56012002C984A /* CategoryTableController.swift in Sources */,
-				ACF44A4E0000054000B9A67C /* RhymeViewController.swift in Sources */,
+				49A694FC21F5678E002C984A /* RhymeViewController.swift in Sources */,
 				AC69EADB0000316C00BD009C /* CollectionViewController.swift in Sources */,
+				49A694F821F566C6002C984A /* AnalyticsViewController.swift in Sources */,
 				49A694F221F5659C002C984A /* RhymesTableController.swift in Sources */,
 				ACF44A4C0000054000B9A67C /* AppDelegate.swift in Sources */,
 				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
 				AC69EADD0000346600BD009C /* LoginViewController.swift in Sources */,
 				ACF44A7D0000085F00B9A67C /* Model.swift in Sources */,
+				49A694F621F566B7002C984A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  CategoryTableController.swift
+//  RegisterViewController.swift
 //  nursery-rhymes
 //
 //  Created by Zachary Cheshire on 1/20/19.
@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class CategoryTableController : UITableViewController {
+class RegisterViewController : UIViewController {
     
 }

@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="4pj-6C-ScJ">
+            <objects>
+                <viewController id="A66-e5-Pz6" customClass="RegisterViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSP-Mj-1op"/>
+                        <viewControllerLayoutGuide type="bottom" id="6RF-hT-Kf6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pl3-3J-NCh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTe-WK-0zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1061" y="-206"/>
+        </scene>
         <!--Rhyme View Controller-->
         <scene sceneID="Plt-VB-0av">
             <objects>
@@ -82,12 +100,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="-145.27736131934034"/>
+            <point key="canvasLocation" x="-303" y="-206"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Rhymes Table Controller-->
         <scene sceneID="LFc-iP-9Tr">
             <objects>
-                <tableViewController id="ony-Ya-1N0" sceneMemberID="viewController">
+                <tableViewController id="ony-Ya-1N0" customClass="RhymesTableController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H5g-HR-6pd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,35 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koH-3H-Dd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-134"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="CfV-Di-fbj">
-            <objects>
-                <tableViewController id="qyp-Ay-5U8" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z6i-2q-ttD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="naT-yD-Wxz">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naT-yD-Wxz" id="R1m-On-0Yq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="qyp-Ay-5U8" id="Bdz-xS-spC"/>
-                            <outlet property="delegate" destination="qyp-Ay-5U8" id="Y1X-Ia-nwh"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kjZ-Cl-ld6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1446" y="-138"/>
+            <point key="canvasLocation" x="506" y="-206"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="34E-GR-DUU">
@@ -157,6 +147,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeL-IH-zOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79" y="-896"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hqV-Fl-o83">
+            <objects>
+                <viewController id="djM-ml-mcO" customClass="LoginViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKl-Rc-UtE"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Zu-wt-HcI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6kv-EQ-igS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63F-2X-H47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1754" y="-206"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="rSY-AY-RrR">
+            <objects>
+                <viewController id="QEv-d9-52h" customClass="SettingsViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQ9-DM-WuQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="OqQ-qF-2CX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRc-9h-DzO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfZ-xQ-sOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1806" y="488"/>
+        </scene>
+        <!--Analytics View Controller-->
+        <scene sceneID="WQO-H4-0hH">
+            <objects>
+                <viewController id="gAr-p1-9ao" customClass="AnalyticsViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L46-us-aPA"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWW-WH-jyq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdB-UO-A52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0MT-Bo-gOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1061" y="485"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="zHe-cp-Oi6">
+            <objects>
+                <viewController id="oJ4-zM-WOr" customClass="QuizViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oan-JL-C1T"/>
+                        <viewControllerLayoutGuide type="bottom" id="3EP-Md-KlX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aZt-Dm-VkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6A-QY-NFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="488"/>
+        </scene>
+        <!--Colletion View Controller-->
+        <scene sceneID="F4q-oR-ofd">
+            <objects>
+                <viewController id="5ra-40-eKe" customClass="ColletionViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rLZ-Pd-fh8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FSu-eF-5i3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Am0-Eu-0jS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVW-6L-doi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="484"/>
         </scene>
     </scenes>
 </document>
