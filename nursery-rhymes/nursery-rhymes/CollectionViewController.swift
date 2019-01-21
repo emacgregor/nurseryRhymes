@@ -6,9 +6,9 @@
 //  Copyright © 2000 Team8343. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
-class ColletionViewController : UIViewController {
+class CollectionViewController : UIViewController {
     
 }
