@@ -16,6 +16,7 @@ class CustomCell: UITableViewCell {
     var messageView : UITextView = {
         var textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.isScrollEnabled = false
         return textView
     }()
     
@@ -32,7 +33,8 @@ class CustomCell: UITableViewCell {
         mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         mainImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         mainImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        mainImageView.widthAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        mainImageView.widthAnchor.constraint(equalToConstant :50).isActive = true
+        mainImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true

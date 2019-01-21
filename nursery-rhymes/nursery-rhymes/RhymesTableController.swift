@@ -19,11 +19,14 @@ class RhymesTableController : UITableViewController {
         data = [cellData.init(image: img, message: "hello")]
         
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 200
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
         cell.mainImage = data[indexPath.row].image
         cell.message = data[indexPath.row].message
+        cell.layoutSubviews()
         return cell
     }
     
