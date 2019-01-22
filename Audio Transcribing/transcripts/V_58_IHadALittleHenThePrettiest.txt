@@ -5,8 +5,8 @@ Word: little, start_time: 1.0, end_time: 1.2
 Word: hen, start_time: 1.2, end_time: 1.8
 Word: the, start_time: 1.8, end_time: 2.2
 Word: prettiest, start_time: 2.2, end_time: 3.0
-Word: ever, start_time: 3.0, end_time: 3.4
-Word: seen, start_time: 3.4, end_time: 4.1
+Word: ever, start_time: 3.0, end_time: 3.5
+Word: seen, start_time: 3.5, end_time: 4.1
 Word: she, start_time: 4.1, end_time: 5.1
 Word: washed, start_time: 5.1, end_time: 5.5
 Word: me, start_time: 5.5, end_time: 5.6
@@ -52,7 +52,7 @@ Word: the, start_time: 20.3, end_time: 20.5
 Word: fire, start_time: 20.5, end_time: 20.7
 Word: and, start_time: 20.7, end_time: 21.5
 Word: sang, start_time: 21.5, end_time: 21.9
-Word: Sweet, start_time: 21.9, end_time: 22.2
-Word: songs, start_time: 22.2, end_time: 23.1
+Word: Sweet, start_time: 21.9, end_time: 22.3
+Word: songs, start_time: 22.3, end_time: 23.1
 Word: to, start_time: 23.1, end_time: 23.2
 Word: me, start_time: 23.2, end_time: 23.5

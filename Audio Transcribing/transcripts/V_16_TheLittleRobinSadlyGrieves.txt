@@ -16,8 +16,8 @@ Word: trees, start_time: 5.9, end_time: 6.5
 Word: have, start_time: 6.5, end_time: 6.7
 Word: no, start_time: 6.7, end_time: 6.9
 Word: leaves, start_time: 6.9, end_time: 7.4
-Word: and, start_time: 7.4, end_time: 7.9
-Word: no, start_time: 7.9, end_time: 8.1
+Word: and, start_time: 7.4, end_time: 8.0
+Word: no, start_time: 8.0, end_time: 8.1
 Word: berries, start_time: 8.1, end_time: 8.7
 Word: can, start_time: 8.7, end_time: 9.0
 Word: be, start_time: 9.0, end_time: 9.1
@@ -51,4 +51,5 @@ Word: live, start_time: 22.0, end_time: 22.4
 Word: till, start_time: 22.4, end_time: 22.9
 Word: snow, start_time: 22.9, end_time: 23.4
 Word: is, start_time: 23.4, end_time: 23.7
-Word: gone, start_time: 23.7, end_time: 24.0
+Word: going, start_time: 23.7, end_time: 24.0
+Word: on, start_time: 24.0, end_time: 24.2

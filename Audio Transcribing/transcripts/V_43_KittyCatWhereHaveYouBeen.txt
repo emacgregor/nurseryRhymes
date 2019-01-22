@@ -14,7 +14,7 @@ Word: to, start_time: 5.1, end_time: 5.7
 Word: visit, start_time: 5.7, end_time: 5.8
 Word: the, start_time: 5.8, end_time: 6.1
 Word: queen, start_time: 6.1, end_time: 6.3
-Word: kitty, start_time: 7.5, end_time: 8.0
+Word: kitty, start_time: 6.3, end_time: 8.0
 Word: cat, start_time: 8.0, end_time: 8.4
 Word: kitty, start_time: 8.4, end_time: 8.8
 Word: cat, start_time: 8.8, end_time: 8.8
@@ -23,8 +23,8 @@ Word: did, start_time: 10.0, end_time: 10.3
 Word: you, start_time: 10.3, end_time: 10.4
 Word: do, start_time: 10.4, end_time: 10.6
 Word: there, start_time: 10.6, end_time: 11.0
-Word: I, start_time: 11.0, end_time: 11.9
-Word: frightened, start_time: 11.9, end_time: 12.7
+Word: by, start_time: 11.0, end_time: 12.1
+Word: frightened, start_time: 12.1, end_time: 12.7
 Word: a, start_time: 12.7, end_time: 12.8
 Word: little, start_time: 12.8, end_time: 13.2
 Word: mouse, start_time: 13.2, end_time: 13.7

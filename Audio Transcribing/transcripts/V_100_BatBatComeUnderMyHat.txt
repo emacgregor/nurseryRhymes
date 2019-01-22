@@ -18,8 +18,8 @@ Word: I, start_time: 6.7, end_time: 6.8
 Word: bake, start_time: 6.8, end_time: 7.2
 Word: I'll, start_time: 7.2, end_time: 7.8
 Word: give, start_time: 7.8, end_time: 8.1
-Word: you, start_time: 8.1, end_time: 8.2
-Word: a, start_time: 8.2, end_time: 8.3
+Word: you, start_time: 8.1, end_time: 8.3
+Word: a, start_time: 8.3, end_time: 8.3
 Word: cake, start_time: 8.3, end_time: 8.9
 Word: if, start_time: 8.9, end_time: 9.6
 Word: I, start_time: 9.6, end_time: 9.7

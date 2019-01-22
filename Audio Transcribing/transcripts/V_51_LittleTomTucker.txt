@@ -4,8 +4,8 @@ Word: Tucker, start_time: 1.1, end_time: 1.5
 Word: sings, start_time: 1.5, end_time: 2.2
 Word: for, start_time: 2.2, end_time: 2.4
 Word: his, start_time: 2.4, end_time: 2.5
-Word: supper, start_time: 2.5, end_time: 2.8
-Word: what, start_time: 2.8, end_time: 3.9
+Word: supper, start_time: 2.5, end_time: 2.9
+Word: what, start_time: 2.9, end_time: 3.9
 Word: shall, start_time: 3.9, end_time: 4.2
 Word: we, start_time: 4.2, end_time: 4.3
 Word: eat, start_time: 4.3, end_time: 4.4

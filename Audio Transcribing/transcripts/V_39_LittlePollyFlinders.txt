@@ -19,8 +19,8 @@ Word: her, start_time: 8.4, end_time: 8.6
 Word: whipped, start_time: 8.6, end_time: 9.5
 Word: her, start_time: 9.5, end_time: 9.6
 Word: little, start_time: 9.6, end_time: 9.9
-Word: daughter, start_time: 9.9, end_time: 10.2
-Word: for, start_time: 10.2, end_time: 10.8
+Word: daughter, start_time: 9.9, end_time: 10.3
+Word: for, start_time: 10.3, end_time: 10.8
 Word: spoiling, start_time: 10.8, end_time: 11.5
 Word: her, start_time: 11.5, end_time: 11.7
 Word: nice, start_time: 11.7, end_time: 12.2

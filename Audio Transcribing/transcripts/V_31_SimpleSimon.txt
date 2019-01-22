@@ -8,8 +8,8 @@ Word: to, start_time: 3.0, end_time: 3.6
 Word: the, start_time: 3.6, end_time: 3.7
 Word: fair, start_time: 3.7, end_time: 4.2
 Word: says, start_time: 4.2, end_time: 5.3
-Word: Simple, start_time: 5.3, end_time: 5.6
-Word: Simon, start_time: 5.6, end_time: 6.1
+Word: Simple, start_time: 5.3, end_time: 5.7
+Word: Simon, start_time: 5.7, end_time: 6.1
 Word: to, start_time: 6.1, end_time: 6.2
 Word: the, start_time: 6.2, end_time: 6.3
 Word: pieman, start_time: 6.3, end_time: 6.8
@@ -19,8 +19,7 @@ Word: me, start_time: 7.8, end_time: 8.0
 Word: taste, start_time: 8.0, end_time: 8.3
 Word: your, start_time: 8.3, end_time: 8.6
 Word: where, start_time: 8.6, end_time: 9.0
-Word: it, start_time: 9.0, end_time: 10.2
-Word: says, start_time: 10.2, end_time: 10.4
+Word: says, start_time: 9.0, end_time: 10.4
 Word: the, start_time: 10.4, end_time: 10.5
 Word: pieman, start_time: 10.5, end_time: 10.9
 Word: to, start_time: 10.9, end_time: 11.2

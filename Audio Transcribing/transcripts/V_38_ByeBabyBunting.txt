@@ -1,11 +1,11 @@
-Word: Bye, start_time: 0.30000000000000004, end_time: 0.7000000000000001
-Word: Baby, start_time: 0.7000000000000001, end_time: 1.4
+Word: Bye, start_time: 0.30000000000000004, end_time: 0.8
+Word: Baby, start_time: 0.8, end_time: 1.4
 Word: Bunting, start_time: 1.4, end_time: 1.6
 Word: father's, start_time: 1.6, end_time: 3.2
 Word: gone, start_time: 3.2, end_time: 3.4
 Word: a, start_time: 3.4, end_time: 3.5
 Word: hunting, start_time: 3.5, end_time: 3.7
-Word: father's, start_time: 3.7, end_time: 5.3
+Word: others, start_time: 3.7, end_time: 5.3
 Word: going, start_time: 5.3, end_time: 5.6
 Word: to, start_time: 5.6, end_time: 5.6
 Word: milking, start_time: 5.6, end_time: 6.2
@@ -24,5 +24,5 @@ Word: to, start_time: 11.3, end_time: 12.2
 Word: wrap, start_time: 12.2, end_time: 12.6
 Word: Little, start_time: 12.6, end_time: 12.9
 Word: Baby, start_time: 12.9, end_time: 13.3
-Word: Bunting, start_time: 13.3, end_time: 13.7
-Word: in, start_time: 13.7, end_time: 14.1
+Word: Bunting, start_time: 13.3, end_time: 13.6
+Word: in, start_time: 13.6, end_time: 14.2

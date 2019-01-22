@@ -30,8 +30,8 @@ Word: don't, start_time: 11.9, end_time: 12.9
 Word: think, start_time: 12.9, end_time: 13.1
 Word: I've, start_time: 13.1, end_time: 13.2
 Word: lost, start_time: 13.2, end_time: 13.4
-Word: my, start_time: 13.4, end_time: 13.6
-Word: mind, start_time: 13.6, end_time: 13.8
+Word: my, start_time: 13.4, end_time: 13.7
+Word: mind, start_time: 13.7, end_time: 13.8
 Word: for, start_time: 13.8, end_time: 15.2
 Word: whenever, start_time: 15.2, end_time: 15.5
 Word: I, start_time: 15.5, end_time: 15.8
@@ -40,7 +40,7 @@ Word: my, start_time: 16.2, end_time: 16.4
 Word: fiddle, start_time: 16.4, end_time: 16.8
 Word: I, start_time: 16.8, end_time: 17.3
 Word: leave, start_time: 17.3, end_time: 17.6
-Word: all, start_time: 17.6, end_time: 17.9
-Word: my, start_time: 17.9, end_time: 18.4
+Word: all, start_time: 17.6, end_time: 18.0
+Word: my, start_time: 18.0, end_time: 18.4
 Word: troubles, start_time: 18.4, end_time: 19.1
 Word: behind, start_time: 19.1, end_time: 19.4

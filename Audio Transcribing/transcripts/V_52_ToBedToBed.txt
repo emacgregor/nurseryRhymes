@@ -6,8 +6,8 @@ Word: said, start_time: 1.4, end_time: 2.1
 Word: sleepyhead, start_time: 2.1, end_time: 2.4
 Word: Let's, start_time: 2.4, end_time: 4.5
 Word: Stay, start_time: 4.5, end_time: 4.8
-Word: Awhile, start_time: 4.8, end_time: 5.2
-Word: says, start_time: 5.2, end_time: 6.0
+Word: Awhile, start_time: 4.8, end_time: 5.3
+Word: says, start_time: 5.3, end_time: 6.0
 Word: slow, start_time: 6.0, end_time: 6.5
 Word: put, start_time: 6.5, end_time: 7.8
 Word: on, start_time: 7.8, end_time: 8.0
@@ -20,4 +20,4 @@ Word: will, start_time: 9.8, end_time: 10.5
 Word: eat, start_time: 10.5, end_time: 11.0
 Word: before, start_time: 11.0, end_time: 11.5
 Word: we, start_time: 11.5, end_time: 11.7
-Word: go, start_time: 11.7, end_time: 11.9
+Word: go, start_time: 11.7, end_time: 12.0

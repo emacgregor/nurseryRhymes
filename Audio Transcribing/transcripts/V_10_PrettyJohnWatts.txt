@@ -14,8 +14,8 @@ Word: out, start_time: 5.0, end_time: 5.1
 Word: of, start_time: 5.1, end_time: 5.2
 Word: the, start_time: 5.2, end_time: 5.4
 Word: house, start_time: 5.4, end_time: 5.8
-Word: we, start_time: 5.8, end_time: 6.9
-Word: had, start_time: 6.9, end_time: 7.1
+Word: we, start_time: 5.8, end_time: 7.0
+Word: have, start_time: 7.0, end_time: 7.1
 Word: my, start_time: 7.1, end_time: 7.4
 Word: stew, start_time: 7.4, end_time: 8.0
 Word: and, start_time: 8.0, end_time: 8.3

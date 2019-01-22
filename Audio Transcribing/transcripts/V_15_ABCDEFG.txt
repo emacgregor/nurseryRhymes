@@ -1,9 +1,9 @@
-Word: ABCD, start_time: 0.30000000000000004, end_time: 2.1
-Word: EFG, start_time: 2.1, end_time: 2.5
+Word: ABCD, start_time: 0.30000000000000004, end_time: 2.0
+Word: EFG, start_time: 2.0, end_time: 2.5
 Word: HIJK, start_time: 2.5, end_time: 4.0
 Word: LMNOP, start_time: 4.0, end_time: 6.2
-Word: QRS, start_time: 6.2, end_time: 9.2
-Word: and, start_time: 9.2, end_time: 9.7
+Word: QRS, start_time: 6.2, end_time: 9.3
+Word: and, start_time: 9.3, end_time: 9.7
 Word: TUV, start_time: 9.7, end_time: 10.6
 Word: WX, start_time: 10.6, end_time: 13.4
 Word: and, start_time: 13.4, end_time: 13.8
@@ -18,7 +18,7 @@ Word: abc, start_time: 17.7, end_time: 19.2
 Word: tell, start_time: 19.2, end_time: 20.4
 Word: me, start_time: 20.4, end_time: 20.7
 Word: what, start_time: 20.7, end_time: 21.3
-Word: you, start_time: 21.3, end_time: 21.8
-Word: think, start_time: 21.8, end_time: 22.5
-Word: of, start_time: 22.5, end_time: 22.7
-Word: me, start_time: 22.7, end_time: 23.4
+Word: you, start_time: 21.3, end_time: 21.7
+Word: think, start_time: 21.7, end_time: 22.5
+Word: of, start_time: 22.5, end_time: 22.8
+Word: me, start_time: 22.8, end_time: 23.4

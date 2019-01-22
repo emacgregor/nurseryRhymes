@@ -14,9 +14,9 @@ Word: not, start_time: 4.7, end_time: 4.8
 Word: gone, start_time: 4.8, end_time: 5.1
 Word: she, start_time: 5.1, end_time: 6.0
 Word: lives, start_time: 6.0, end_time: 6.3
-Word: there, start_time: 6.3, end_time: 6.4
-Word: still, start_time: 6.4, end_time: 6.7
-Word: baked, start_time: 7.8, end_time: 8.4
+Word: there, start_time: 6.3, end_time: 6.5
+Word: still, start_time: 6.5, end_time: 6.7
+Word: baked, start_time: 7.9, end_time: 8.4
 Word: apples, start_time: 8.4, end_time: 9.0
 Word: she, start_time: 9.0, end_time: 9.3
 Word: sold, start_time: 9.3, end_time: 9.8

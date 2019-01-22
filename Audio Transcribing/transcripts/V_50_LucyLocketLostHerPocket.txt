@@ -1,8 +1,8 @@
 Word: Lucy, start_time: 0.1, end_time: 0.8
 Word: Locket, start_time: 0.8, end_time: 1.4
-Word: lost, start_time: 1.4, end_time: 1.7000000000000002
-Word: her, start_time: 1.7000000000000002, end_time: 2.1
-Word: pocket, start_time: 2.1, end_time: 2.2
+Word: lost, start_time: 1.4, end_time: 1.6
+Word: her, start_time: 1.6, end_time: 2.0
+Word: pocket, start_time: 2.0, end_time: 2.2
 Word: Kitty, start_time: 2.2, end_time: 3.5
 Word: Fisher, start_time: 3.5, end_time: 3.7
 Word: found, start_time: 3.7, end_time: 4.2

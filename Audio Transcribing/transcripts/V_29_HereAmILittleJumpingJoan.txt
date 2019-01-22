@@ -1,6 +1,6 @@
-Word: here, start_time: 0.0, end_time: 0.5
-Word: are, start_time: 0.5, end_time: 0.6000000000000001
-Word: my, start_time: 0.6000000000000001, end_time: 0.7000000000000001
+Word: here, start_time: 0.0, end_time: 0.6000000000000001
+Word: are, start_time: 0.6000000000000001, end_time: 0.7000000000000001
+Word: my, start_time: 0.7000000000000001, end_time: 0.7000000000000001
 Word: little, start_time: 0.7000000000000001, end_time: 1.6
 Word: jumping, start_time: 1.6, end_time: 2.2
 Word: Joan, start_time: 2.2, end_time: 2.7

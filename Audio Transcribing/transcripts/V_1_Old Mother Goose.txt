@@ -4,8 +4,8 @@ Word: Goose, start_time: 1.1, end_time: 1.2
 Word: when, start_time: 1.2, end_time: 1.9
 Word: she, start_time: 1.9, end_time: 2.1
 Word: wanted, start_time: 2.1, end_time: 2.5
-Word: to, start_time: 2.5, end_time: 2.6
-Word: wander, start_time: 2.6, end_time: 3.1
+Word: to, start_time: 2.5, end_time: 2.7
+Word: wander, start_time: 2.7, end_time: 3.1
 Word: would, start_time: 3.1, end_time: 4.0
 Word: ride, start_time: 4.0, end_time: 4.5
 Word: through, start_time: 4.5, end_time: 4.6
