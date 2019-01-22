@@ -1,0 +1,13 @@
+Word: Hushabye, start_time: 1.8, end_time: 3.0
+Word: Baby, start_time: 3.0, end_time: 3.2
+Word: Daddy, start_time: 3.2, end_time: 4.4
+Word: is, start_time: 4.4, end_time: 4.6
+Word: near, start_time: 4.6, end_time: 5.0
+Word: mama, start_time: 5.0, end_time: 6.0
+Word: is, start_time: 6.0, end_time: 6.2
+Word: a, start_time: 6.2, end_time: 6.3
+Word: lady, start_time: 6.3, end_time: 6.8
+Word: in, start_time: 6.8, end_time: 6.9
+Word: that, start_time: 6.9, end_time: 7.5
+Word: very, start_time: 7.5, end_time: 8.1
+Word: clear, start_time: 8.1, end_time: 8.6

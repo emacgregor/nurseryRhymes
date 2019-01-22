@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "burnished-fold-228818",
+  "private_key_id": "62610988f2bce119cc9ee76d464bc3c0fac96097",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDD7akr3PnEokBo\n4s/ppRlY43CzsMSQClaeSiY4gtqQW9UKb2/m8Z+6yadyk1hdWSS4LfpJqM/DTk4m\np4Ju5yzgTK/u5ZoWEJ0t/6JmSwnBBBML1cXVtyjV8HwNqoGQA/LRP4Olz9RaUX4A\nGkzZXGEp44rh7h431YO7SMlizsjgLwm+HJRFxJH4Hzr0Xj3QB2Zkkwzuc4WvTzEc\nrvPDbi8NIBeW3Zc42e+4vDVgpCh/unY0mjgXmE96U7CJcM+E8X2XQYB5keG3tV1A\nR4Sx/STN9jDWKqMd5PUvxfLNfRFpjbiJTtnpvgeLjWNOP+hdIweghuaIKjATuIPh\nHx9gl0wdAgMBAAECggEAHZkOgFYpKSpK8/f86VKL6gtZytto+6Au259fTL7VHmUG\nYZraBcJPRfFmqVQBpQBtdUwEzmcrvlkFof3rd1jW76obaHR+UC0BrEw85UUasRzY\nymXoiqjZCLtZPNtFfVMLYHmUJ/1QcAsgL2B0ZuBMu/49dx9N/f30S4ZAXfvXs/3u\nCnHVVSlSTrLCcmNJJpW0yXufusKRqadc9KZG60iV4ZxczHut3RNAwqjZq9/9Kiye\n5gc712eKNFLzMgvRn18adczsFns04XD07SGiIJaBrFaw+Z8asFuxsh3m34EXUj5J\nbENintxH52SxuEUiNr24RelZ55MjpEtV2AhmUY/wJQKBgQDrEqNRPFfdmF95cjwo\nPHVWCwNg0TTOMnnYo08/+i3nRF8vMWWlMuiMN+jIN2NsOlwi+pqXf9jhEBykd8cp\nAxnRlYtx8nFg4oN2CoQUP5yp5EON/QG7vnWpG+S+Aml6RHYvP53VT8P9vYC1EOrU\nI42XxA/86ieFzFAMrnAHJhYycwKBgQDVXumIf9g8FVrLhSO5qgtr96unS3ZVmg+A\nRwXZaW9qLbIdfq9H01GyGIAEolYKib3m5oJZnTPYH/BmKEmvCz+zq/LO2w/m4F6i\n2TrlK+GHe9YPy8WlLqyn+OUIjrVTiRo77ubA2RA/X417zPv+ysj/MzWpO8IyPq1o\nRvVvj0STLwKBgQCw6HjiRQB3Mxn/AtqFCWLgmy8yqJ8N4uzR/a1Bn5z2I/1iPdGa\nLqLWC6lzLEP1ikIWzPSUuVFVp1N27vGCSuQeV2X3Hhb3a+C1cBqQRoM3VCMG83Zf\nfWl9GBHgcV5B9s3epwi4JOyBxCDdo1qmxg7kPVgu5WVTCzzfHlQO/TnNQwKBgQCV\n+1BmzY6+tTgMRTsWgAvlScPUJbw5ccChp8rZxz40wYgpKWqmL0mGyaf7Ge0nHSlq\ni+9mdJUDv3epJ3qb22lcr2pOszdbT63WBKJcgtrV9FtE4TS95rAgpljACig1XvMc\n29JCDpJYKZ93PWCI+hwNHv8CRWo9DUexO+e8ElXeqwKBgQDARSczNGmAEIXYQsHg\nP2vok42FMU23/dnIIBFPOkgCXeZ7VMqIM2UW8xCW6apOdyCjE0yzcrQxTTEBK7De\nOKE9k8+gCdKqB/YeSoPWaeTaDYuc62u6ibthv7ukTDDvRU3UH2IVWkalBGibps/Y\nSdZQTxaWYmJuTyzw7pZ5hISlMA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "rhyme-transcriber@burnished-fold-228818.iam.gserviceaccount.com",
+  "client_id": "112330829861828339036",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rhyme-transcriber%40burnished-fold-228818.iam.gserviceaccount.com"
+}

@@ -1,0 +1,14 @@
+Word: Bow, start_time: 1.6, end_time: 2.2
+Word: Wow, start_time: 2.2, end_time: 2.3
+Word: wow, start_time: 2.3, end_time: 2.5
+Word: whose, start_time: 2.5, end_time: 3.9
+Word: dog, start_time: 3.9, end_time: 4.3
+Word: art, start_time: 4.3, end_time: 4.6
+Word: thou, start_time: 4.6, end_time: 4.8
+Word: little, start_time: 4.8, end_time: 5.5
+Word: Tom, start_time: 5.5, end_time: 5.9
+Word: Tinkers, start_time: 5.9, end_time: 6.5
+Word: dog, start_time: 6.5, end_time: 6.9
+Word: Bow, start_time: 6.9, end_time: 7.2
+Word: Wow, start_time: 7.2, end_time: 7.5
+Word: Wow, start_time: 7.5, end_time: 7.5

@@ -1,0 +1,7 @@
+Word: finally, start_time: 0.0, end_time: 0.30000000000000004
+Word: called, start_time: 0.30000000000000004, end_time: 0.6000000000000001
+Word: for, start_time: 0.6000000000000001, end_time: 0.8
+Word: his, start_time: 0.8, end_time: 1.0
+Word: Red, start_time: 1.0, end_time: 1.1
+Word: Alert, start_time: 1.1, end_time: 1.5
+Word: 3, start_time: 1.5, end_time: 1.8

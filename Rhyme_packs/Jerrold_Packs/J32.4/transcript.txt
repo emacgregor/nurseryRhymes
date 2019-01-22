@@ -1,0 +1,16 @@
+Word: this, start_time: 0.0, end_time: 0.2
+Word: is, start_time: 0.2, end_time: 0.30000000000000004
+Word: the, start_time: 0.30000000000000004, end_time: 0.4
+Word: copy, start_time: 0.4, end_time: 0.7000000000000001
+Word: in, start_time: 0.7000000000000001, end_time: 1.1
+Word: the, start_time: 1.1, end_time: 1.1
+Word: morning, start_time: 1.1, end_time: 1.4
+Word: to, start_time: 1.4, end_time: 1.5
+Word: wake, start_time: 1.5, end_time: 1.7000000000000002
+Word: the, start_time: 1.7000000000000002, end_time: 1.9
+Word: priest, start_time: 1.9, end_time: 2.1
+Word: of, start_time: 2.1, end_time: 2.2
+Word: Shaving, start_time: 2.2, end_time: 2.6
+Word: insurance, start_time: 2.6, end_time: 3.2
+Word: check, start_time: 3.2, end_time: 12.1
+Word: build, start_time: 12.1, end_time: 12.5

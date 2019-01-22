@@ -1,0 +1,14 @@
+Word: the, start_time: 0.2, end_time: 0.7000000000000001
+Word: knave, start_time: 0.7000000000000001, end_time: 1.0
+Word: of, start_time: 1.0, end_time: 1.1
+Word: Hearts, start_time: 1.1, end_time: 1.3
+Word: brought, start_time: 1.3, end_time: 1.9
+Word: back, start_time: 1.9, end_time: 2.2
+Word: those, start_time: 2.2, end_time: 2.4
+Word: Tarts, start_time: 2.4, end_time: 2.9
+Word: and, start_time: 2.9, end_time: 3.4
+Word: vowed, start_time: 3.4, end_time: 3.8
+Word: he'd, start_time: 3.8, end_time: 4.3
+Word: steal, start_time: 4.3, end_time: 4.7
+Word: no, start_time: 4.7, end_time: 5.2
+Word: more, start_time: 5.2, end_time: 5.4

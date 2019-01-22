@@ -1,0 +1,12 @@
+Word: stand, start_time: 1.4, end_time: 1.9
+Word: up, start_time: 1.9, end_time: 2.1
+Word: she, start_time: 2.1, end_time: 2.2
+Word: took, start_time: 2.2, end_time: 2.4
+Word: her, start_time: 2.4, end_time: 2.6
+Word: little, start_time: 2.6, end_time: 2.9
+Word: crook, start_time: 2.9, end_time: 3.2
+Word: determined, start_time: 3.2, end_time: 4.2
+Word: for, start_time: 4.2, end_time: 4.4
+Word: to, start_time: 4.4, end_time: 4.5
+Word: find, start_time: 4.5, end_time: 4.8
+Word: them, start_time: 4.8, end_time: 5.0

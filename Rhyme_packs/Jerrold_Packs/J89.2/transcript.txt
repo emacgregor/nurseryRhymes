@@ -1,0 +1,12 @@
+Word: 1516, start_time: 0.1, end_time: 1.4
+Word: Maize, start_time: 1.4, end_time: 1.7000000000000002
+Word: in, start_time: 1.7000000000000002, end_time: 1.9
+Word: the, start_time: 1.9, end_time: 1.9
+Word: kitchen, start_time: 1.9, end_time: 2.3
+Word: 1718, start_time: 2.3, end_time: 3.8
+Word: maze, start_time: 3.8, end_time: 4.3
+Word: awaiting, start_time: 4.3, end_time: 4.8
+Word: 1920, start_time: 4.8, end_time: 6.3
+Word: my, start_time: 6.3, end_time: 6.7
+Word: play, start_time: 6.7, end_time: 7.0
+Word: Stampy, start_time: 7.0, end_time: 7.6

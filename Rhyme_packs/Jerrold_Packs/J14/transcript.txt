@@ -1,0 +1,15 @@
+Word: Daffy, start_time: 1.5, end_time: 2.1
+Word: Down, start_time: 2.1, end_time: 2.2
+Word: Dilly, start_time: 2.2, end_time: 2.5
+Word: has, start_time: 2.5, end_time: 3.2
+Word: come, start_time: 3.2, end_time: 3.4
+Word: to, start_time: 3.4, end_time: 3.6
+Word: town, start_time: 3.6, end_time: 3.9
+Word: in, start_time: 3.9, end_time: 4.4
+Word: a, start_time: 4.4, end_time: 4.5
+Word: yellow, start_time: 4.5, end_time: 4.9
+Word: Petticoat, start_time: 4.9, end_time: 5.8
+Word: and, start_time: 5.8, end_time: 6.0
+Word: a, start_time: 6.0, end_time: 6.1
+Word: green, start_time: 6.1, end_time: 6.5
+Word: gown, start_time: 6.5, end_time: 6.7

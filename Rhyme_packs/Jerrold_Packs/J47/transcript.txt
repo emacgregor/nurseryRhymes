@@ -1,0 +1,17 @@
+Word: here's, start_time: 1.8, end_time: 2.6
+Word: Sookie, start_time: 2.6, end_time: 3.3
+Word: Sue, start_time: 3.3, end_time: 3.8
+Word: what, start_time: 3.8, end_time: 5.0
+Word: shall, start_time: 5.0, end_time: 5.6
+Word: we, start_time: 5.6, end_time: 5.8
+Word: do, start_time: 5.8, end_time: 6.1
+Word: turn, start_time: 7.3, end_time: 8.0
+Word: her, start_time: 8.0, end_time: 8.1
+Word: face, start_time: 8.1, end_time: 8.4
+Word: to, start_time: 8.4, end_time: 9.2
+Word: the, start_time: 9.2, end_time: 9.4
+Word: wall, start_time: 9.4, end_time: 9.6
+Word: till, start_time: 9.6, end_time: 10.7
+Word: she, start_time: 10.7, end_time: 11.0
+Word: comes, start_time: 11.0, end_time: 11.5
+Word: to, start_time: 11.5, end_time: 11.8

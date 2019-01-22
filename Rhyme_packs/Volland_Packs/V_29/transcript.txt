@@ -1,0 +1,13 @@
+Word: here, start_time: 0.0, end_time: 0.6000000000000001
+Word: are, start_time: 0.6000000000000001, end_time: 0.7000000000000001
+Word: my, start_time: 0.7000000000000001, end_time: 0.7000000000000001
+Word: little, start_time: 0.7000000000000001, end_time: 1.6
+Word: jumping, start_time: 1.6, end_time: 2.2
+Word: Joan, start_time: 2.2, end_time: 2.7
+Word: when, start_time: 2.7, end_time: 3.4
+Word: nobody's, start_time: 3.4, end_time: 4.1
+Word: with, start_time: 4.1, end_time: 4.4
+Word: me, start_time: 4.4, end_time: 4.5
+Word: I'm, start_time: 4.5, end_time: 5.4
+Word: always, start_time: 5.4, end_time: 5.8
+Word: alone, start_time: 5.8, end_time: 6.2

@@ -1,0 +1,17 @@
+Word: why, start_time: 0.1, end_time: 0.7000000000000001
+Word: was, start_time: 0.7000000000000001, end_time: 1.1
+Word: a, start_time: 1.1, end_time: 1.1
+Word: youth, start_time: 1.1, end_time: 1.5
+Word: who, start_time: 1.5, end_time: 1.7000000000000002
+Word: didn't, start_time: 1.7000000000000002, end_time: 2.3
+Word: like, start_time: 2.3, end_time: 2.6
+Word: school, start_time: 2.6, end_time: 2.9
+Word: be, start_time: 2.9, end_time: 3.9
+Word: with, start_time: 3.9, end_time: 4.2
+Word: a, start_time: 4.2, end_time: 4.4
+Word: zany, start_time: 4.4, end_time: 5.1
+Word: clown, start_time: 5.1, end_time: 5.6
+Word: a, start_time: 5.6, end_time: 5.9
+Word: silly, start_time: 5.9, end_time: 6.3
+Word: old, start_time: 6.3, end_time: 6.4
+Word: fool, start_time: 6.4, end_time: 7.0

@@ -1,0 +1,15 @@
+Word: Old, start_time: 2.3, end_time: 2.8
+Word: King, start_time: 2.8, end_time: 3.1
+Word: Cole, start_time: 3.1, end_time: 3.5
+Word: was, start_time: 3.5, end_time: 3.6
+Word: a, start_time: 3.6, end_time: 3.8
+Word: merry, start_time: 3.8, end_time: 3.8
+Word: old, start_time: 3.8, end_time: 4.2
+Word: soul, start_time: 4.2, end_time: 4.4
+Word: and, start_time: 4.4, end_time: 4.9
+Word: a, start_time: 4.9, end_time: 5.0
+Word: Merry, start_time: 5.0, end_time: 5.3
+Word: Old, start_time: 5.3, end_time: 5.4
+Word: Soul, start_time: 5.4, end_time: 5.7
+Word: was, start_time: 5.7, end_time: 6.2
+Word: he, start_time: 6.2, end_time: 6.4
