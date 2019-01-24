@@ -20,7 +20,6 @@
             "id":"3",
             "title":"Peter, Peter, pumpkin eater",
             "collection":"Volland",
-            "collection":"Father Goose Visit",
             "text":"Peter, Peter, pumpkin eater,\nHad a wife and couldn't keep her;\nHe put her in a pumpkin shell,\nAnd then he kept her very well.\n\nPeter, Peter, pumpkin eater,\nHad another, and didn't love her;\nPeter learned to read and spell,\nAnd then he loved her very well.\n"
         },
 
@@ -35,7 +34,6 @@
             "id":"5",
             "title":"One misty, moisty morning",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"One misty, moisty morning,\nWhen cloudy was the weather,\nI happened to meet an old man clothed all in leather.\nHe began to compliment, and I began to grin,\nHow do you do, and how do you do?\nAnd how do you do again?\n"
         },
 
@@ -43,7 +41,6 @@
             "id":"6",
             "title":"I like little kitty",
             "collection":"Volland",
-            "collection":"Jerrold",
             "text":"I like little kitty, her coat is so warm,\nAnd if I don't hurt her she'll do me no harm;\nSo I'll not pull her tail, nor drive her away,\nBut kitty and I very gently will play.\n"
         },
 
@@ -65,7 +62,6 @@
             "id":"9",
             "title":"Jack, be nimble",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Jack, be nimble, Jack, be quick,\nJack, jump over the candlestick.\n"
         },
 
@@ -86,8 +82,6 @@
             "id":"12",
             "title":"Rock-a-bye, Baby",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
-            "collection": "Mother Goose Visit",
             "text":"Rock-a-bye, Baby, on the tree top,\nWhen the wind blows the cradle will rock,\nWhen the bough breaks the cradle will fall,\nAnd down will come Baby, cradle, and all.\n"
         },
 
@@ -123,7 +117,6 @@
             "id":"17",
             "title":"Little Tommy Tittlemouse",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Little Tommy Tittlemouse\nLived in a little house;\nHe caught fishes\nIn other men's ditches.\n"
         },
 
@@ -166,7 +159,6 @@
             "id":"23",
             "title":"Wee Willie Winkie",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Wee Willie Winkie runs through the town,\nUpstairs and downstairs, in his nightgown;\nTapping at the window, crying at the lock:\n\"Are the children all in bed? It's now eight o'clock?\"\n"
         },
 
@@ -174,7 +166,6 @@
             "id":"24",
             "title":"There was an old woman who lived in a shoe",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"There was an old woman who lived in a shoe,\nShe had so many children she didn't know what to do.\nShe gave them some broth without any bread,\nThen whipped them all soundly and put them to bed.\n"
         },
 
@@ -189,7 +180,6 @@
             "id":"26",
             "title":"There was an old man,\nAnd he had a calf",
             "collection":"Volland",
-            "collection":"Jerrold",
             "text":"There was an old man,\nAnd he had a calf,\nAnd that's half;\nHe took him out of the stall,\nAnd put him on the wall,\nAnd that's all.\n"
         },
 
@@ -211,7 +201,6 @@
             "id":"29",
             "title":"Here am I, little jumping Joan",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Here am I, little jumping Joan,\nWhen nobody's with me\nI'm always alone.\n"
         },
 
@@ -219,7 +208,6 @@
             "id":"30",
             "title":"There was an old woman lived under the hill",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"There was an old woman lived under the hill,\nAnd if she's not gone she lives there still.\nBaked apples she sold, and cranberry pies,\nAnd she's the old woman who never told lies.\n"
         },
 
@@ -227,7 +215,6 @@
             "id":"31",
             "title":"Simple Simon",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Simple Simon met a pieman\nGoing to the fair;\nSays Simple Simon to the pieman:\n\"Please let me taste your ware.\"\n\nSays the pieman to Simple Simon:\n\"Show me first your penny.\"\nSays Simple Simon to the pieman:\n\"Indeed I have not any.\"\n"
         },
 
@@ -235,7 +222,6 @@
             "id":"32",
             "title":"Sing a song of sixpence",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Sing a song of sixpence, a pocket full of rye,\nFour and twenty blackbirds baked in a pie.\nWhen the pie was opened the birds began to sing,\nNow wasn't this a dainty dish to set before the king?\nThe king was in the parlor counting out his money;\nThe queen was in the kitchen eating bread and honey;\nThe maid was in the garden hanging out the clothes,\nAnd along came a blackbird and nipped off her nose.\n"
         },
 
@@ -243,7 +229,6 @@
             "id":"33",
             "title":"To market, to market",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"To market, to market, to buy a fat pig,\nHome again, home again, jiggety, jig.\nTo market, to market, to buy a fat hog,\nHome again, home again, jiggety, jog.\n"
         },
 
@@ -258,7 +243,6 @@
             "id":"35",
             "title":"Little Miss Muffet",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Little Miss Muffet\nSat on a tuffet,\nEating some curds and whey.\nAlong came a spider,\nAnd sat down beside her,\nAnd frightened Miss Muffet away.\n"
         },
 
@@ -266,7 +250,6 @@
             "id":"36",
             "title":"Three wise men of Gotham",
             "collection":"Volland",
-            "collection":"Jerrold",
             "text":"Three wise men of Gotham\nWent to sea in a bowl,\nAnd if the bowl had been stronger\nMy song had been longer.\n"
         },
 
@@ -295,7 +278,6 @@
             "id":"40",
             "title":"Tom, Tom, the piper's son",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Tom, Tom, the piper's son,\nStole a pig, and away did run;\nThe pig was eat,\nAnd Tom was beat,\nAnd Tom ran crying down the street.\n"
         },
         "rhyme": {
@@ -309,8 +291,6 @@
             "id":"42",
             "title":"A dillar, a dollar",
             "collection":"Volland",
-            "collection":"Jerrold",
-            "collection": "Father Goose Visit",
             "text":"A dillar, a dollar,\nA ten o'clock scholar;\nWhat makes you come so soon?\nYou used to come at ten o'clock,\nBut now you come at noon!\n"
         },
 
@@ -332,7 +312,6 @@
             "id":"45",
             "title":"Little Boy Blue",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Little Boy Blue, come blow your horn,\nThe sheep's in the meadow, the cow's in the corn.\nWhere is the boy who minds the sheep?\nUnder the haystack fast asleep.\nWill you wake him?  No, not I,\nFor if I do he's sure to cry.\n"
         },
 
@@ -340,7 +319,6 @@
             "id":"46",
             "title":"There was an old woman got tossed in a blanket",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"There was an old woman got tossed in a blanket\nSeventeen times as high as the moon;\nBut where she was going no person could tell,\nFor under her arm she carried a broom.\n\n\"Old woman, old woman, old woman,\" said I,\n\"Where in the world are you flying so high?\"\n\"To sweep the cobwebs from the sky,\nAnd I'll be with you by and by.\"\n"
         },
 
@@ -369,14 +347,12 @@
             "id":"50",
             "title":"Lucy Locket lost her pocket",
             "collection":"Volland",
-            "collection":"Father Goose Visit",
             "text":"Lucy Locket lost her pocket,\nKitty Fisher found it;\nThere was not a penny in it,\nBut a ribbon round it.\n"
         },
         "rhyme": {
             "id":"51",
             "title":"Little Tom Tucker",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Little Tom Tucker\nSings for his supper.\nWhat shall he eat?\nWhite bread and butter.\nHow will he cut it\nWithout any a knife?\nHow will he marry\nWithout any wife?\n"
         },
 
@@ -391,7 +367,6 @@
             "id":"53",
             "title":"Diddle, diddle, dumpling",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Diddle, diddle, dumpling, my son John,\nWent to bed with his trousers on,\nOne stocking off, and one stocking on,\nDiddle, diddle, dumpling, my son John.\n"
         },
 
@@ -454,7 +429,6 @@
             "id":"62",
             "title":"Humpty Dumpty",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Humpty Dumpty sat on a wall,\nHumpty Dumpty had a great fall;\nAll the king's horses and all the king's men\nCouldn't put Humpty Dumpty together again.\n"
         },
 
@@ -476,7 +450,6 @@
             "id":"65",
             "title":"Little Jack Horner",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Little Jack Horner\nSat in a corner\nEating a Christmas pie;\nHe put in his thumb,\nAnd pulled out a plum,\nAnd said: \"What a good boy am I!\"\n"
         },
 
@@ -532,7 +505,6 @@
             "id":"73",
             "title":"Old King Cole",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Old King Cole\nWas a merry old soul,\nAnd a merry old soul was he;\nHe called for his pipe,\nAnd he called for his bowl,\nAnd he called for his fiddlers three.\n"
         },
 
@@ -540,7 +512,6 @@
             "id":"74",
             "title":"Mistress Mary",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Mistress Mary, quite contrary,\nHow does your garden grow?\nWith silver bells and cockle shells\nAnd pretty maids all in a row.\n"
         },
 
@@ -562,7 +533,6 @@
             "id":"77",
             "title":"Ding—dong—bell",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Ding—dong—bell, Kitty's in the well.\nWho put her in? Little Johnny Green.\nWho pulled her out? Little Johnny Stout.\nWhat a naughty boy was that\nTo try to drown poor kitty cat\nWho never did him any harm,\nAnd killed the mice in his father's barn.\n"
         },
 
@@ -570,7 +540,6 @@
             "id":"78",
             "title":"This little piggy",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"This little piggy went to market,\nThis little piggy stayed home;\nThis little piggy had roast beef,\nThis little piggy had none;\nThis little piggy said,\n\"Wee, wee wee! I want some!\"\n"
         },
 
@@ -591,7 +560,6 @@
             "id":"81",
             "title":"Old Mother Hubbard",
             "collection":"Volland",
-            "collection":"Father Goose Visit",
             "text":"Old Mother Hubbard\nWent to the cupboard\nTo get her poor dog a bone;\nBut when she went there\nThe cupboard was bare,\nAnd so the poor dog had none.\n"
         },
 
@@ -599,7 +567,6 @@
             "id":"82",
             "title":"Pease porridge",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"Pease porridge hot, pease porridge cold,\nPease porridge in the pot, nine days old.\nSome like it hot, some like it cold,\nSome like it in the pot, nine days old.\n\nSpell me that in four letters:\nI will: T H A T.\n"
         },
 
@@ -656,7 +623,6 @@
             "id":"90",
             "title":"Jack Sprat ",
             "collection":"Volland",
-            "collection": "Mother Goose Visit",
             "text":"Jack Sprat would eat no fat,\nHis wife would eat no lean;\nAnd so between the two of them\nThey licked the platter clean.\n"
         },
         "rhyme": {
@@ -677,7 +643,6 @@
             "id":"93",
             "title":"There was a crooked man",
             "collection":"Volland",
-            "collection":"Father Goose Visit",
             "text":"There was a crooked man,\nAnd he walked a crooked mile,\nHe found a crooked sixpence\nAgainst a crooked tile;\nHe bought a crooked cat\nWhich caught a crooked mouse,\nAnd they all lived together\nIn a little crooked house.\n"
         },
 
@@ -685,7 +650,6 @@
             "id":"94",
             "title":"There was a piper had a cow",
             "collection":"Volland",
-            "collection": "Father Goose Visit",
             "text":"There was a piper had a cow,\nAnd he had nothing to give her;\nHe pulled out his pipe and played her a tune,\nAnd asked the cow to consider.\n\nThe cow considered very well,\nAnd gave the piper a penny,\nAnd asked him to play another tune,\nThat is, if he knew any.\n"
         },
 
@@ -728,7 +692,6 @@
             "id":"100",
             "title":"Bat, bat",
             "collection":"Volland",
-            "collection":"Jerrold",
             "text":"Bat, bat,\nCome under my hat,\nAnd I'll give you a slice of bacon;\nAnd when I bake\nI'll give you a cake,\nIf I am not mistaken.\n"
         },
         "rhyme": {
@@ -882,7 +845,6 @@
             "id":"122",
             "title":"Twinkle, twinkle, little star",
             "collection":"Jerrold",
-            "collection":"Mother Goose Visit",
             "text":"Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.\n"
         },
 
@@ -988,7 +950,6 @@
             "id":"137",
             "title":"Lady-Bird, Lady-Bird",
             "collection":"Jerrold",
-            "collection":"Mother Goose Visit",
             "text":"Lady-Bird, Lady-Bird, fly away home,\nYour house is on fire, your children have gone,\nAll but one, who lies under a stone;\nFly you home, Lady-Bird, before it is gone.\n"
         },
 
@@ -1108,7 +1069,6 @@
             "id":"154",
             "title":"Little Nanny Etticoat",
             "collection":"Jerrold",
-            "collection": "Father Goose Visit",
             "text":"Little Nanny Etticoat,\nIn a white petticoat\nAnd a red nose\nThe longer she stands\nThe shorter she grows.\n"
         },
 
@@ -1536,6 +1496,287 @@
             "title":"Bye, Baby Bunting",
             "collection":"Mother Goose Visit",
             "text":"Bye, Baby Bunting,\nFather's gone a-hunting,\nTo get a little rabbit skin\nTo wrap the Baby Bunting in.\n"
+        },
+
+        "rhyme": {
+            "id":"216",
+            "title":"Peter, Peter, pumpkin eater",
+            "collection":"Father Goose Visit",
+            "text":"Peter, Peter, pumpkin eater,\nHad a wife and couldn't keep her;\nHe put her in a pumpkin shell,\nAnd then he kept her very well.\n\nPeter, Peter, pumpkin eater,\nHad another, and didn't love her;\nPeter learned to read and spell,\nAnd then he loved her very well.\n"
+        },
+
+        "rhyme": {
+            "id":"217",
+            "title":"One misty, moisty morning",
+            "collection": "Father Goose Visit",
+            "text":"One misty, moisty morning,\nWhen cloudy was the weather,\nI happened to meet an old man clothed all in leather.\nHe began to compliment, and I began to grin,\nHow do you do, and how do you do?\nAnd how do you do again?\n"
+        },
+
+         "rhyme": {
+            "id":"218",
+            "title":"I like little kitty",
+            "collection":"Jerrold",
+            "text":"I like little kitty, her coat is so warm,\nAnd if I don't hurt her she'll do me no harm;\nSo I'll not pull her tail, nor drive her away,\nBut kitty and I very gently will play.\n"
+        },
+
+        "rhyme": {
+            "id":"219",
+            "title":"Pretty John Watts",
+            "collection": "Father Goose Visit",
+            "text":"Pretty John Watts,\nWe are troubled with rats,\nWill you drive them out of the house?\nWe have mice, too, in plenty,\nThat feast in the pantry,\nBut let them stay\nAnd nibble away,\nWhat harm in a little brown mouse?\n"
+        },
+
+        "rhyme": {
+            "id":"220",
+            "title":"Rock-a-bye, Baby",
+            "collection": "Father Goose Visit",
+            "text":"Rock-a-bye, Baby, on the tree top,\nWhen the wind blows the cradle will rock,\nWhen the bough breaks the cradle will fall,\nAnd down will come Baby, cradle, and all.\n"
+        },
+
+        "rhyme": {
+            "id":"221",
+            "title":"Rock-a-bye, Baby",
+            "collection": "Mother Goose Visit",
+            "text":"Rock-a-bye, Baby, on the tree top,\nWhen the wind blows the cradle will rock,\nWhen the bough breaks the cradle will fall,\nAnd down will come Baby, cradle, and all.\n"
+        },
+
+         "rhyme": {
+            "id":"222",
+            "title":"Little Tommy Tittlemouse",
+            "collection": "Father Goose Visit",
+            "text":"Little Tommy Tittlemouse\nLived in a little house;\nHe caught fishes\nIn other men's ditches.\n"
+        },
+
+        "rhyme": {
+            "id":"223",
+            "title":"Wee Willie Winkie",
+            "collection": "Father Goose Visit",
+            "text":"Wee Willie Winkie runs through the town,\nUpstairs and downstairs, in his nightgown;\nTapping at the window, crying at the lock:\n\"Are the children all in bed? It's now eight o'clock?\"\n"
+        },
+
+        "rhyme": {
+            "id":"224",
+            "title":"There was an old woman who lived in a shoe",
+            "collection": "Mother Goose Visit",
+            "text":"There was an old woman who lived in a shoe,\nShe had so many children she didn't know what to do.\nShe gave them some broth without any bread,\nThen whipped them all soundly and put them to bed.\n"
+        },
+
+        "rhyme": {
+            "id":"225",
+            "title":"There was an old man",
+            "collection":"Jerrold",
+            "text":"There was an old man,\nAnd he had a calf,\nAnd that's half;\nHe took him out of the stall,\nAnd put him on the wall,\nAnd that's all.\n"
+        },
+
+        "rhyme": {
+            "id":"226",
+            "title":"Here am I, little jumping Joan",
+            "collection": "Mother Goose Visit",
+            "text":"Here am I, little jumping Joan,\nWhen nobody's with me\nI'm always alone.\n"
+        },
+
+        "rhyme": {
+            "id":"227",
+            "title":"There was an old woman lived under the hill",
+            "collection": "Mother Goose Visit",
+            "text":"There was an old woman lived under the hill,\nAnd if she's not gone she lives there still.\nBaked apples she sold, and cranberry pies,\nAnd she's the old woman who never told lies.\n"
+        },
+
+         "rhyme": {
+            "id":"228",
+            "title":"Simple Simon",
+            "collection": "Mother Goose Visit",
+            "text":"Simple Simon met a pieman\nGoing to the fair;\nSays Simple Simon to the pieman:\n\"Please let me taste your ware.\"\n\nSays the pieman to Simple Simon:\n\"Show me first your penny.\"\nSays Simple Simon to the pieman:\n\"Indeed I have not any.\"\n"
+        },
+
+        "rhyme": {
+            "id":"229",
+            "title":"Sing a song of sixpence",
+            "collection": "Father Goose Visit",
+            "text":"Sing a song of sixpence, a pocket full of rye,\nFour and twenty blackbirds baked in a pie.\nWhen the pie was opened the birds began to sing,\nNow wasn't this a dainty dish to set before the king?\nThe king was in the parlor counting out his money;\nThe queen was in the kitchen eating bread and honey;\nThe maid was in the garden hanging out the clothes,\nAnd along came a blackbird and nipped off her nose.\n"
+        },
+
+        "rhyme": {
+            "id":"230",
+            "title":"To market, to market",
+            "collection": "Father Goose Visit",
+            "text":"To market, to market, to buy a fat pig,\nHome again, home again, jiggety, jig.\nTo market, to market, to buy a fat hog,\nHome again, home again, jiggety, jog.\n"
+        },
+
+        "rhyme": {
+            "id":"231",
+            "title":"Little Miss Muffet",
+            "collection": "Father Goose Visit",
+            "text":"Little Miss Muffet\nSat on a tuffet,\nEating some curds and whey.\nAlong came a spider,\nAnd sat down beside her,\nAnd frightened Miss Muffet away.\n"
+        },
+
+         "rhyme": {
+            "id":"232",
+            "title":"Three wise men of Gotham",
+            "collection":"Jerrold",
+            "text":"Three wise men of Gotham\nWent to sea in a bowl,\nAnd if the bowl had been stronger\nMy song had been longer.\n"
+        },
+
+        "rhyme": {
+            "id":"233",
+            "title":"Tom, Tom, the piper's son",
+            "collection": "Father Goose Visit",
+            "text":"Tom, Tom, the piper's son,\nStole a pig, and away did run;\nThe pig was eat,\nAnd Tom was beat,\nAnd Tom ran crying down the street.\n"
+        },
+
+        "rhyme": {
+            "id":"234",
+            "title":"A dillar, a dollar",
+            "collection":"Jerrold",
+            "text":"A dillar, a dollar,\nA ten o'clock scholar;\nWhat makes you come so soon?\nYou used to come at ten o'clock,\nBut now you come at noon!\n"
+        },
+
+        "rhyme": {
+            "id":"235",
+            "title":"A dillar, a dollar",
+            "collection": "Father Goose Visit",
+            "text":"A dillar, a dollar,\nA ten o'clock scholar;\nWhat makes you come so soon?\nYou used to come at ten o'clock,\nBut now you come at noon!\n"
+        },
+
+        "rhyme": {
+            "id":"236",
+            "title":"Little Boy Blue",
+            "collection": "Father Goose Visit",
+            "text":"Little Boy Blue, come blow your horn,\nThe sheep's in the meadow, the cow's in the corn.\nWhere is the boy who minds the sheep?\nUnder the haystack fast asleep.\nWill you wake him?  No, not I,\nFor if I do he's sure to cry.\n"
+        },
+
+        "rhyme": {
+            "id":"237",
+            "title":"There was an old woman got tossed in a blanket",
+            "collection": "Mother Goose Visit",
+            "text":"There was an old woman got tossed in a blanket\nSeventeen times as high as the moon;\nBut where she was going no person could tell,\nFor under her arm she carried a broom.\n\n\"Old woman, old woman, old woman,\" said I,\n\"Where in the world are you flying so high?\"\n\"To sweep the cobwebs from the sky,\nAnd I'll be with you by and by.\"\n"
+        },
+
+         "rhyme": {
+            "id":"238",
+            "title":"Lucy Locket lost her pocket",
+            "collection":"Father Goose Visit",
+            "text":"Lucy Locket lost her pocket,\nKitty Fisher found it;\nThere was not a penny in it,\nBut a ribbon round it.\n"
+        },
+
+        "rhyme": {
+            "id":"239",
+            "title":"Little Tom Tucker",
+            "collection": "Mother Goose Visit",
+            "text":"Little Tom Tucker\nSings for his supper.\nWhat shall he eat?\nWhite bread and butter.\nHow will he cut it\nWithout any a knife?\nHow will he marry\nWithout any wife?\n"
+        },
+
+        "rhyme": {
+            "id":"240",
+            "title":"Diddle, diddle, dumpling",
+            "collection": "Father Goose Visit",
+            "text":"Diddle, diddle, dumpling, my son John,\nWent to bed with his trousers on,\nOne stocking off, and one stocking on,\nDiddle, diddle, dumpling, my son John.\n"
+        },
+
+        "rhyme": {
+            "id":"241",
+            "title":"Humpty Dumpty",
+            "collection": "Mother Goose Visit",
+            "text":"Humpty Dumpty sat on a wall,\nHumpty Dumpty had a great fall;\nAll the king's horses and all the king's men\nCouldn't put Humpty Dumpty together again.\n"
+        },
+
+         "rhyme": {
+            "id":"242",
+            "title":"Little Jack Horner",
+            "collection": "Mother Goose Visit",
+            "text":"Little Jack Horner\nSat in a corner\nEating a Christmas pie;\nHe put in his thumb,\nAnd pulled out a plum,\nAnd said: \"What a good boy am I!\"\n"
+        },
+
+        "rhyme": {
+            "id":"243",
+            "title":"Old King Cole",
+            "collection": "Mother Goose Visit",
+            "text":"Old King Cole\nWas a merry old soul,\nAnd a merry old soul was he;\nHe called for his pipe,\nAnd he called for his bowl,\nAnd he called for his fiddlers three.\n"
+        },
+
+        "rhyme": {
+            "id":"244",
+            "title":"Mistress Mary",
+            "collection": "Father Goose Visit",
+            "text":"Mistress Mary, quite contrary,\nHow does your garden grow?\nWith silver bells and cockle shells\nAnd pretty maids all in a row.\n"
+        },
+
+        "rhyme": {
+            "id":"245",
+            "title":"Ding—dong—bell",
+            "collection": "Father Goose Visit",
+            "text":"Ding—dong—bell, Kitty's in the well.\nWho put her in? Little Johnny Green.\nWho pulled her out? Little Johnny Stout.\nWhat a naughty boy was that\nTo try to drown poor kitty cat\nWho never did him any harm,\nAnd killed the mice in his father's barn.\n"
+        },
+
+        "rhyme": {
+            "id":"246",
+            "title":"This little piggy",
+            "collection": "Mother Goose Visit",
+            "text":"This little piggy went to market,\nThis little piggy stayed home;\nThis little piggy had roast beef,\nThis little piggy had none;\nThis little piggy said,\n\"Wee, wee wee! I want some!\"\n"
+        },
+
+        "rhyme": {
+            "id":"247",
+            "title":"Old Mother Hubbard",
+            "collection":"Father Goose Visit",
+            "text":"Old Mother Hubbard\nWent to the cupboard\nTo get her poor dog a bone;\nBut when she went there\nThe cupboard was bare,\nAnd so the poor dog had none.\n"
+        },
+
+         "rhyme": {
+            "id":"248",
+            "title":"Pease porridge",
+            "collection": "Father Goose Visit",
+            "text":"Pease porridge hot, pease porridge cold,\nPease porridge in the pot, nine days old.\nSome like it hot, some like it cold,\nSome like it in the pot, nine days old.\n\nSpell me that in four letters:\nI will: T H A T.\n"
+        },
+
+        "rhyme": {
+            "id":"249",
+            "title":"Jack Sprat ",
+            "collection": "Mother Goose Visit",
+            "text":"Jack Sprat would eat no fat,\nHis wife would eat no lean;\nAnd so between the two of them\nThey licked the platter clean.\n"
+        },
+
+
+        "rhyme": {
+            "id":"250",
+            "title":"There was a crooked man",
+            "collection":"Father Goose Visit",
+            "text":"There was a crooked man,\nAnd he walked a crooked mile,\nHe found a crooked sixpence\nAgainst a crooked tile;\nHe bought a crooked cat\nWhich caught a crooked mouse,\nAnd they all lived together\nIn a little crooked house.\n"
+        },
+
+        "rhyme": {
+            "id":"251",
+            "title":"There was a piper had a cow",
+            "collection": "Father Goose Visit",
+            "text":"There was a piper had a cow,\nAnd he had nothing to give her;\nHe pulled out his pipe and played her a tune,\nAnd asked the cow to consider.\n\nThe cow considered very well,\nAnd gave the piper a penny,\nAnd asked him to play another tune,\nThat is, if he knew any.\n"
+        },
+
+         "rhyme": {
+            "id":"252",
+            "title":"Bat, bat",
+            "collection":"Jerrold",
+            "text":"Bat, bat,\nCome under my hat,\nAnd I'll give you a slice of bacon;\nAnd when I bake\nI'll give you a cake,\nIf I am not mistaken.\n"
+        },
+
+        "rhyme": {
+            "id":"253",
+            "title":"Twinkle, twinkle, little star",
+            "collection":"Mother Goose Visit",
+            "text":"Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.\n"
+        },
+
+        "rhyme": {
+            "id":"254",
+            "title":"Lady-Bird, Lady-Bird",
+            "collection":"Mother Goose Visit",
+            "text":"Lady-Bird, Lady-Bird, fly away home,\nYour house is on fire, your children have gone,\nAll but one, who lies under a stone;\nFly you home, Lady-Bird, before it is gone.\n"
+        },
+
+        "rhyme": {
+            "id":"255",
+            "title":"Little Nanny Etticoat",
+            "collection": "Father Goose Visit",
+            "text":"Little Nanny Etticoat,\nIn a white petticoat\nAnd a red nose\nThe longer she stands\nThe shorter she grows.\n"
         }
     }]
 }
