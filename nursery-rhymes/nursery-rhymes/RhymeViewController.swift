@@ -17,13 +17,30 @@ class RhymeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model.getModel()
-        rhymeText.text = m.getRhymeText(id: id)
+        // rhymeText.text = m.getRhymeText(id: id)
         self.navigationItem.title = message;
         
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
+        
+        let textArr = m.getRhymeText(id: id).characters.split(separator: "\n")
+        let attrText = NSMutableAttributedString()
+        
+        for (index, text) in textArr.enumerated() {
+            let text = String(text) as NSString
+            let attr = NSMutableAttributedString(string: text as String)
+            if (index == 0) {
+                attr.addAttribute(NSBackgroundColorAttributeName,
+                                  value: UIColor.yellow,
+                                  range: NSMakeRange(0, text.length))
+            }
+            attrText.append(attr)
+        }
+        
+        rhymeText.attributedText = (attrText.copy() as! NSAttributedString)
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
