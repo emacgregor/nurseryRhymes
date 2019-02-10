@@ -73,7 +73,19 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Little Tom Tucker" id="eoq-9a-lU7">
                         <barButtonItem key="leftBarButtonItem" title="Audio" id="pcJ-S6-yr1"/>
-                        <barButtonItem key="rightBarButtonItem" title="Quiz" id="Ali-HM-WaK"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Quiz" id="Ali-HM-WaK"/>
+                            <barButtonItem style="plain" id="aQx-ow-u79">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cUz-1N-BSB">
+                                    <rect key="frame" x="195" y="7" width="121" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Home Experience"/>
+                                    <connections>
+                                        <action selector="homeexperience:" destination="UZ7-Sz-QO0" eventType="primaryActionTriggered" id="es2-DX-DpN"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -450,9 +462,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xok-T9-P9Y"/>
+        <segue reference="Agx-4Y-1MI"/>
         <segue reference="WTk-BX-XYE"/>
-        <segue reference="Kda-un-5GX"/>
-        <segue reference="UEc-oW-tuV"/>
+        <segue reference="MO8-h3-aWJ"/>
+        <segue reference="frj-is-4df"/>
     </inferredMetricsTieBreakers>
 </document>

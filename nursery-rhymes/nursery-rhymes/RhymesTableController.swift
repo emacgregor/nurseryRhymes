@@ -14,10 +14,10 @@ struct cellData {
 }
 class RhymesTableController : UITableViewController {
     var data = [cellData]()
-    
     var m = Model.getModel()
     
     override func viewDidLoad() {
+        print("Heya")
         let name = "pandaprofile.png"
         let img = UIImage(named: name)
         data = []

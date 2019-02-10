@@ -17,12 +17,16 @@ class Model {
     init() {
         collections = [String: [String: String]]()
         collections["Volland"] = [String: String]()
+        print("hello")
         fileNameList = [String]()
-        
+        print("I'm here")
         readFileNameList()
+        print("How are you?")
         for fileName in self.fileNameList {
+            print(fileName)
             readFile(fileName: fileName, collectionName: "Volland")
         }
+        print("I'm doing fine")
     }
     
     func readFileNameList() {
@@ -78,11 +82,15 @@ class Model {
     
     func getRhymeName(fileName: String) -> String {
         let splitted = fileName.characters.split(separator: "_")
-        let result = splitted[2]
+        let result = splitted[splitted.count - 1]
+        
+        //This is just for my testing, sorry if I forgot to comment it out -Ethan
+        //return fileName
         return String(result)
     }
     
     static func getModel() -> Model {
+        print ("how do you do")
         return Model.model
     }
 }
