@@ -7,26 +7,48 @@
 //
 
 import Foundation
+import UIKit
 
 class Model {
     static var model: Model = Model()
     
-    var collections: [String: [String: String]]
-    var fileNameList: [String]
+    var jsonModel: Any
+    var collections = [String: [String: String]]()
+    var fileNameList = [String]()
+    var rhymes = [[String: String]]()
     
     init() {
-        collections = [String: [String: String]]()
+        //jsonModel = JSONSerialization.jsonObject()
+        //collections = [String: [String: String]]()
+        
+        jsonModel = String()
         collections["Volland"] = [String: String]()
-        print("hello")
-        fileNameList = [String]()
-        print("I'm here")
-        readFileNameList()
-        print("How are you?")
-        for fileName in self.fileNameList {
-            print(fileName)
-            readFile(fileName: fileName, collectionName: "Volland")
+        
+        //fileNameList = [String]()
+        
+        readJSONModel()
+        
+        //readFileNameList()
+        /*for fileName in self.fileNameList {
+         readFile(fileName: fileName, collectionName: "Volland")
+         }*/
+    }
+    
+    func readJSONModel() {
+        if let path = Bundle.main.path(forResource: "rhymeText", ofType: "json")//, inDirectory: "Rhyme_packs")
+        {
+            do {
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!) // as! [String: [[String: String]]]
+                print(jsonModel)
+                rhymes = (jsonModel as! [[String:String]])
+                print(rhymes)
+            } catch let error {
+                print(error)
+            }
+        } else {
+            print("File not found: rhymeText.json")
         }
-        print("I'm doing fine")
     }
     
     func readFileNameList() {
@@ -80,17 +102,56 @@ class Model {
         return result
     }
     
-    func getRhymeName(fileName: String) -> String {
-        let splitted = fileName.characters.split(separator: "_")
-        let result = splitted[splitted.count - 1]
+    func getRhymeName(id: Int) -> String {
+        return rhymes[id]["title"]!
+    }
+    
+    func getRhymeText(id: Int) -> String {
+        return rhymes[id]["text"]!
+    }
+    
+    func getRhymeTranscript(id: Int) -> String {
+        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
         
-        //This is just for my testing, sorry if I forgot to comment it out -Ethan
-        //return fileName
-        return String(result)
+        if let path = Bundle.main.path(forResource: filename, ofType: "transcript", inDirectory: "rhyme_files")
+        {
+            do {
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                //self.collections[collectionName]?[fileName] = txtData
+                return txtData
+            } catch let error as NSError {
+                print(error)
+            }
+        } else {
+            print("File not found: transcripts/"+filename+".transcript")
+        }
+        
+        return String()
+    }
+    
+    func getRhymeAudio(id: Int) -> String {
+        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
+        return filename
+    }
+    
+    func getRhymeImage(id: Int) -> UIImage {
+        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
+        
+        if let path = Bundle.main.path(forResource: filename, ofType: "jpg", inDirectory: "rhyme_files")
+        {
+            return UIImage(contentsOfFile: path)!
+        } else {
+            print("File not found: transcripts/"+filename+".jpg")
+        }
+        
+        return UIImage(named: "pandaprofile.png")!;
+    }
+    
+    func getRhymeCollection(id: Int) -> String {
+        return rhymes[id]["collection"]!
     }
     
     static func getModel() -> Model {
-        print ("how do you do")
         return Model.model
     }
 }

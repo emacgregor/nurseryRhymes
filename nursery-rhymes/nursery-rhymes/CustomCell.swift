@@ -12,8 +12,7 @@ import UIKit
 class CustomCell: UITableViewCell {
     var message: String?
     var mainImage: UIImage?
-    var fileName: String?
-
+    
     var messageView : UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -49,11 +48,11 @@ class CustomCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let messsage = message {
+        if message != nil {
             messageView.text = message
         }
-        if let image = mainImage {
-            mainImageView.image = image
+        if mainImage != nil {
+            mainImageView.image = mainImage
         }
     }
     
