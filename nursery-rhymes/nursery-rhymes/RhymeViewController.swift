@@ -9,9 +9,24 @@
 import UIKit
 import AVFoundation
 
-class RhymeViewController: UIViewController {
+class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var rhymeLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
+    
+    @IBOutlet weak var playButton: UIBarButtonItem!
+    @IBAction func rewindClicked(_ sender: Any) {
+    }
+    @IBAction func fastforwardClicked(_ sender: Any) {
+    }
+    @IBAction func playClicked(_ sender: Any) {
+        if (self.player?.isPlaying)! {
+            self.pauseRhyme()
+            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(RhymeViewController.playClicked))
+        } else {
+            self.playRhyme()
+            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.pause, target: self, action: #selector(RhymeViewController.playClicked))
+        }
+    }
     
     var id = Int()
     var message = String()
@@ -44,6 +59,7 @@ class RhymeViewController: UIViewController {
         let attrText = self.buildAttributedText(wordIndex: self.wordIndex)
         rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
         
+        self.preparePlayer()
         self.playRhyme()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +68,10 @@ class RhymeViewController: UIViewController {
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.player?.stop()
+        self.updater.invalidate()
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,15 +101,23 @@ class RhymeViewController: UIViewController {
         return (self.remainingText.lowercased() as NSString).range(of: word)
     }
     
-    func playRhyme() {
+    func preparePlayer() {
         self.updater = CADisplayLink(target: self, selector: #selector(RhymeViewController.trackAudio))
         self.updater.preferredFramesPerSecond = 60
         self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
         
         self.player = m.getRhymeAudio(id: self.id)
+        self.player?.delegate = self as AVAudioPlayerDelegate
+    }
+    
+    func playRhyme() {
         self.player?.prepareToPlay()
-        player?.delegate = self as? AVAudioPlayerDelegate
         self.player?.play()
+    }
+    
+    func pauseRhyme() {
+        self.player?.pause()
+        
     }
     
     func trackAudio() {

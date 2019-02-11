@@ -48,28 +48,58 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-8o-SJB">
-                                <rect key="frame" x="14" y="593" width="347" height="31"/>
+                                <rect key="frame" x="14" y="533" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-dZ-J3d">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="raZ-Pt-OJn"/>
+                                    <barButtonItem systemItem="rewind" id="1jW-nX-LfI">
+                                        <connections>
+                                            <action selector="rewindClicked:" destination="UZ7-Sz-QO0" id="FcA-0q-uff"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="DGA-jq-b27"/>
+                                    <barButtonItem title="Item" systemItem="play" id="sEw-yI-cSW">
+                                        <connections>
+                                            <action selector="playClicked:" destination="UZ7-Sz-QO0" id="9Kn-Or-pZy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="0YY-ES-Cxe"/>
+                                    <barButtonItem systemItem="fastForward" id="kSq-Kt-AOK">
+                                        <connections>
+                                            <action selector="fastforwardClicked:" destination="UZ7-Sz-QO0" id="lof-yg-MWq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZQS-1e-ugn"/>
+                                </items>
+                            </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gd8-dZ-J3d" secondAttribute="trailing" id="grt-kc-xFk"/>
+                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="Gd8-dZ-J3d" secondAttribute="bottom" id="jhf-RC-tNe"/>
+                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="Gd8-dZ-J3d" secondAttribute="bottom" id="mOU-hF-bsj"/>
+                            <constraint firstItem="Gd8-dZ-J3d" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leading" id="t2k-PM-F3B"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Little Tom Tucker" id="eoq-9a-lU7">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="pcJ-S6-yr1">
+                    <navigationItem key="navigationItem" title="Little Tom Tucker" id="9jj-gb-z2R">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="roL-VD-1Kb">
                             <connections>
-                                <segue destination="ony-Ya-1N0" kind="show" id="yld-yd-0zG"/>
+                                <segue destination="ony-Ya-1N0" kind="show" id="2m8-hp-Clp"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Quiz" id="Ali-HM-WaK"/>
-                            <barButtonItem style="plain" id="aQx-ow-u79">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cUz-1N-BSB">
+                            <barButtonItem title="Quiz" id="Ago-2E-9li"/>
+                            <barButtonItem style="plain" id="eS2-ts-TS3">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hyt-C7-sm5">
                                     <rect key="frame" x="195" y="7" width="121" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Home Experience"/>
                                     <connections>
-                                        <action selector="homeexperience:" destination="UZ7-Sz-QO0" eventType="primaryActionTriggered" id="es2-DX-DpN"/>
+                                        <action selector="homeexperience:" destination="UZ7-Sz-QO0" eventType="primaryActionTriggered" id="XeV-p3-qPj"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -77,6 +107,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="playButton" destination="sEw-yI-cSW" id="qjQ-Mz-iIQ"/>
                         <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
                         <outlet property="timeSlider" destination="2IR-8o-SJB" id="8AZ-fZ-XP3"/>
                     </connections>
@@ -452,7 +483,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="frj-is-4df"/>
-        <segue reference="yld-yd-0zG"/>
+        <segue reference="2m8-hp-Clp"/>
         <segue reference="Agx-4Y-1MI"/>
         <segue reference="J4l-Ju-kgD"/>
     </inferredMetricsTieBreakers>
