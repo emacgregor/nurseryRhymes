@@ -36,6 +36,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     var m = Model()
     
     var transcript = String()
+    var transcriptTimes = [(Float, Float)]()
     var rhymeText = String()
     var remainingText = String()
     var wordIndex = 0
@@ -46,6 +47,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.transcript = m.getRhymeTranscript(id: self.id)
         self.rhymeText = m.getRhymeText(id: self.id)
         self.remainingText = self.rhymeText
+        self.parseTranscript()
         
         self.navigationItem.title = message;
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
@@ -56,9 +58,8 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
         
-        let attrText = self.buildAttributedText(wordIndex: self.wordIndex)
-        rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
-        
+        self.buildAttributedText(wordIndex: self.wordIndex)
+
         self.preparePlayer()
         self.playRhyme()
     }
@@ -74,19 +75,22 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.updater.invalidate()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func buildAttributedText(wordIndex: Int) -> NSMutableAttributedString {
+    func buildAttributedText(wordIndex: Int) {
+        //let difference = NSString(string: rhymeText).length - NSString(string: remainingText).length
+        
         let attrText = NSMutableAttributedString(string: self.rhymeText)
         let wordRange = getCurrentWordRange(wordIndex: wordIndex)
-        print("wordRange: \(wordRange)")
+        //let correctedRange = NSMakeRange(wordRange.location + difference,
+        //                                 wordRange.length)
         attrText.addAttribute(NSBackgroundColorAttributeName,
                           value: UIColor.yellow,
                           range: wordRange)
-        return attrText
+        self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
+        
+        /*var newRemaining = NSString(string: remainingText)
+        newRemaining = newRemaining.substring(with: NSMakeRange(wordRange.location + wordRange.length,
+                                                                newRemaining.length)) as NSString
+        self.remainingText = newRemaining as String*/
     }
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
@@ -117,12 +121,41 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     
     func pauseRhyme() {
         self.player?.pause()
-        
+    }
+    
+    func parseTranscript() {
+        let lines = self.transcript.characters.split(separator: "\n")
+        for (_, line) in lines.enumerated() {
+            let words = line.split(separator: " ")
+            
+            if (words.count >= 6) {
+                var word = String(words[3])
+                //Remove comma
+                let end = word.index(word.endIndex, offsetBy: -1)
+                word = word.substring(to: end)
+                let startTime = Float(word)
+                let endTime = Float(String(words[5]))
+                transcriptTimes.append((startTime!,endTime!))
+            }
+        }
     }
     
     func trackAudio() {
         let normalizedTime = Float((self.player?.currentTime)! * 100.0 / (player?.duration)!)
         timeSlider.value = normalizedTime
+        
+        if (transcriptTimes[wordIndex].1 < Float((self.player?.currentTime)!) ) {
+            if (wordIndex < (transcriptTimes.count - 1)) {
+                wordIndex += 1
+            }
+        }
+        
+        self.buildAttributedText(wordIndex: self.wordIndex)
     }
     
+    // From AVAudioPlayerDelegate
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        //reset highlighting when audio finishes
+        self.wordIndex = 0
+    }
 }
