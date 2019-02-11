@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class Model {
     static var model: Model = Model()
@@ -17,21 +18,14 @@ class Model {
     var fileNameList = [String]()
     var rhymes = [[String: String]]()
     
+    var player: AVAudioPlayer?
+    
     init() {
-        //jsonModel = JSONSerialization.jsonObject()
-        //collections = [String: [String: String]]()
-        
         jsonModel = String()
         collections["Volland"] = [String: String]()
-        
-        //fileNameList = [String]()
-        
+        player = AVAudioPlayer()
+
         readJSONModel()
-        
-        //readFileNameList()
-        /*for fileName in self.fileNameList {
-         readFile(fileName: fileName, collectionName: "Volland")
-         }*/
     }
     
     func readJSONModel() {
@@ -39,10 +33,9 @@ class Model {
         {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!) // as! [String: [[String: String]]]
-                print(jsonModel)
+                jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
                 rhymes = (jsonModel as! [[String:String]])
-                print(rhymes)
+                //print(rhymes)
             } catch let error {
                 print(error)
             }
@@ -67,22 +60,6 @@ class Model {
             }
         } else {
             print("File not found: FileNames.txt")
-        }
-    }
-    
-    func readFile(fileName: String, collectionName: String) {
-        if let path = Bundle.main.path(forResource: fileName, ofType: "txt", inDirectory: "transcripts")
-        {
-            //print(path)
-            do {
-                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                self.collections[collectionName]?[fileName] = txtData
-                //print(txtData)
-            } catch let error as NSError {
-                print(error)
-            }
-        } else {
-            print("File not found: transcripts/"+fileName+".txt")
         }
     }
     
@@ -129,9 +106,26 @@ class Model {
         return String()
     }
     
-    func getRhymeAudio(id: Int) -> String {
+    func getRhymeAudio(id: Int) -> AVAudioPlayer {
         let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
-        return filename
+        
+        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
+        {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                self.player = try AVAudioPlayer(contentsOf: url)
+                return self.player!
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("File not found: transcripts/"+filename+".jpg")
+        }
+        
+        print("Audio player error for rhyme_files/\(filename).mp3")
+        return self.player!
     }
     
     func getRhymeImage(id: Int) -> UIImage {

@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RhymeViewController: UIViewController {
     @IBOutlet weak var rhymeLabel: UILabel!
+    @IBOutlet weak var timeSlider: UISlider!
+    
     var id = Int()
     var message = String()
+    var player: AVAudioPlayer?
+    var updater: CADisplayLink! = nil
+    
     var m = Model()
     
     var transcript = String()
     var rhymeText = String()
     var remainingText = String()
-    
-    // for audio / timing with highlighting
     var wordIndex = 0
     
     override func viewDidLoad() {
@@ -33,11 +37,14 @@ class RhymeViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
+        self.player = AVAudioPlayer()
+        self.timeSlider.minimumValue = 0
+        self.timeSlider.maximumValue = 100
         
         let attrText = self.buildAttributedText(wordIndex: self.wordIndex)
         rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
         
-        
+        self.playRhyme()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -73,6 +80,21 @@ class RhymeViewController: UIViewController {
         // Search for word in remainingText
         return (self.remainingText.lowercased() as NSString).range(of: word)
     }
-
+    
+    func playRhyme() {
+        self.updater = CADisplayLink(target: self, selector: #selector(RhymeViewController.trackAudio))
+        self.updater.preferredFramesPerSecond = 60
+        self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+        
+        self.player = m.getRhymeAudio(id: self.id)
+        self.player?.prepareToPlay()
+        player?.delegate = self as? AVAudioPlayerDelegate
+        self.player?.play()
+    }
+    
+    func trackAudio() {
+        let normalizedTime = Float((self.player?.currentTime)! * 100.0 / (player?.duration)!)
+        timeSlider.value = normalizedTime
+    }
     
 }

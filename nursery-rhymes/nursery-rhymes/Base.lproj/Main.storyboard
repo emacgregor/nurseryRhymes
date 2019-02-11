@@ -47,33 +47,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlr-tI-Pol" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="33" y="597" width="309" height="70"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-8o-SJB">
+                                <rect key="frame" x="14" y="593" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save and Exit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="ony-Ya-1N0" kind="show" id="MO8-h3-aWJ"/>
-                                </connections>
-                            </button>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Little Tom Tucker" id="eoq-9a-lU7">
-                        <barButtonItem key="leftBarButtonItem" title="Audio" id="pcJ-S6-yr1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="pcJ-S6-yr1">
+                            <connections>
+                                <segue destination="ony-Ya-1N0" kind="show" id="yld-yd-0zG"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Quiz" id="Ali-HM-WaK"/>
                             <barButtonItem style="plain" id="aQx-ow-u79">
@@ -91,6 +78,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
+                        <outlet property="timeSlider" destination="2IR-8o-SJB" id="8AZ-fZ-XP3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,7 +452,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="frj-is-4df"/>
-        <segue reference="MO8-h3-aWJ"/>
+        <segue reference="yld-yd-0zG"/>
         <segue reference="Agx-4Y-1MI"/>
         <segue reference="J4l-Ju-kgD"/>
     </inferredMetricsTieBreakers>
