@@ -29,13 +29,11 @@ class Model {
     }
     
     func readJSONModel() {
-        if let path = Bundle.main.path(forResource: "rhymeText", ofType: "json")//, inDirectory: "Rhyme_packs")
-        {
+        if let path = Bundle.main.path(forResource: "rhymeText", ofType: "json")        {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
                 jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
                 rhymes = (jsonModel as! [[String:String]])
-                //print(rhymes)
             } catch let error {
                 print(error)
             }
@@ -44,41 +42,16 @@ class Model {
         }
     }
     
-    func readFileNameList() {
-        if let path = Bundle.main.path(forResource: "FileNames", ofType: "txt")
-        {
-            do {
-                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                for fileName in txtData.characters.split(separator: "\n") {
-                    var line = String(fileName)
-                    let end = line.index(line.endIndex, offsetBy: -4)
-                    line = line.substring(to: end)
-                    self.fileNameList.append(String(line))
-                }
-            } catch let error as NSError {
-                print(error)
-            }
-        } else {
-            print("File not found: FileNames.txt")
+    func getRhymeFileName(id: Int) -> String {
+        var collectionName =  rhymes[id]["collection"]!
+        if (collectionName == "Father Goose Visit") {
+            collectionName = "FGV"
+        } else if (collectionName == "Mother Goose Visit") {
+            collectionName = "MGV"
         }
+        return rhymes[id]["title"]! + collectionName
     }
-    
-    func getRhymeText(rawText: String) -> String {
-        var result = String()
-        
-        let lines = rawText.characters.split(separator: "\n")
-        for line in lines {
-            let words = line.split(separator: " ")
-            
-            var word = String(words[1])
-            let end = word.index(word.endIndex, offsetBy: -1)
-            word = word.substring(to: end)
-            result.append(word)
-            result.append(" ")
-        }
-        return result
-    }
-    
+
     func getRhymeName(id: Int) -> String {
         return rhymes[id]["title"]!
     }
@@ -88,7 +61,7 @@ class Model {
     }
     
     func getRhymeTranscript(id: Int) -> String {
-        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
+        let filename = getRhymeFileName(id: id)
         
         if let path = Bundle.main.path(forResource: filename, ofType: "transcript", inDirectory: "rhyme_files")
         {
@@ -100,14 +73,14 @@ class Model {
                 print(error)
             }
         } else {
-            print("File not found: transcripts/"+filename+".transcript")
+            print("File not found: rhyme_files/"+filename+".transcript")
         }
         
         return String()
     }
     
     func getRhymeAudio(id: Int) -> AVAudioPlayer {
-        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
+        let filename = getRhymeFileName(id: id)
         
         if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
         {
@@ -121,7 +94,7 @@ class Model {
                 print(error.localizedDescription)
             }
         } else {
-            print("File not found: transcripts/"+filename+".jpg")
+            print("File not found: rhyme_files/"+filename+".jpg")
         }
         
         print("Audio player error for rhyme_files/\(filename).mp3")
@@ -129,13 +102,13 @@ class Model {
     }
     
     func getRhymeImage(id: Int) -> UIImage {
-        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]!
+        let filename = getRhymeFileName(id: id)
         
         if let path = Bundle.main.path(forResource: filename, ofType: "jpg", inDirectory: "rhyme_files")
         {
             return UIImage(contentsOfFile: path)!
         } else {
-            print("File not found: transcripts/"+filename+".jpg")
+            print("File not found: rhyme_files/"+filename+".jpg")
         }
         
         return UIImage(named: "pandaprofile.png")!;

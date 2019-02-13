@@ -76,7 +76,6 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func buildAttributedText(wordIndex: Int) {
-        let remLength = remainingText.characters.count
         let difference = NSString(string: rhymeText).length - NSString(string: remainingText).length
         
         let attrText = NSMutableAttributedString(string: self.rhymeText)
@@ -89,11 +88,11 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
         
         var newRemaining = NSString(string: remainingText)
-        let newRemLength = newRemaining.length
-        //Plus one here for the spaces
+        
         newRemaining = newRemaining.substring(with:
-            NSMakeRange(wordRange.length + 1, newRemaining.length - wordRange.length - 1)) as NSString
-        self.remainingText = newRemaining as String
+            NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
+        //make sure to trim whitespace
+        self.remainingText = (newRemaining as String).trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
