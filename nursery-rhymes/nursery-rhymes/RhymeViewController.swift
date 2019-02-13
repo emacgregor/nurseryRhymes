@@ -76,21 +76,24 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func buildAttributedText(wordIndex: Int) {
-        //let difference = NSString(string: rhymeText).length - NSString(string: remainingText).length
+        let remLength = remainingText.characters.count
+        let difference = NSString(string: rhymeText).length - NSString(string: remainingText).length
         
         let attrText = NSMutableAttributedString(string: self.rhymeText)
         let wordRange = getCurrentWordRange(wordIndex: wordIndex)
-        //let correctedRange = NSMakeRange(wordRange.location + difference,
-        //                                 wordRange.length)
+        let correctedRange = NSMakeRange(wordRange.location + difference,
+                                         wordRange.length)
         attrText.addAttribute(NSBackgroundColorAttributeName,
                           value: UIColor.yellow,
-                          range: wordRange)
+                          range: correctedRange)
         self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
         
-        /*var newRemaining = NSString(string: remainingText)
-        newRemaining = newRemaining.substring(with: NSMakeRange(wordRange.location + wordRange.length,
-                                                                newRemaining.length)) as NSString
-        self.remainingText = newRemaining as String*/
+        var newRemaining = NSString(string: remainingText)
+        let newRemLength = newRemaining.length
+        //Plus one here for the spaces
+        newRemaining = newRemaining.substring(with:
+            NSMakeRange(wordRange.length + 1, newRemaining.length - wordRange.length - 1)) as NSString
+        self.remainingText = newRemaining as String
     }
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
@@ -147,15 +150,18 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         if (transcriptTimes[wordIndex].1 < Float((self.player?.currentTime)!) ) {
             if (wordIndex < (transcriptTimes.count - 1)) {
                 wordIndex += 1
+                //rebuild the label only when word change is detected
+                self.buildAttributedText(wordIndex: self.wordIndex)
             }
         }
-        
-        self.buildAttributedText(wordIndex: self.wordIndex)
     }
     
     // From AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         //reset highlighting when audio finishes
         self.wordIndex = 0
+        self.remainingText = self.rhymeText
+        self.preparePlayer()
+        self.buildAttributedText(wordIndex: self.wordIndex)
     }
 }
