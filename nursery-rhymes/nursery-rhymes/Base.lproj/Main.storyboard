@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F74-PD-hHv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F74-PD-hHv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,58 +31,6 @@
         <scene sceneID="Plt-VB-0av">
             <objects>
                 <viewController id="UZ7-Sz-QO0" customClass="RhymeViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lmu-GT-jka"/>
-                        <viewControllerLayoutGuide type="bottom" id="2T5-Q5-pyX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0xN-aa-wf0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-UT-pbk">
-                                <rect key="frame" x="33" y="103" width="309" height="422"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-8o-SJB">
-                                <rect key="frame" x="14" y="533" width="347" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-dZ-J3d">
-                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="raZ-Pt-OJn"/>
-                                    <barButtonItem systemItem="rewind" id="1jW-nX-LfI">
-                                        <connections>
-                                            <action selector="rewindClicked:" destination="UZ7-Sz-QO0" id="FcA-0q-uff"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="DGA-jq-b27"/>
-                                    <barButtonItem title="Item" systemItem="play" id="sEw-yI-cSW">
-                                        <connections>
-                                            <action selector="playClicked:" destination="UZ7-Sz-QO0" id="9Kn-Or-pZy"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="0YY-ES-Cxe"/>
-                                    <barButtonItem systemItem="fastForward" id="kSq-Kt-AOK">
-                                        <connections>
-                                            <action selector="fastforwardClicked:" destination="UZ7-Sz-QO0" id="lof-yg-MWq"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZQS-1e-ugn"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Gd8-dZ-J3d" secondAttribute="trailing" id="grt-kc-xFk"/>
-                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="Gd8-dZ-J3d" secondAttribute="bottom" id="jhf-RC-tNe"/>
-                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="Gd8-dZ-J3d" secondAttribute="bottom" id="mOU-hF-bsj"/>
-                            <constraint firstItem="Gd8-dZ-J3d" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leading" id="t2k-PM-F3B"/>
-                        </constraints>
-                    </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Little Tom Tucker" id="9jj-gb-z2R">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="roL-VD-1Kb">
@@ -93,24 +40,14 @@
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Quiz" id="Ago-2E-9li"/>
-                            <barButtonItem style="plain" id="eS2-ts-TS3">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hyt-C7-sm5">
-                                    <rect key="frame" x="195" y="7" width="121" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Home Experience"/>
-                                    <connections>
-                                        <action selector="homeexperience:" destination="UZ7-Sz-QO0" eventType="primaryActionTriggered" id="XeV-p3-qPj"/>
-                                    </connections>
-                                </button>
+                            <barButtonItem title="Home Experience" id="Z4m-a6-mGV" userLabel="Home Experience">
+                                <connections>
+                                    <segue destination="8z7-KN-B9n" kind="show" id="2Ir-Ao-yke"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="playButton" destination="sEw-yI-cSW" id="qjQ-Mz-iIQ"/>
-                        <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
-                        <outlet property="timeSlider" destination="2IR-8o-SJB" id="8AZ-fZ-XP3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="6wg-QJ-AMK" id="sbs-Md-rWL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -480,11 +417,29 @@
             </objects>
             <point key="canvasLocation" x="-303.19999999999999" y="-206.44677661169416"/>
         </scene>
+        <!--Home Experience-->
+        <scene sceneID="IjA-9c-5f7">
+            <objects>
+                <viewController id="8z7-KN-B9n" userLabel="Home Experience" customClass="HomeExViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jDI-Wt-Rjt"/>
+                        <viewControllerLayoutGuide type="bottom" id="AcN-uC-ZDd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEC-H1-SCk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0O-DM-mGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-206"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="frj-is-4df"/>
-        <segue reference="2m8-hp-Clp"/>
         <segue reference="Agx-4Y-1MI"/>
         <segue reference="J4l-Ju-kgD"/>
+        <segue reference="2m8-hp-Clp"/>
+        <segue reference="UEc-oW-tuV"/>
     </inferredMetricsTieBreakers>
 </document>

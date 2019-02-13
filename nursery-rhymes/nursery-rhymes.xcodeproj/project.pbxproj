@@ -16,6 +16,7 @@
 		49A694FC21F5678E002C984A /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694FB21F5678E002C984A /* RhymeViewController.swift */; };
 		49A6950021F56CE5002C984A /* pandaprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A694FF21F56CE5002C984A /* pandaprofile.png */; };
 		49A6950221F56DFC002C984A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6950121F56DFC002C984A /* CustomCell.swift */; };
+		573214C02213913C005C9058 /* HomeExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573214BF2213913C005C9058 /* HomeExViewController.swift */; };
 		8C64AF6D2210E17800523DCC /* rhyme_files in Resources */ = {isa = PBXBuildFile; fileRef = 8C64AF6C2210E17800523DCC /* rhyme_files */; };
 		8C64AF702210E4CC00523DCC /* rhymeText.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C64AF6F2210E4CC00523DCC /* rhymeText.json */; };
 		AC69EADB0000316C00BD009C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69EADA0000316C00BD009C /* CollectionViewController.swift */; };
@@ -60,6 +61,7 @@
 		49A694FB21F5678E002C984A /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		49A694FF21F56CE5002C984A /* pandaprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pandaprofile.png; sourceTree = "<group>"; };
 		49A6950121F56DFC002C984A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		573214BF2213913C005C9058 /* HomeExViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExViewController.swift; sourceTree = "<group>"; };
 		8C64AF6C2210E17800523DCC /* rhyme_files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rhyme_files; path = ../rhyme_files; sourceTree = "<group>"; };
 		8C64AF6F2210E4CC00523DCC /* rhymeText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rhymeText.json; sourceTree = "<group>"; };
 		AC69EADA0000316C00BD009C /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				ACF44A520000054000B9A67C /* nursery_rhymes.xcdatamodeld */,
 				ACF44A7C0000085F00B9A67C /* Model.swift */,
 				AC69EADE0000415700BD009C /* FileNames.txt */,
+				573214BF2213913C005C9058 /* HomeExViewController.swift */,
 			);
 			path = "nursery-rhymes";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				ACF44A540000054000B9A67C /* nursery_rhymes.xcdatamodeld in Sources */,
 				AC69EADD0000346600BD009C /* LoginViewController.swift in Sources */,
 				ACF44A7D0000085F00B9A67C /* Model.swift in Sources */,
+				573214C02213913C005C9058 /* HomeExViewController.swift in Sources */,
 				49A6950221F56DFC002C984A /* CustomCell.swift in Sources */,
 				49A694F621F566B7002C984A /* SettingsViewController.swift in Sources */,
 			);

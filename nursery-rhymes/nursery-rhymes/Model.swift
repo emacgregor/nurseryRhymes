@@ -19,6 +19,7 @@ class Model {
     var rhymes = [[String: String]]()
     
     var player: AVAudioPlayer?
+    var homeExes = [AVAudioPlayer]()
     
     init() {
         jsonModel = String()
@@ -121,11 +122,40 @@ class Model {
                 print(error.localizedDescription)
             }
         } else {
-            print("File not found: transcripts/"+filename+".jpg")
+            print("File not found: rhyme_files/"+filename+".mp3")
         }
         
         print("Audio player error for rhyme_files/\(filename).mp3")
         return self.player!
+    }
+    func getHomeExAudio(id: Int) -> [AVAudioPlayer] {
+        self.homeExes = []
+        
+        var index = 1
+        let filename = rhymes[id]["title"]! + rhymes[id]["collection"]! + "HE" + String(index)
+        print(filename)
+        
+        var flag = true
+        while flag {
+            if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
+            {
+                do {
+                    print(url)
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                    try AVAudioSession.sharedInstance().setActive(true)
+                    
+                    self.homeExes.append(try AVAudioPlayer(contentsOf: url))
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+            } else {
+                print("File not found: rhyme_files/"+filename+".mp3")
+                flag = false
+            }
+        }
+        
+        print("Returning home experience audio players")
+        return self.homeExes
     }
     
     func getRhymeImage(id: Int) -> UIImage {
