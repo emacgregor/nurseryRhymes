@@ -55,8 +55,6 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
         self.player = AVAudioPlayer()
-        print(timeSlider)
-        
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
         
