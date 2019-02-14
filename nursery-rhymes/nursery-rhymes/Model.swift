@@ -100,6 +100,27 @@ class Model {
         print("Audio player error for rhyme_files/\(filename).mp3")
         return self.player!
     }
+    func getHomeExAudio(rhymeId: Int, homeExId: Int) -> AVAudioPlayer? {
+        var filename = getRhymeFileName(id: rhymeId)
+        filename = filename + "HE" + String(homeExId)
+        
+        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
+        {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                self.player = try AVAudioPlayer(contentsOf: url)
+                return self.player
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("File not found: rhyme_files/"+filename+".mp3")
+        }
+        
+        return nil
+    }
     
     func getRhymeImage(id: Int) -> UIImage {
         let filename = getRhymeFileName(id: id)

@@ -28,10 +28,13 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    @IBOutlet weak var homeExperienceBar: UIToolbar!
+    
     var id = Int()
     var message = String()
     var player: AVAudioPlayer?
     var updater: CADisplayLink! = nil
+    var homeExBarItems = [UIBarButtonItem]()
     
     var m = Model()
     
@@ -60,7 +63,10 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.buildAttributedText(wordIndex: self.wordIndex)
 
-        self.preparePlayer()
+        self.buildHomeExBar()
+        //Make sure you do this after building home experience bar,
+        //or wrong audio will play
+        //self.preparePlayer()  <-- move into playRhyme now that we're reusing player for HE's
         self.playRhyme()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +79,43 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         self.player?.stop()
         self.updater.invalidate()
+    }
+    
+    func buildHomeExBar() {
+        var homeExCount = 0
+        var index = 1
+        
+        while (index != 0) {
+            //not actually using audio, just checking if it's there
+            let homeExAudio = m.getHomeExAudio(rhymeId: id, homeExId: index)
+            if (homeExAudio == nil) {
+                //End loop
+                homeExCount = index - 1
+                index = 0
+            }
+        }
+        
+        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                                   target: nil,
+                                                   action: nil))
+        for i in 0...homeExCount {
+            let button = UIBarButtonItem(barButtonSystemItem: .play,
+                                                       target: self,
+                                                       action: #selector(RhymeViewController.playHomeExperience))
+            button.tag = i
+            self.homeExBarItems.append(button)
+        }
+        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                                   target: nil,
+                                                   action: nil))
+    }
+    
+    func playHomeExperience(sender: UIBarButtonItem) {
+        let homeExId = sender.tag
+        self.player = m.getHomeExAudio(rhymeId: id, homeExId: homeExId)
+        self.player?.delegate = self as AVAudioPlayerDelegate
+        self.player?.prepareToPlay()
+        self.player?.play()
     }
     
     func buildAttributedText(wordIndex: Int) {
@@ -117,6 +160,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func playRhyme() {
+        self.preparePlayer()
         self.player?.prepareToPlay()
         self.player?.play()
     }
