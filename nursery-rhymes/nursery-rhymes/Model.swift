@@ -139,6 +139,14 @@ class Model {
         return rhymes[id]["collection"]!
     }
     
+    func getRhymesForCollection(collectionName: String) ->[[String: String]] {
+        var tempRhymes = self.rhymes
+        tempRhymes = tempRhymes.filter { (rhyme: [String : String]) -> Bool in
+            return rhyme["collection"] == collectionName
+        }
+        return tempRhymes
+    }
+    
     static func getModel() -> Model {
         return Model.model
     }

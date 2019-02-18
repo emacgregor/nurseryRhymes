@@ -13,12 +13,13 @@ struct cellData {
     let id: Int?
 }
 class RhymesTableController : UITableViewController {
-    var data = [cellData]()
-    
+    var collectionName: String!
     var m = Model.getModel()
     
+    var data = [cellData]()
+    
     override func viewDidLoad() {
-        for (id, _) in m.rhymes.enumerated() {
+        for (id, _) in m.getRhymesForCollection(collectionName: self.collectionName).enumerated() {
             data.append(cellData(
                 image: m.getRhymeImage(id: id),
                 message: m.getRhymeName(id: id),
@@ -33,6 +34,11 @@ class RhymesTableController : UITableViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
     }
+    
+    @IBAction func popToCollectionList(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
         cell.mainImage = data[indexPath.row].image

@@ -10,6 +10,8 @@
 import UIKit
 
 class CollectionViewController : UIViewController {
+    
+    var collectionToOpen = String()
    
     @IBOutlet weak var back: UIBarButtonItem!
     override func viewDidLoad() {
@@ -25,11 +27,34 @@ class CollectionViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         //nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange] // swift 4.2
     }
     
+    @IBAction func popToHome(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? RhymesTableController {
+            vc.collectionName = self.collectionToOpen
+        }
+    }
+    @IBAction func openVolland(_ sender: Any) {
+        self.collectionToOpen = "Volland"
+        performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
+    @IBAction func openJerrold(_ sender: Any) {
+        self.collectionToOpen = "Volland"
+        performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
+    @IBAction func openMotherGoose(_ sender: Any) {
+        self.collectionToOpen = "Volland"
+        performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
 }

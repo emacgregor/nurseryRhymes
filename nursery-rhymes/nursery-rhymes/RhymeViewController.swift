@@ -28,6 +28,10 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    @IBAction func popToRhymeList(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBOutlet weak var homeExperienceBar: UIToolbar!
     
     var id = Int()
