@@ -3,29 +3,29 @@ import os
 from pprint import pprint
 import shutil
 
-"""for file in os.listdir('Father Goose/Successes/'):
-    print ('Father Goose/Successes/' + file[9:])
-    os.rename('Father Goose/Successes/' + file, 'Father Goose/Successes/' + file[9:])"""
+"""for file in os.listdir('Jerrold/Successes/'):
+    print ('Jerrold/Successes/' + file[9:])
+    os.rename('Jerrold/Successes/' + file, 'Jerrold/Successes/' + file[9:])"""
 
 with open('rhymeText.json', 'r', encoding='utf8') as data_file:
     parsed_json = json.load(data_file)
 
 counter = 1
-for folder in os.listdir('Father Goose/Failures'):
+for folder in os.listdir('Jerrold/Failures'):
     title = ""
-    """if (len(os.listdir('Father Goose/Failures/' + folder)) == 1):
-        shutil.rmtree("Father Goose/Failures/" + folder)
+    """if (len(os.listdir('Jerrold/Failures/' + folder)) == 1):
+        shutil.rmtree("Jerrold/Failures/" + folder)
     else:"""
-    for file in os.listdir('Father Goose/Failures/' + folder):
+    for file in os.listdir('Jerrold/Failures/' + folder):
         if (file[-5:] == "title"):
             title = file[:-6]
     print (title)
     for rhyme in parsed_json:
-        if (rhyme["title"] == title and rhyme["collection"] == "Father Goose Visit"):
+        if (rhyme["title"] == title and rhyme["collection"] == "Jerrold"):
             print ("I found one, I found one!")
-            file = open("Father Goose/Successes/" + title + "FGV.txt", "w")
+            file = open("Jerrold/Successes/" + title + "Jerrold.txt", "w")
             file.write(rhyme["text"])
-            os.rename('Father Goose/Failures/' + folder + "/Artwork.jpg", "Father Goose/Successes/" + title + "FGV.jpg")
-            os.rename('Father Goose/Failures/' + folder + "/Audio.mp3", "Father Goose/Successes/" + title + "FGV.mp3")
-            os.rename('Father Goose/Failures/' + folder + "/transcript.txt", "Father Goose/Successes/" + title + "FGV.transcript")
-            shutil.rmtree("Father Goose/Failures/" + folder)
+            os.rename('Jerrold/Failures/' + folder + "/Artwork.jpg", "Jerrold/Successes/" + title + "Jerrold.jpg")
+            os.rename('Jerrold/Failures/' + folder + "/Audio.mp3", "Jerrold/Successes/" + title + "Jerrold.mp3")
+            os.rename('Jerrold/Failures/' + folder + "/transcript.txt", "Jerrold/Successes/" + title + "Jerrold.transcript")
+            shutil.rmtree("Jerrold/Failures/" + folder)
