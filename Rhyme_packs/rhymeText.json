@@ -461,8 +461,8 @@
         {
             "id":"67",
             "title":"The Queen of Hearts",
-            "collection":"Jerrold",
-            "text":"The Queen of Hearts,\nShe made some tarts\nAll on a summer's day;\nThe Knave of Hearts,\nHe stole those tarts,\nAnd took them clean away."
+            "collection":"Volland",
+            "text":"The Queen of Hearts,\nShe made some tarts\nAll on a summer's day;\nThe Knave of Hearts,\nHe stole those tarts,\nAnd took them clean away.\n\nThe King of Hearts\nCalled for the tarts,\nAnd beat the Knave full sore;\nThe Knave of Hearts\nBrought back the tarts,\nAnd promised he'd steal no more.\n"
         },
 
         {
@@ -1079,7 +1079,7 @@
 
         {
             "id":"164",
-            "title":"What are little boys made of, made of",
+            "title":"What are little boys made of, made of?",
             "collection":"Father Goose Visit",
             "text":"What are little boys made of, made of?\nWhat are little boys made of?\n\"Snaps and snails, and puppy-dogs' tails,\nAnd that's what little boys are made of.\"\n\nWhat are little girls made of, made of?\nWhat are little girls\nmade of?\n\"Sugar and spice, and everything nice,\nAnd that's what little girls are made of.\"\n"
         },
@@ -1653,7 +1653,7 @@
 
         {
             "id":"249",
-            "title":"Jack Sprat",
+            "title":"Jack Sprat ",
             "collection": "Mother Goose Visit",
             "text":"Jack Sprat would eat no fat,\nHis wife would eat no lean;\nAnd so between the two of them\nThey licked the platter clean.\n"
         },
@@ -1778,12 +1778,5 @@
             "title":"Do you know the muffin-man",
             "collection":"Mother Goose Visit",
             "text":"Oh, do you know the muffin-man,\nThe muffin-man, the muffin-man,\nDo you know the muffin-man\nWho lives in Drury Lane?\nYes, I know the muffin-man,\nThe muffin-man, the muffin-man,\nYes, I know the muffin-man\nWho lives in Drury Lane.\n"
-        },
-
-        {
-            "id":"256",
-            "title":"Bah, bah, black sheep",
-            "collection":"Mother Goose Visit",
-            "text":"Bah, bah, black sheep,\nHave you any wool?\nYes sir, Yes sir,\nThree bags full.\nOne for my master,\nOne for my dame,\nAnd one for the little boy\nWho lives down the lane.\n"
         }
 ]
