@@ -5,6 +5,7 @@ from shutil import copyfile
 for filename in os.listdir('Home Experiences'):
     name = filename
     filename = filename.replace('_', ' ')
+    print (filename)
     label = re.sub("([A-Z])"," \g<0>",filename).replace('  ', ' ')
     filename = label
     name1 = filename[1:-6] + "MGV" + filename[-4:]
