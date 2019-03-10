@@ -83,7 +83,11 @@ class Model {
         var filename = getRhymeFileName(id: rhymeId)
         filename = filename + "HE" + String(homeExId)
         
-        return filename
+        if Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files") != nil {
+            return filename
+        } else {
+            return ""
+        }
     }
     
     func getRhymeImage(id: Int) -> UIImage {

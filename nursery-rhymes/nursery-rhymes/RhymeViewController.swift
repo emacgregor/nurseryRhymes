@@ -50,6 +50,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         } else {
             self.buildHomeExBar()
             self.rhymeLabel.text = m.getRhymeText(id: self.id)
+            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
         }
 
 
@@ -88,6 +89,8 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
                 //End loop
                 homeExCount = index - 1
                 index = 0
+            } else {
+                index = index + 1
             }
         }
         

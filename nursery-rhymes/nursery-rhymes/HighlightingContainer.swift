@@ -17,7 +17,7 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
     var remainingText = String()
     var wordIndex = 0
     var id = 0
-    var rhymeViewController = RhymeViewController()
+    var rhymeViewController: RhymeViewController?
     var updater: CADisplayLink! = nil
     
     override init() {
@@ -28,17 +28,18 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
     func loadRhyme(id: Int, rhymeViewController: RhymeViewController) {
         self.reset()
         let m = Model.getModel()
+        m.audioContainer.loadFile(filename: m.getRhymeFileName(id: id))
+        
         self.id = id
         self.transcript = m.getRhymeTranscript(id: self.id)
         self.rhymeText = m.getRhymeText(id: self.id)
         self.remainingText = self.rhymeText
         self.parseTranscript()
         self.rhymeViewController = rhymeViewController
-        m.audioContainer.setDelegate(viewController: self)
+        m.audioContainer.setDelegate(delegate: self)
         self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
         self.updater.preferredFramesPerSecond = 60
         self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
-        m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
     }
     
     func parseTranscript() {
@@ -69,7 +70,7 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
             attrText.addAttribute(NSBackgroundColorAttributeName,
                                   value: UIColor.yellow,
                                   range: correctedRange)
-            self.rhymeViewController.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
+            self.rhymeViewController!.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
             
             var newRemaining = NSString(string: remainingText)
             //get rid of this range so that we don't re-highlight the first location of a word
@@ -106,15 +107,19 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
         let lines = self.transcript.characters.split(separator: "\n")
-        let words = lines[wordIndex].split(separator: " ")
-        
-        var word = String(words[1]).lowercased()
-        let end = word.index(word.endIndex, offsetBy: -1)
-        word = word.substring(to: end)
-        
-        // Search for word in remainingText
-        let range = (self.remainingText.lowercased() as NSString).range(of: word)
-        return range
+        if wordIndex < lines.count {
+            let words = lines[wordIndex].split(separator: " ")
+            
+            var word = String(words[1]).lowercased()
+            let end = word.index(word.endIndex, offsetBy: -1)
+            word = word.substring(to: end)
+            
+            // Search for word in remainingText
+            let range = (self.remainingText.lowercased() as NSString).range(of: word)
+            return range
+        } else {
+            return NSMakeRange(0, 0)
+        }
     }
     
     func reset() {
@@ -122,7 +127,9 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         self.transcript = String()
         self.rhymeText = String()
         self.remainingText = String()
-        self.updater.invalidate()
+        self.remainingText = String()
+        self.wordIndex = Int()
+        self.updater = nil
     }
     
 }
