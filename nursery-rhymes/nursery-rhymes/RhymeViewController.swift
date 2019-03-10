@@ -20,10 +20,10 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     @IBAction func playClicked(_ sender: Any) {
         if (self.player?.isPlaying)! {
-            self.pauseRhyme()
+            //self.pauseRhyme()
             playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(RhymeViewController.playClicked))
         } else {
-            self.playRhyme()
+            //self.playRhyme()
             playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.pause, target: self, action: #selector(RhymeViewController.playClicked))
         }
     }
@@ -60,7 +60,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
-        self.player = AVAudioPlayer()
+        //self.player = AVAudioPlayer()
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
         
@@ -70,7 +70,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         //Make sure you do this after building home experience bar,
         //or wrong audio will play
         //self.preparePlayer()  <-- move into playRhyme now that we're reusing player for HE's
-        self.playRhyme()
+        //self.playRhyme()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -91,8 +91,8 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         
         while (index != 0) {
             //not actually using audio, just checking if it's there
-            let homeExAudio = m.getHomeExAudio(rhymeId: id, homeExId: index)
-            if (homeExAudio == nil) {
+            let homeExFilename = m.getHomeExFilename(rhymeId: id, homeExId: index)
+            if (homeExFilename == "") {
                 //End loop
                 homeExCount = index - 1
                 index = 0
@@ -122,7 +122,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.updater.invalidate()
         
         let homeExId = sender.tag + 1
-        self.player = m.getHomeExAudio(rhymeId: id, homeExId: homeExId)
+        //self.player = m.getHomeExAudio(rhymeId: id, homeExId: homeExId)
         self.player?.delegate = self as AVAudioPlayerDelegate
         self.player?.prepareToPlay()
         self.player?.play()
@@ -166,20 +166,20 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         return range
     }
     
-    func preparePlayer() {
+    /*func preparePlayer() {
         self.updater = CADisplayLink(target: self, selector: #selector(RhymeViewController.trackAudio))
         self.updater.preferredFramesPerSecond = 60
         self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
         
         self.player = m.getRhymeAudio(id: self.id)
         self.player?.delegate = self as AVAudioPlayerDelegate
-    }
+    }*/
     
-    func playRhyme() {
+    /*func playRhyme() {
         self.preparePlayer()
         self.player?.prepareToPlay()
         self.player?.play()
-    }
+    }*/
     
     func pauseRhyme() {
         self.player?.pause()
@@ -220,7 +220,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         //reset highlighting when audio finishes
         self.wordIndex = 0
         self.remainingText = self.rhymeText
-        self.preparePlayer()
+        //self.preparePlayer()
         self.buildAttributedText(wordIndex: self.wordIndex)
     }
 }

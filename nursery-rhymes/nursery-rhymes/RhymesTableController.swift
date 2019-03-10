@@ -19,8 +19,10 @@ class RhymesTableController : UITableViewController {
     var data = [cellData]()
     
     override func viewDidLoad() {
-        for (id, rhyme) in m.getRhymesForCollection(collectionName: self.collectionName).enumerated() {
-            let rhymeid = Int(rhyme["id"]!)!
+        let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
+        
+        for id in Array(collectionRhymes.keys) {
+            let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
             data.append(cellData(
                 image: m.getRhymeImage(id: rhymeid),
                 message: m.getRhymeName(id: rhymeid),

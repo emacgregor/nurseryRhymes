@@ -52,11 +52,11 @@ class Model {
     }
 
     func getRhymeName(id: Int) -> String {
-        return rhymes[id]["title"]!
+        return rhymes[id]?["title"]! ?? ""
     }
     
     func getRhymeText(id: Int) -> String {
-        return rhymes[id]["text"]!
+        return rhymes[id]?["text"]! ?? ""
     }
     
     func getRhymeTranscript(id: Int) -> String {
@@ -78,7 +78,7 @@ class Model {
         return String()
     }
     
-    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> AVAudioPlayer? {
+    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> String {
         var filename = getRhymeFileName(id: rhymeId)
         filename = filename + "HE" + String(homeExId)
         
@@ -99,20 +99,27 @@ class Model {
     }
     
     func getRhymeCollection(id: Int) -> String {
-        var collectionName =  rhymes[id]["collection"]!
+        var collectionName =  rhymes[id]?["collection"]!
         if (collectionName == "Father Goose Visit") {
             collectionName = "FGV"
         } else if (collectionName == "Mother Goose Visit") {
             collectionName = "MGV"
         }
-        return collectionName
+        return collectionName ?? ""
     }
     
-    func getRhymesForCollection(collectionName: String) ->[[String: String]] {
-        var tempRhymes = self.rhymes
-        tempRhymes = tempRhymes.filter { (rhyme: [String : String]) -> Bool in
-            return rhyme["collection"] == collectionName
+    func getRhymesForCollection(collectionName: String) ->[Int: [String: String]] {
+        var tempRhymes = [Int: [String: String]]()
+        //tempRhymes = tempRhymes.filter { (rhyme: [String : String]) -> Bool inreturn
+            //rhyme["collection"] == collectionName
+        //}
+        let validRhymeIds = Array(self.rhymes.keys).filter { (key: Int) -> Bool in
+            return self.rhymes[key]?["collection"] == collectionName
         }
+        for key in validRhymeIds {
+            tempRhymes[key] = self.rhymes[key]
+        }
+        
         return tempRhymes
     }
     
