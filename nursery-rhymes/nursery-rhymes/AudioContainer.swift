@@ -74,5 +74,11 @@ class AudioContainer {
     func setDelegate(viewController: AVAudioPlayerDelegate) {
         self.player?.delegate = viewController
     }
+    
+    func isPlaying() -> Bool {
+        return (self.player?.isPlaying)!
+    }
+    
+  
 }
 

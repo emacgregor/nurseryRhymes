@@ -19,6 +19,7 @@ class Model {
     var rhymes = [Int: [String: String]]()
     
     var audioContainer = AudioContainer()
+    var highlightingContainer = HighlightingContainer()
     
     init() {
         jsonModel = String()
