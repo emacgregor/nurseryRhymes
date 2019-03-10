@@ -16,15 +16,13 @@ class Model {
     var jsonModel: Any
     var collections = [String: [String: String]]()
     var fileNameList = [String]()
-    var rhymes = [[String: String]]()
+    var rhymes = [Int: [String: String]]()
     
-    var player: AVAudioPlayer?
+    var audioContainer = AudioContainer()
     
     init() {
         jsonModel = String()
         collections["Volland"] = [String: String]()
-        player = AVAudioPlayer()
-
         readJSONModel()
     }
     
@@ -33,7 +31,14 @@ class Model {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
                 jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
-                rhymes = (jsonModel as! [[String:String]])
+                let rhymesData = (jsonModel as! [[String:String]])
+                
+                rhymes = [Int: [String:String]]();
+                for (_, rhyme) in rhymesData.enumerated() {
+                    let rhymeId = Int(rhyme["id"]!)
+                    rhymes[rhymeId!] = rhyme
+                }
+                
             } catch let error {
                 print(error)
             }
@@ -43,13 +48,7 @@ class Model {
     }
     
     func getRhymeFileName(id: Int) -> String {
-        var collectionName =  rhymes[id]["collection"]!
-        if (collectionName == "Father Goose Visit") {
-            collectionName = "FGV"
-        } else if (collectionName == "Mother Goose Visit") {
-            collectionName = "MGV"
-        }
-        return rhymes[id]["title"]! + collectionName
+        return getRhymeName(id: id) + getRhymeCollection(id: id)
     }
 
     func getRhymeName(id: Int) -> String {
@@ -79,47 +78,11 @@ class Model {
         return String()
     }
     
-    func getRhymeAudio(id: Int) -> AVAudioPlayer {
-        let filename = getRhymeFileName(id: id)
-        
-        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
-        {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                self.player = try AVAudioPlayer(contentsOf: url)
-                return self.player!
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("File not found: rhyme_files/"+filename+".jpg")
-        }
-        
-        print("Audio player error for rhyme_files/\(filename).mp3")
-        return self.player!
-    }
-    func getHomeExAudio(rhymeId: Int, homeExId: Int) -> AVAudioPlayer? {
+    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> AVAudioPlayer? {
         var filename = getRhymeFileName(id: rhymeId)
         filename = filename + "HE" + String(homeExId)
         
-        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
-        {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                self.player = try AVAudioPlayer(contentsOf: url)
-                return self.player
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("File not found: rhyme_files/"+filename+".mp3")
-        }
-        
-        return nil
+        return filename
     }
     
     func getRhymeImage(id: Int) -> UIImage {
@@ -136,7 +99,13 @@ class Model {
     }
     
     func getRhymeCollection(id: Int) -> String {
-        return rhymes[id]["collection"]!
+        var collectionName =  rhymes[id]["collection"]!
+        if (collectionName == "Father Goose Visit") {
+            collectionName = "FGV"
+        } else if (collectionName == "Mother Goose Visit") {
+            collectionName = "MGV"
+        }
+        return collectionName
     }
     
     func getRhymesForCollection(collectionName: String) ->[[String: String]] {

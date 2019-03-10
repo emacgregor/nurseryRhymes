@@ -19,11 +19,12 @@ class RhymesTableController : UITableViewController {
     var data = [cellData]()
     
     override func viewDidLoad() {
-        for (id, _) in m.getRhymesForCollection(collectionName: self.collectionName).enumerated() {
+        for (id, rhyme) in m.getRhymesForCollection(collectionName: self.collectionName).enumerated() {
+            let rhymeid = Int(rhyme["id"]!)!
             data.append(cellData(
-                image: m.getRhymeImage(id: id),
-                message: m.getRhymeName(id: id),
-                id: id
+                image: m.getRhymeImage(id: rhymeid),
+                message: m.getRhymeName(id: rhymeid),
+                id: rhymeid
             ))
         }
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")

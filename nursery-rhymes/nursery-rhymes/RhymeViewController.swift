@@ -38,7 +38,6 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     var message = String()
     var player: AVAudioPlayer?
     var updater: CADisplayLink! = nil
-    var homeExBarItems = [UIBarButtonItem]()
     
     var m = Model()
     
@@ -86,6 +85,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func buildHomeExBar() {
+        var homeExBarItems = [UIBarButtonItem]()
         var homeExCount = 0
         var index = 1
         
@@ -99,23 +99,29 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
             }
         }
         
-        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+        homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                                    target: nil,
                                                    action: nil))
-        for i in 0...homeExCount {
-            let button = UIBarButtonItem(barButtonSystemItem: .play,
+        if (homeExCount > 0) {
+            for i in 0..<homeExCount {
+                let button = UIBarButtonItem(barButtonSystemItem: .play,
                                                        target: self,
                                                        action: #selector(RhymeViewController.playHomeExperience))
-            button.tag = i
-            self.homeExBarItems.append(button)
+                button.tag = i
+                homeExBarItems.append(button)
+            }
         }
-        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+        homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                                    target: nil,
                                                    action: nil))
+        self.homeExperienceBar.items = homeExBarItems
     }
     
     func playHomeExperience(sender: UIBarButtonItem) {
-        let homeExId = sender.tag
+        self.player?.stop()
+        self.updater.invalidate()
+        
+        let homeExId = sender.tag + 1
         self.player = m.getHomeExAudio(rhymeId: id, homeExId: homeExId)
         self.player?.delegate = self as AVAudioPlayerDelegate
         self.player?.prepareToPlay()
@@ -127,19 +133,24 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         
         let attrText = NSMutableAttributedString(string: self.rhymeText)
         let wordRange = getCurrentWordRange(wordIndex: wordIndex)
-        let correctedRange = NSMakeRange(wordRange.location + difference,
-                                         wordRange.length)
-        attrText.addAttribute(NSBackgroundColorAttributeName,
-                          value: UIColor.yellow,
-                          range: correctedRange)
-        self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
-        
-        var newRemaining = NSString(string: remainingText)
-        
-        newRemaining = newRemaining.substring(with:
-            NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
-        //make sure to trim whitespace
-        self.remainingText = (newRemaining as String).trimmingCharacters(in: .whitespacesAndNewlines)
+        if (wordRange.length > 0) {
+            let correctedRange = NSMakeRange(wordRange.location + difference - 1,
+                                             wordRange.length)
+            attrText.addAttribute(NSBackgroundColorAttributeName,
+                              value: UIColor.yellow,
+                              range: correctedRange)
+            self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
+            
+            var newRemaining = NSString(string: remainingText)
+            //get rid of this range so that we don't re-highlight the first location of a word
+            newRemaining = newRemaining.substring(with:
+                NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
+            
+            //make sure to trim whitespace
+            newRemaining = newRemaining.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines) as NSString
+            self.remainingText = newRemaining as String
+            //self.remainingText = (newRemaining as String).trimmingCharacters(in: .whitespacesAndNewlines)
+        }
     }
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
@@ -151,7 +162,8 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         word = word.substring(to: end)
         
         // Search for word in remainingText
-        return (self.remainingText.lowercased() as NSString).range(of: word)
+        let range = (self.remainingText.lowercased() as NSString).range(of: word)
+        return range
     }
     
     func preparePlayer() {
