@@ -49,18 +49,6 @@ class AudioContainer {
         self.player?.stop()
     }
     
-    func reset() {
-        self.player = AVAudioPlayer();
-        self.loadedFilename = nil
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
     func getLoadedFilename() -> String? {
         return self.loadedFilename
     }
@@ -78,7 +66,17 @@ class AudioContainer {
     func isPlaying() -> Bool {
         return (self.player?.isPlaying)!
     }
-    
-  
+
+    func reset() {
+        self.player = AVAudioPlayer();
+        self.loadedFilename = nil
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 

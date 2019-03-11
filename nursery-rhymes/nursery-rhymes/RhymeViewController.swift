@@ -12,7 +12,9 @@ import AVFoundation
 class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     var collectionName = String()
     @IBOutlet weak var rhymeLabel: UILabel!
+    
     @IBOutlet weak var timeSlider: UISlider!
+    var updater: CADisplayLink!
     
     @IBOutlet var playButton: UIBarButtonItem!
     @IBAction func rewindClicked(_ sender: Any) {
@@ -51,9 +53,13 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
             self.buildHomeExBar()
             self.rhymeLabel.text = m.getRhymeText(id: self.id)
             m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
+            
+            //Stuff that is handled by HighlightingContainer in the other case
+            self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
+            self.updater.preferredFramesPerSecond = 60
+            self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+            m.audioContainer.setDelegate(delegate: self)
         }
-
-
         
         self.navigationItem.title = message;
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
@@ -128,5 +134,14 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
 
+    func trackAudio() {
+        let normalizedTime = Float((m.audioContainer.player?.currentTime)! * 100.0
+            / (m.audioContainer.player?.duration)!)
+        timeSlider.value = normalizedTime
+    }
     
+    // From AVAudioPlayerDelegate
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        //Clean up after rhyme is finished
+    }
 }

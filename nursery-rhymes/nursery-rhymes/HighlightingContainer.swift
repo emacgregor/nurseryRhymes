@@ -40,6 +40,9 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
         self.updater.preferredFramesPerSecond = 60
         self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+        
+        //Display unhighlighted text on load
+        self.rhymeViewController!.rhymeLabel.attributedText = (NSMutableAttributedString(string: self.rhymeText).copy() as! NSAttributedString)
     }
     
     func parseTranscript() {
@@ -75,7 +78,8 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
             var newRemaining = NSString(string: remainingText)
             //get rid of this range so that we don't re-highlight the first location of a word
             newRemaining = newRemaining.substring(with:
-                NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
+                NSMakeRange(wordRange.length + wordRange.location,
+                            newRemaining.length - (wordRange.length + wordRange.location))) as NSString
             
             //make sure to trim whitespace
             newRemaining = newRemaining.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines) as NSString
@@ -86,6 +90,10 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
     
     func trackAudio() {
         let m = Model.getModel()
+        
+        let normalizedTime = Float((m.audioContainer.player?.currentTime)! * 100.0
+            / (m.audioContainer.player?.duration)!)
+        self.rhymeViewController?.timeSlider.value = normalizedTime
         
         if (transcriptTimes[wordIndex].1 < Float((m.audioContainer.getCurrentTime())!) ) {
             if (wordIndex < (transcriptTimes.count - 1)) {

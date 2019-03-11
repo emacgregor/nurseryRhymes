@@ -32,12 +32,22 @@ class RhymesTableController : UITableViewController {
         let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
         for id in Array(collectionRhymes.keys) {
             let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
-            data.append(cellData(
-                image: m.getRhymeImage(id: rhymeid),
-                message: m.getRhymeName(id: rhymeid),
-                id: rhymeid
-            ))
+            
+            //Make sure rhyme files exist before we display it
+            if (m.getRhymeTranscript(id: rhymeid) != "") {
+                data.append(cellData(
+                    image: m.getRhymeImage(id: rhymeid),
+                    message: m.getRhymeName(id: rhymeid),
+                    id: rhymeid
+                ))
+            }
         }
+        
+        data.sort { (a, b) -> Bool in
+            let comparison = a.message?.localizedCaseInsensitiveCompare(b.message ?? "")
+            return (comparison == ComparisonResult.orderedAscending)
+        }
+        
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
