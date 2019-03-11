@@ -38,6 +38,12 @@ class RhymesTableController : UITableViewController {
                 id: rhymeid
             ))
         }
+        
+        data.sort { (a, b) -> Bool in
+            let comparison = a.message?.localizedCaseInsensitiveCompare(b.message ?? "")
+            return (comparison == ComparisonResult.orderedAscending)
+        }
+        
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
