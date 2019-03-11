@@ -60,6 +60,11 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
+        self.homeExperienceBar.setBackgroundImage(UIImage(),
+                                        forToolbarPosition: .any,
+                                        barMetrics: .default)
+        self.homeExperienceBar.setShadowImage(UIImage(), forToolbarPosition: .any)
+        
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
         
@@ -86,11 +91,13 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
                                                    action: nil))
         if (homeExCount > 0) {
             for i in 0..<homeExCount {
-                let button = UIBarButtonItem(barButtonSystemItem: .play,
-                                                       target: self,
-                                                       action: #selector(RhymeViewController.playHomeExperience))
-                button.tag = i
-                homeExBarItems.append(button)
+                let heButton = UIBarButtonItem()
+                heButton.title = ""
+                heButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "FontAwesome", size: UIFont.buttonFontSize)!], for: UIControlState.normal)
+                heButton.target = self
+                heButton.action = #selector(RhymeViewController.playHomeExperience)
+                heButton.tag = i
+                homeExBarItems.append(heButton)
             }
         }
         homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,

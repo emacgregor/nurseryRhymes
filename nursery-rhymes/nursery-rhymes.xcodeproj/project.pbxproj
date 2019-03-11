@@ -17,6 +17,7 @@
 		49A694FC21F5678E002C984A /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694FB21F5678E002C984A /* RhymeViewController.swift */; };
 		49A6950021F56CE5002C984A /* pandaprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A694FF21F56CE5002C984A /* pandaprofile.png */; };
 		49A6950221F56DFC002C984A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6950121F56DFC002C984A /* CustomCell.swift */; };
+		681D04212235E7BF0014D594 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 681D04202235E7BF0014D594 /* fontawesome-webfont.ttf */; };
 		8C64AF6D2210E17800523DCC /* rhyme_files in Resources */ = {isa = PBXBuildFile; fileRef = 8C64AF6C2210E17800523DCC /* rhyme_files */; };
 		8C64AF702210E4CC00523DCC /* rhymeText.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C64AF6F2210E4CC00523DCC /* rhymeText.json */; };
 		8C8F7514222B86B4003CC7F4 /* RhymeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F7513222B86B4003CC7F4 /* RhymeController.swift */; };
@@ -64,6 +65,7 @@
 		49A694FB21F5678E002C984A /* RhymeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		49A694FF21F56CE5002C984A /* pandaprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pandaprofile.png; sourceTree = "<group>"; };
 		49A6950121F56DFC002C984A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		681D04202235E7BF0014D594 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		8C64AF6C2210E17800523DCC /* rhyme_files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rhyme_files; path = ../rhyme_files; sourceTree = "<group>"; };
 		8C64AF6F2210E4CC00523DCC /* rhymeText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rhymeText.json; sourceTree = "<group>"; };
 		8C8F7513222B86B4003CC7F4 /* RhymeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhymeController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				49A694F121F5659C002C984A /* RhymesTableController.swift */,
 				49A694FF21F56CE5002C984A /* pandaprofile.png */,
 				ACF44A550000054000B9A67C /* Assets.xcassets */,
+				681D04202235E7BF0014D594 /* fontawesome-webfont.ttf */,
 				49A6950121F56DFC002C984A /* CustomCell.swift */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
 				ACF44A4B0000054000B9A67C /* AppDelegate.swift */,
@@ -303,6 +306,7 @@
 				8C64AF702210E4CC00523DCC /* rhymeText.json in Resources */,
 				8C64AF6D2210E17800523DCC /* rhyme_files in Resources */,
 				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
+				681D04212235E7BF0014D594 /* fontawesome-webfont.ttf in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
 				49A6950021F56CE5002C984A /* pandaprofile.png in Resources */,
