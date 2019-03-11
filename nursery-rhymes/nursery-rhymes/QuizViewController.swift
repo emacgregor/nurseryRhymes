@@ -11,7 +11,6 @@ import UIKit
 import CoreData
 
 class QuizViewController : UIViewController {
-
     @IBOutlet weak var score: UILabel!
     var quizzes: [String: String] = [:]
     var m = Model()
@@ -19,6 +18,7 @@ class QuizViewController : UIViewController {
     var message = String()
     var level = 1
     var count = 0
+    var jsonModel  = String()
   
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var labelA: RoundButton!
@@ -28,8 +28,8 @@ class QuizViewController : UIViewController {
     
     override func viewDidLoad() {
         m = Model.getModel()
-        saveData(key: "rhyme", value: "bobby")
-        getData(key: "rhyme")
+        saveData(key: "dic", value: "bill")
+        getData(key: "dic")
         
       
         
@@ -56,11 +56,27 @@ class QuizViewController : UIViewController {
     func saveData(key: String, value: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)!
-        let  newUser = NSManagedObject(entity: entity, insertInto: context)
-        print(key)
-        print(value)
-        newUser.setValue("steve", forKey: "rhyme")
+        
+        let model = NSManagedObjectModel()
+        
+        let personEntity = NSEntityDescription()
+        personEntity.name = "Person"
+        personEntity.managedObjectClassName = "Person"
+        
+        let nameAttribute = NSAttributeDescription()
+        nameAttribute.name = "name"
+        nameAttribute.attributeType = .stringAttributeType
+        nameAttribute.isOptional = true
+        
+        personEntity.properties.append(nameAttribute)
+        
+        model.entities.append(personEntity)
+        let newUser = NSManagedObject(entity: personEntity, insertInto: context)
+        newUser.setValue("1", forKey: "name")
+
+      
+
+        
         do {
             try context.save()
             print("Worked")
@@ -72,15 +88,23 @@ class QuizViewController : UIViewController {
     func getData(key: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         //request.predicate = NSPredicate(format: "age = %@", "12")
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
+            print("in")
             for data in result as! [NSManagedObject] {
                 print("data \(data)")
-                if (data.value(forKey: "rhyme") != nil) {
-                    print(data.value(forKey: "rhyme") as! String)
+                if (data.value(forKey: "name") != nil) {
+                    //let jsonDecoder = JSONDecoder()
+                    //let jsonDecoder = JSONDecoder()
+                    print("DATATEMP \(data.value(forKey: "name"))")
+
+//                    let dataExample : NSData = NSKeyedArchiver.archivedDataWithRootObject(dictionaryExample)
+                
+                    //let employee2 = try jsonDecoder.decode([String: String], from: temp)
+                    //print("emplyoyee \(employee2)")
 
                 } else {
                     print("done")
@@ -91,6 +115,11 @@ class QuizViewController : UIViewController {
             
             print("Failed")
         }
+    }
+    
+    func updateData() {
+        
+        
     }
     
     @IBAction func answerA(_ sender: Any) {
