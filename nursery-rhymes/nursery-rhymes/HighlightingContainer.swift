@@ -78,7 +78,8 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
             var newRemaining = NSString(string: remainingText)
             //get rid of this range so that we don't re-highlight the first location of a word
             newRemaining = newRemaining.substring(with:
-                NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
+                NSMakeRange(wordRange.length + wordRange.location,
+                            newRemaining.length - (wordRange.length + wordRange.location))) as NSString
             
             //make sure to trim whitespace
             newRemaining = newRemaining.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines) as NSString
