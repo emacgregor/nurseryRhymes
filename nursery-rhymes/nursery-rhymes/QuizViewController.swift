@@ -28,12 +28,11 @@ class QuizViewController : UIViewController {
     
     override func viewDidLoad() {
         m = Model.getModel()
-        saveData(key: "dic", value: "bill")
-        getData(key: "dic")
+        //saveData(key: "dic", value: "bill")
+        //getData(key: "dic")
         
-      
+        level = getCurrentLevel(key: String(id)) ?? 0
         
-        id = id + 1
         score.text = "\(count) / 4"
         
         print("message \(message)")
@@ -44,7 +43,7 @@ class QuizViewController : UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
         
-        quizzes = m.getQuiz(rhyme: self.id, level: "\(level)")
+        quizzes = m.getQuiz(rhyme: self.id, level: level)
         questionLabel.text = quizzes["QuestionText"]
         print(quizzes)
         labelA.setTitle(quizzes["A"], for: .normal)
@@ -52,74 +51,56 @@ class QuizViewController : UIViewController {
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
     }
-    
-    func saveData(key: String, value: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let model = NSManagedObjectModel()
-        
-        let personEntity = NSEntityDescription()
-        personEntity.name = "Person"
-        personEntity.managedObjectClassName = "Person"
-        
-        let nameAttribute = NSAttributeDescription()
-        nameAttribute.name = "name"
-        nameAttribute.attributeType = .stringAttributeType
-        nameAttribute.isOptional = true
-        
-        personEntity.properties.append(nameAttribute)
-        
-        model.entities.append(personEntity)
-        let newUser = NSManagedObject(entity: personEntity, insertInto: context)
-        newUser.setValue("1", forKey: "name")
 
-      
-
-        
-        do {
-            try context.save()
-            print("Worked")
-        } catch {
-            print("Failed saving")
+    func getCurrentLevel(key: String) -> Int? {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return nil
         }
-        
-    }
-    func getData(key: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
-        request.returnsObjectsAsFaults = false
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Quiz")
+        let predicate = NSPredicate(format: "rhymeId = %@", String(self.id))
+        fetchRequest.predicate = predicate
         do {
-            let result = try context.fetch(request)
-            print("in")
-            for data in result as! [NSManagedObject] {
-                print("data \(data)")
-                if (data.value(forKey: "name") != nil) {
-                    //let jsonDecoder = JSONDecoder()
-                    //let jsonDecoder = JSONDecoder()
-                    print("DATATEMP \(data.value(forKey: "name"))")
-
-//                    let dataExample : NSData = NSKeyedArchiver.archivedDataWithRootObject(dictionaryExample)
-                
-                    //let employee2 = try jsonDecoder.decode([String: String], from: temp)
-                    //print("emplyoyee \(employee2)")
-
-                } else {
-                    print("done")
-                }
+            let currentLevel = try managedContext.fetch(fetchRequest).first?.value(forKeyPath: "question")
+            print("CurrentLevel: \(currentLevel ?? "--")")
+            return currentLevel as? Int
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+    
+    func saveCurrentLevel() {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Quiz")
+        fetchRequest.predicate = NSPredicate(format: "rhymeId = %@", String(self.id))
+        do {
+            if let quiz = try managedContext.fetch(fetchRequest).first {
+                quiz.setValue(self.level, forKeyPath: "question")
+                print("Updating \(self.id)")
+                try managedContext.save()
+            } else {
+                let entity = NSEntityDescription.entity(forEntityName: "Quiz",
+                                                        in: managedContext)!
+                let quiz = NSManagedObject(entity: entity,
+                                           insertInto: managedContext)
+                quiz.setValue(self.id, forKeyPath: "rhymeId")
+                quiz.setValue(self.level, forKeyPath: "question")
+                try managedContext.save()
             }
             
-        } catch {
-            
-            print("Failed")
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
-    }
-    
-    func updateData() {
-        
-        
     }
     
     @IBAction func answerA(_ sender: Any) {
@@ -128,7 +109,8 @@ class QuizViewController : UIViewController {
             count = count + 1
             score.text = "\(count) / 4"
         }
-        quizzes = m.getQuiz(rhyme: self.id, level: "\(level)")
+        quizzes = m.getQuiz(rhyme: self.id, level: level)
+        saveCurrentLevel()
         print(quizzes["Answer"])
         print(labelA.titleLabel!.text)
         questionLabel.text = quizzes["QuestionText"]
@@ -148,7 +130,8 @@ class QuizViewController : UIViewController {
             score.text = "\(count) / 4"
             
         }
-        quizzes = m.getQuiz(rhyme: self.id, level: "\(level)")
+        quizzes = m.getQuiz(rhyme: self.id, level: level)
+        saveCurrentLevel()
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
@@ -165,7 +148,8 @@ class QuizViewController : UIViewController {
             score.text = "\(count) / 4"
             
         }
-        quizzes = m.getQuiz(rhyme: self.id, level: "\(level)")
+        quizzes = m.getQuiz(rhyme: self.id, level: level)
+        saveCurrentLevel()
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
@@ -183,16 +167,14 @@ class QuizViewController : UIViewController {
             score.text = "\(count) / 4"
             
         }
-        quizzes = m.getQuiz(rhyme: self.id, level: "\(level)")
+        quizzes = m.getQuiz(rhyme: self.id, level: level)
+        saveCurrentLevel()
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelA.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
-        
-
-        
     }
 }
 

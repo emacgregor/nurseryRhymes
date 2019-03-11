@@ -122,14 +122,15 @@ class Model {
     
     //Takes in rhyme name
     //Returns array with All Questions, 4 answer choices per question, with every i = 4 being the correct answer
-    func getQuiz(rhyme: Int, level: String) -> [String:String] {
+    func getQuiz(rhyme: Int, level: Int) -> [String:String] {
         
         let stringRhyme = String(rhyme)
+        let stringLevel = String(10 + level)
         print("\(level)")
         var rhymeQuiz: [String: String] = [:]
         for quiz in quizzes {
             print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(level)")
-            if (quiz["RhymeID"] == stringRhyme && quiz["QuestionNo"] == "10") {
+            if (quiz["RhymeID"] == "2" && quiz["QuestionNo"] == stringLevel) {
                 rhymeQuiz = quiz
                 print("inside \(stringRhyme)")
             }
