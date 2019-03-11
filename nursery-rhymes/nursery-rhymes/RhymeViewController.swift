@@ -15,19 +15,24 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var timeSlider: UISlider!
     var updater: CADisplayLink!
+    @IBOutlet weak var controlView: UIView!
     
-    @IBOutlet var playButton: UIBarButtonItem!
-    @IBAction func rewindClicked(_ sender: Any) {
-    }
-    @IBAction func fastforwardClicked(_ sender: Any) {
-    }
-    @IBAction func playClicked(_ sender: Any) {
-        if (m.audioContainer.isPlaying()) {
-            m.audioContainer.pause()
-            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(RhymeViewController.playClicked))
+    @IBOutlet var playButton: UIButton!
+    @IBAction func playTouched(_ sender: Any) {
+        //Play button is strictly for Rhyme Audio, not Home Experiences
+        if (m.getRhymeFileName(id: self.id) == m.audioContainer.getLoadedFilename()) {
+            if (m.audioContainer.isPlaying()) {
+                m.audioContainer.pause()
+                playButton.setTitle("", for: UIControlState.normal) //Play Button
+            } else {
+                m.audioContainer.play()
+                playButton.setTitle("", for: UIControlState.normal) //Pause Button
+            }
         } else {
+            m.audioContainer.stop()
+            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
             m.audioContainer.play()
-            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.pause, target: self, action: #selector(RhymeViewController.playClicked))
+            playButton.setTitle("", for: UIControlState.normal) //Pause Button
         }
     }
     
@@ -47,12 +52,13 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         m = Model.getModel()
         collectionName = m.getRhymeCollection(id: self.id)
         
-        if (collectionName == "Volland") {
-             m.highlightingContainer.loadRhyme(id: self.id, rhymeViewController: self)
-        } else {
-            self.buildHomeExBar()
+        self.loadRhyme()
+        
+        if (collectionName != "Volland") {
+            if (collectionName != "Jerrold") {
+                self.buildHomeExBar()
+            }
             self.rhymeLabel.text = m.getRhymeText(id: self.id)
-            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
             
             //Stuff that is handled by HighlightingContainer in the other case
             self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
@@ -70,12 +76,15 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
                                         forToolbarPosition: .any,
                                         barMetrics: .default)
         self.homeExperienceBar.setShadowImage(UIImage(), forToolbarPosition: .any)
+        timeSlider.leftAnchor.constraint(equalTo: self.playButton.rightAnchor).isActive = true
+        timeSlider.rightAnchor.constraint(equalTo: self.controlView.rightAnchor).isActive = true
         
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
         
     
         m.audioContainer.play()
+        playButton.setTitle("", for: UIControlState.normal) //Pause Button\
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -87,6 +96,14 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         m.audioContainer.stop()
         m.highlightingContainer.reset()
+    }
+    
+    func loadRhyme() {
+        if (collectionName == "Volland") {
+            m.highlightingContainer.loadRhyme(id: self.id, rhymeViewController: self)
+        } else {
+            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
+        }
     }
     
     func buildHomeExBar() {
@@ -102,7 +119,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
                 heButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "FontAwesome", size: UIFont.buttonFontSize)!], for: UIControlState.normal)
                 heButton.target = self
                 heButton.action = #selector(RhymeViewController.playHomeExperience)
-                heButton.tag = i
+                heButton.tag = i + 1
                 homeExBarItems.append(heButton)
             }
         }
@@ -116,9 +133,10 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         m.audioContainer.stop()
         m.highlightingContainer.reset()
         
-        let homeExId = sender.tag + 1
+        let homeExId = sender.tag
         m.audioContainer.loadFile(filename: m.getHomeExFilename(rhymeId: id, homeExId: homeExId))
         m.audioContainer.play()
+        playButton.setTitle("", for: UIControlState.normal) //Play Button
     }
     
     @IBAction func quizClick(_ sender: Any) {
