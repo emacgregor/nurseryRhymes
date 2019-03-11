@@ -13,8 +13,9 @@ class CustomCell: UITableViewCell {
     var message: String?
     var mainImage: UIImage?
     var homeExp = UILabel()
-    var homeExpExists = false
-    
+    var homeExpExists: Bool?
+    var showConstraint: NSLayoutConstraint?
+    var hideConstraint: NSLayoutConstraint?
     
     var messageView : UILabel = {
         var label = UILabel()
@@ -38,6 +39,7 @@ class CustomCell: UITableViewCell {
         label.font = UIFont(name: "FontAwesome", size: UIFont.buttonFontSize)
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
+        label.text = ""
         return label
     }()
     
@@ -65,6 +67,10 @@ class CustomCell: UITableViewCell {
         homeExpLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         homeExpLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         homeExpLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        self.showConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant :50)
+        self.hideConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant :0)
+        self.hideConstraint?.isActive = true
     }
     
     override func layoutSubviews() {
@@ -76,11 +82,13 @@ class CustomCell: UITableViewCell {
             mainImageView.image = mainImage
         }
         
-        if homeExpExists {
-            homeExpLabel.text = ""
-            homeExpLabel.widthAnchor.constraint(equalToConstant :50).isActive = true
+        print("STAR \(message!) \(homeExpExists!)")
+        if homeExpExists ?? false {
+            self.showConstraint?.isActive = true
+            self.hideConstraint?.isActive = false
         } else {
-            homeExpLabel.widthAnchor.constraint(equalToConstant :0).isActive = true
+            self.showConstraint?.isActive = false
+            self.hideConstraint?.isActive = true
         }
     }
     
