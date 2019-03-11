@@ -40,6 +40,9 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
         self.updater.preferredFramesPerSecond = 60
         self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+        
+        //Display unhighlighted text on load
+        self.rhymeViewController!.rhymeLabel.attributedText = (NSMutableAttributedString(string: self.rhymeText).copy() as! NSAttributedString)
     }
     
     func parseTranscript() {
