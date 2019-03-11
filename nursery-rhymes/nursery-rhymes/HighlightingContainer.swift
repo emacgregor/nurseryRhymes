@@ -91,6 +91,10 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
     func trackAudio() {
         let m = Model.getModel()
         
+        let normalizedTime = Float((m.audioContainer.player?.currentTime)! * 100.0
+            / (m.audioContainer.player?.duration)!)
+        self.rhymeViewController?.timeSlider.value = normalizedTime
+        
         if (transcriptTimes[wordIndex].1 < Float((m.audioContainer.getCurrentTime())!) ) {
             if (wordIndex < (transcriptTimes.count - 1)) {
                 wordIndex += 1
