@@ -81,19 +81,7 @@ class Model {
             print("File not found: rhyme_files/"+filename+".transcript")
         }
         
-        return String()
-    }
-    
-    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> String {
-        var filename = getRhymeFileName(id: rhymeId)
-        filename = filename + "HE" + String(homeExId)
-        //print("HOME \(filename)")
-        
-        if Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files") != nil {
-            return filename
-        } else {
-            return ""
-        }
+        return ""
     }
     
     func getRhymeImage(id: Int) -> UIImage {
@@ -162,6 +150,18 @@ class Model {
     
     static func getModel() -> Model {
         return Model.model
+    }
+    
+    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> String {
+        var filename = getRhymeFileName(id: rhymeId)
+        filename = filename + "HE" + String(homeExId)
+        //print("HOME \(filename)")
+        
+        if Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files") != nil {
+            return filename
+        } else {
+            return ""
+        }
     }
     
     func getHomeExCount(id: Int) -> Int {
