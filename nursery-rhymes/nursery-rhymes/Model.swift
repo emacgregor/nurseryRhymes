@@ -20,11 +20,16 @@ class Model {
     
     var audioContainer = AudioContainer()
     var highlightingContainer = HighlightingContainer()
+    var quizzes = [[String: String]]()
+    var quizJson: Any
+    
     
     init() {
+        quizJson = String()
         jsonModel = String()
         collections["Volland"] = [String: String]()
         readJSONModel()
+        readQuizzesJson()
     }
     
     func readJSONModel() {
@@ -107,6 +112,40 @@ class Model {
     func getRhymeCollection(id: Int) -> String {
         let collectionName =  rhymes[id]?["collection"]
         return collectionName ?? ""
+    }
+    
+    func readQuizzesJson() {
+        if let path = Bundle.main.path(forResource: "quizDatabase", ofType: "json")
+        {
+            do {
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                quizJson = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
+                quizzes = (quizJson as! [[String:String]])
+                //print("in rhyme json \(quizzes)")
+            } catch let error {
+                print(error)
+            }
+        } else {
+            print("File not found: rhymeText.json")
+        }
+    }
+    
+    //Takes in rhyme name
+    //Returns array with All Questions, 4 answer choices per question, with every i = 4 being the correct answer
+    func getQuiz(rhyme: Int, level: String) -> [String:String] {
+        
+        let stringRhyme = String(rhyme)
+        print("\(level)")
+        var rhymeQuiz: [String: String] = [:]
+        for quiz in quizzes {
+            print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(level)")
+            if (quiz["RhymeID"] == stringRhyme && quiz["QuestionNo"] == "10") {
+                rhymeQuiz = quiz
+                print("inside \(stringRhyme)")
+            }
+        }
+        print("\(rhymeQuiz)")
+        return rhymeQuiz
     }
     
     func getRhymesForCollection(collectionName: String) ->[Int: [String: String]] {

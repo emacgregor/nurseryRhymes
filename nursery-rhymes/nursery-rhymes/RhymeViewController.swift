@@ -108,4 +108,18 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         m.audioContainer.play()
     }
     
+    @IBAction func quizClick(_ sender: Any) {
+        performSegue(withIdentifier: "quiz", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("In")
+        if let vc = segue.destination as? QuizViewController {
+            print("VC")
+            
+            vc.id = self.id
+            vc.message = self.message
+        }
+    }
+
+    
 }

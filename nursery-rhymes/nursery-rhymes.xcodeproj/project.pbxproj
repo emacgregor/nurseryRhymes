@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49944F522235AAA600CD794D /* HighlightingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944F512235AAA600CD794D /* HighlightingContainer.swift */; };
+		49944F562235E9FF00CD794D /* quizDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = 49944F552235E9FF00CD794D /* quizDatabase.json */; };
 		49A694EE21F559BB002C984A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694ED21F559BB002C984A /* RoundButton.swift */; };
 		49A694F221F5659C002C984A /* RhymesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F121F5659C002C984A /* RhymesTableController.swift */; };
 		49A694F421F56698002C984A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F321F56698002C984A /* RegisterViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		49944F512235AAA600CD794D /* HighlightingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightingContainer.swift; sourceTree = "<group>"; };
+		49944F552235E9FF00CD794D /* quizDatabase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = quizDatabase.json; path = ../../../../../Downloads/quizDatabase.json; sourceTree = "<group>"; };
 		49A694ED21F559BB002C984A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		49A694F121F5659C002C984A /* RhymesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesTableController.swift; sourceTree = "<group>"; };
 		49A694F321F56698002C984A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				8C8F7515222B889B003CC7F4 /* AudioContainer.swift */,
 				49A694F121F5659C002C984A /* RhymesTableController.swift */,
 				49A694FF21F56CE5002C984A /* pandaprofile.png */,
+				49944F552235E9FF00CD794D /* quizDatabase.json */,
 				ACF44A550000054000B9A67C /* Assets.xcassets */,
 				49A6950121F56DFC002C984A /* CustomCell.swift */,
 				ACF44A8000000B5200B9A67C /* transcripts */,
@@ -302,6 +305,7 @@
 			files = (
 				8C64AF702210E4CC00523DCC /* rhymeText.json in Resources */,
 				8C64AF6D2210E17800523DCC /* rhyme_files in Resources */,
+				49944F562235E9FF00CD794D /* quizDatabase.json in Resources */,
 				ACF44A590000054000B9A67C /* LaunchScreen.storyboard in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
