@@ -12,7 +12,7 @@ import UIKit
 class CustomCell: UITableViewCell {
     var message: String?
     var mainImage: UIImage?
-    var homeExp = UIImage(named: "pandaprofile.png")!
+    var homeExp = UILabel()
     var homeExpExists = false
     
     
@@ -31,19 +31,24 @@ class CustomCell: UITableViewCell {
         return imageView
     }()
     
-    var homeExpImageView : UIImageView = {
-        var imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
-        return imageView
+    var homeExpLabel : UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:0.0)
+        label.font = UIFont(name: "FontAwesome", size: UIFont.buttonFontSize)
+        label.textColor = UIColor.white
+        label.textAlignment = NSTextAlignment.center
+        return label
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:0.0)
+        
         self.addSubview(mainImageView)
         self.addSubview(messageView)
-    
-        self.addSubview(homeExpImageView)
+        self.addSubview(homeExpLabel)
         
         mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         mainImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
@@ -51,23 +56,15 @@ class CustomCell: UITableViewCell {
         mainImageView.widthAnchor.constraint(equalToConstant :50).isActive = true
         mainImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        if (homeExpExists) {
-            messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
-        } else {
-            messageView.leftAnchor.constraint(equalTo: self.homeExpImageView.rightAnchor).isActive = true
-        }
-        
-        ///messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 50)
-        messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
+        messageView.rightAnchor.constraint(equalTo: self.homeExpLabel.leftAnchor).isActive = true
         messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         messageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
-        homeExpImageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
-        homeExpImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        homeExpImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        homeExpImageView.widthAnchor.constraint(equalToConstant :50).isActive = true
-        homeExpImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        homeExpLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        homeExpLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        homeExpLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        homeExpLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     override func layoutSubviews() {
@@ -80,7 +77,10 @@ class CustomCell: UITableViewCell {
         }
         
         if homeExpExists {
-            homeExpImageView.image = homeExp
+            homeExpLabel.text = ""
+            homeExpLabel.widthAnchor.constraint(equalToConstant :50).isActive = true
+        } else {
+            homeExpLabel.widthAnchor.constraint(equalToConstant :0).isActive = true
         }
     }
     
