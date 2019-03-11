@@ -28,30 +28,10 @@ class QuizViewController : UIViewController {
     
     override func viewDidLoad() {
         m = Model.getModel()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
-        newUser.setValue("Shashikant", forKey: "rhyme")
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
+        saveData(key: "rhyme", value: "bobby")
+        getData(key: "rhyme")
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "rhyme") as! String)
-            }
-            
-        } catch {
-            
-            print("Failed")
-        }
+      
         
         id = id + 1
         score.text = "\(count) / 4"
@@ -71,6 +51,46 @@ class QuizViewController : UIViewController {
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
+    }
+    
+    func saveData(key: String, value: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)!
+        let  newUser = NSManagedObject(entity: entity, insertInto: context)
+        print(key)
+        print(value)
+        newUser.setValue("steve", forKey: "rhyme")
+        do {
+            try context.save()
+            print("Worked")
+        } catch {
+            print("Failed saving")
+        }
+        
+    }
+    func getData(key: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print("data \(data)")
+                if (data.value(forKey: "rhyme") != nil) {
+                    print(data.value(forKey: "rhyme") as! String)
+
+                } else {
+                    print("done")
+                }
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
     }
     
     @IBAction func answerA(_ sender: Any) {

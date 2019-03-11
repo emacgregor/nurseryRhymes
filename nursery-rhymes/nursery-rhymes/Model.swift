@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 import AVFoundation
+import CoreData
 
 class Model {
     static var model: Model = Model()
-    
+   
     var jsonModel: Any
     var collections = [String: [String: String]]()
     var fileNameList = [String]()
@@ -22,9 +23,10 @@ class Model {
     var highlightingContainer = HighlightingContainer()
     var quizzes = [[String: String]]()
     var quizJson: Any
-    
+  
     
     init() {
+       
         quizJson = String()
         jsonModel = String()
         collections["Volland"] = [String: String]()
