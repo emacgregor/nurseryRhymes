@@ -80,20 +80,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     
     func buildHomeExBar() {
         var homeExBarItems = [UIBarButtonItem]()
-        var homeExCount = 0
-        var index = 1
-        
-        while (index != 0) {
-            let homeExFilename = m.getHomeExFilename(rhymeId: id, homeExId: index)
-            if (homeExFilename == "") {
-                //End loop
-                homeExCount = index - 1
-                index = 0
-            } else {
-                index = index + 1
-            }
-        }
-        
+        let homeExCount = m.getHomeExCount(id: self.id)
         homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                                    target: nil,
                                                    action: nil))

@@ -20,7 +20,6 @@ class RhymesTableController : UITableViewController {
     
     override func viewDidLoad() {
         let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
-        
         for id in Array(collectionRhymes.keys) {
             let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
             data.append(cellData(
@@ -44,6 +43,9 @@ class RhymesTableController : UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
+        
+        cell.homeExpExists = (m.getHomeExCount(id: data[indexPath.row].id!) > 0)
+           
         cell.mainImage = data[indexPath.row].image
         cell.message = data[indexPath.row].message
         cell.layoutSubviews()

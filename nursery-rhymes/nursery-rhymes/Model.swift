@@ -82,6 +82,7 @@ class Model {
     func getHomeExFilename(rhymeId: Int, homeExId: Int) -> String {
         var filename = getRhymeFileName(id: rhymeId)
         filename = filename + "HE" + String(homeExId)
+        //print("HOME \(filename)")
         
         if Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files") != nil {
             return filename
@@ -104,20 +105,12 @@ class Model {
     }
     
     func getRhymeCollection(id: Int) -> String {
-        var collectionName =  rhymes[id]?["collection"]!
-        if (collectionName == "Father Goose Visit") {
-            collectionName = "FGV"
-        } else if (collectionName == "Mother Goose Visit") {
-            collectionName = "MGV"
-        }
+        let collectionName =  rhymes[id]?["collection"]
         return collectionName ?? ""
     }
     
     func getRhymesForCollection(collectionName: String) ->[Int: [String: String]] {
         var tempRhymes = [Int: [String: String]]()
-        //tempRhymes = tempRhymes.filter { (rhyme: [String : String]) -> Bool inreturn
-            //rhyme["collection"] == collectionName
-        //}
         let validRhymeIds = Array(self.rhymes.keys).filter { (key: Int) -> Bool in
             return self.rhymes[key]?["collection"] == collectionName
         }
@@ -130,5 +123,21 @@ class Model {
     
     static func getModel() -> Model {
         return Model.model
+    }
+    
+    func getHomeExCount(id: Int) -> Int {
+        var index = 1
+        var homeExCount = 0
+        while (index != 0) {
+            let homeExFilename = getHomeExFilename(rhymeId: id, homeExId: index)
+            if (homeExFilename == "") {
+                //End loop
+                homeExCount = index - 1
+                index = 0
+            } else {
+                index = index + 1
+            }
+        }
+        return homeExCount
     }
 }
