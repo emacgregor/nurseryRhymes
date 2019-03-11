@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class QuizViewController : UIViewController {
 
@@ -27,6 +28,31 @@ class QuizViewController : UIViewController {
     
     override func viewDidLoad() {
         m = Model.getModel()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        newUser.setValue("Shashikant", forKey: "rhyme")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "rhyme") as! String)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
         id = id + 1
         score.text = "\(count) / 4"
         
