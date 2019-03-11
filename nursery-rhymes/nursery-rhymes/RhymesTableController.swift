@@ -14,11 +14,21 @@ struct cellData {
 }
 class RhymesTableController : UITableViewController {
     var collectionName: String!
+    
+    @IBOutlet weak var collectionNameLabel: UINavigationItem!
+    
     var m = Model.getModel()
     
     var data = [cellData]()
     
     override func viewDidLoad() {
+        var formattedName = collectionName
+        if (formattedName == "MGV") {
+            formattedName = "Mother Goose Visit"
+        } else if (formattedName == "FGV") {
+            formattedName = "Father Goose Visit"
+        }
+        collectionNameLabel.title = formattedName
         let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
         for id in Array(collectionRhymes.keys) {
             let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
@@ -32,9 +42,8 @@ class RhymesTableController : UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true;
+        self.navigationController?.navigationBar.isTranslucent = false;
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
     }
     
     @IBAction func popToCollectionList(_ sender: Any) {
