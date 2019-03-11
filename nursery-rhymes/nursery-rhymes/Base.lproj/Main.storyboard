@@ -108,7 +108,11 @@
                                 <action selector="popToRhymeList:" destination="UZ7-Sz-QO0" id="eWb-gk-T2j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Quiz" id="Ago-2E-9li"/>
+                        <barButtonItem key="rightBarButtonItem" title="Quiz" id="Ago-2E-9li">
+                            <connections>
+                                <action selector="quizClick:" destination="UZ7-Sz-QO0" id="352-8U-Q5B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -116,6 +120,7 @@
                         <outlet property="playButton" destination="sEw-yI-cSW" id="qjQ-Mz-iIQ"/>
                         <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
                         <outlet property="timeSlider" destination="2IR-8o-SJB" id="8AZ-fZ-XP3"/>
+                        <segue destination="oJ4-zM-WOr" kind="show" identifier="quiz" id="Fo4-2r-83b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,12 +326,90 @@
                     <view key="view" contentMode="scaleToFill" id="aZt-Dm-VkH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mother Goose is WHO?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-XU-CzY">
+                                <rect key="frame" x="20" y="114" width="374" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-gV-fUJ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="329" width="374" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="labelA">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerA:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="a8k-oy-FTJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-7F-Cw1" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="424" width="374" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="labelB">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerB:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="ntt-zw-MHm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-KS-tPd" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="637" width="374" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="labelD">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerD:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="QhV-r9-I1f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-UL-ObL">
+                                <rect key="frame" x="352" y="85" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-uY-lyV" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="534" width="374" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="labelC">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerC:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="gbh-Mn-4dV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1jq-jI-WkM">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="Onp-eB-ik2"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelA" destination="5b6-gV-fUJ" id="UcB-X7-omN"/>
+                        <outlet property="labelB" destination="2fO-7F-Cw1" id="SUV-rC-GPM"/>
+                        <outlet property="labelC" destination="LFq-uY-lyV" id="cWK-zn-rho"/>
+                        <outlet property="labelD" destination="lEK-KS-tPd" id="DP9-cz-2qP"/>
+                        <outlet property="questionLabel" destination="ozm-XU-CzY" id="0QP-Qv-nMH"/>
+                        <outlet property="score" destination="WG0-UL-ObL" id="NWt-Vt-2oS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6A-QY-NFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="488"/>
+            <point key="canvasLocation" x="604.34782608695662" y="487.50000000000006"/>
         </scene>
         <!--Collections-->
         <scene sceneID="F4q-oR-ofd">
@@ -440,5 +523,26 @@
             </objects>
             <point key="canvasLocation" x="-303.19999999999999" y="-1406.4467766116943"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4D5-8G-lhe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rJA-hq-FfE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxG-m4-Bzn">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oJ4-zM-WOr" kind="relationship" relationship="rootViewController" id="SU6-SU-plg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb7-aC-dNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302.89855072463769" y="487.50000000000006"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fo4-2r-83b"/>
+    </inferredMetricsTieBreakers>
 </document>
