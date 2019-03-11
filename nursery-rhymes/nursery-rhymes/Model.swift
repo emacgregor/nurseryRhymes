@@ -23,6 +23,7 @@ class Model {
     var highlightingContainer = HighlightingContainer()
     var quizzes = [[String: String]]()
     var quizJson: Any
+    var coreData = CoreDataContainer()
   
     
     init() {
