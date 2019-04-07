@@ -52,13 +52,13 @@ class CustomCell: UITableViewCell {
         self.addSubview(messageView)
         self.addSubview(homeExpLabel)
         
-        mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        mainImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        mainImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        mainImageView.widthAnchor.constraint(equalToConstant :50).isActive = true
-        mainImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        mainImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        mainImageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        //mainImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor).isActive = true
+        messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 10).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.homeExpLabel.leftAnchor).isActive = true
         messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         messageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true

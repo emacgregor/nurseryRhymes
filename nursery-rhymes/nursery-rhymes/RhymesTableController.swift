@@ -49,7 +49,7 @@ class RhymesTableController : UITableViewController {
         }
         
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = 100
         self.tableView.estimatedRowHeight = 200
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.isTranslucent = false;
