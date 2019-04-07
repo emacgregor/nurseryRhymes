@@ -369,18 +369,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="20" y="560" width="171" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mother Goose Visit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Mother Goose Visit" backgroundImage="MGV.png">
+                                    <color key="titleColor" red="0.57541108131408691" green="0.37389454245567322" blue="0.17202240228652954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,18 +392,24 @@
                                     <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="CxW-KF-AfL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="223" y="560" width="171" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Father Goose Visit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="34w-hO-dVy"/>
+                                    <constraint firstAttribute="width" constant="171" id="7xY-4C-cIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Father Goose Visit" backgroundImage="FGV.png">
+                                    <color key="titleColor" red="0.47359472513198853" green="0.11247991770505905" blue="0.067981906235218048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.98444992303848267" green="0.79876810312271118" blue="0.82202214002609253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -411,18 +419,20 @@
                                     <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="hlk-Fa-rhk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="223" y="255" width="171" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Jerrold Rhymes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Father Goose Rhymes" backgroundImage="Jerrold.png">
+                                    <color key="titleColor" red="0.9389835000038147" green="0.93052858114242554" blue="0.9369015097618103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -432,18 +442,21 @@
                                     <action selector="openJerrold:" destination="5ra-40-eKe" eventType="touchUpInside" id="P6I-ys-wqK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="20" y="255" width="171" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Volland Rhymes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Mother Goose Rhymes" backgroundImage="Volland.png">
+                                    <color key="titleColor" red="0.90751343965530396" green="0.95039361715316772" blue="0.8355136513710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -453,8 +466,29 @@
                                     <action selector="openVolland:" destination="5ra-40-eKe" eventType="touchUpInside" id="0eS-dl-F5L"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pandaprofile.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
+                                <rect key="frame" x="57" y="105" width="300" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="PpO-AB-OeP"/>
+                                    <constraint firstAttribute="width" constant="300" id="imE-gy-dfa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="trailing" secondItem="Am0-Eu-0jS" secondAttribute="trailingMargin" id="46I-Oy-lUg"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="leading" secondItem="LEk-mM-k58" secondAttribute="leading" id="4GR-zV-AUk"/>
+                            <constraint firstItem="MSr-lG-i2h" firstAttribute="centerX" secondItem="Am0-Eu-0jS" secondAttribute="centerX" id="CMa-V7-YAr"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="bottom" constant="29" id="FNU-WZ-nwl"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="baseline" secondItem="4Sx-Y7-RZT" secondAttribute="firstBaseline" id="IO0-cA-GNe"/>
+                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="tHK-0J-Kt2" secondAttribute="bottom" constant="26" id="Yav-Jz-Jjy"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="top" secondItem="4Sx-Y7-RZT" secondAttribute="top" id="gRq-0r-i1m"/>
+                            <constraint firstItem="MSr-lG-i2h" firstAttribute="top" secondItem="rLZ-Pd-fh8" secondAttribute="bottom" constant="17" id="nC3-3v-JqY"/>
+                            <constraint firstItem="LEk-mM-k58" firstAttribute="top" secondItem="MSr-lG-i2h" secondAttribute="bottom" constant="30" id="oLD-5F-JHG"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="trailing" secondItem="LEk-mM-k58" secondAttribute="trailing" id="obC-wb-450"/>
+                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leadingMargin" id="rAW-GT-V1G"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="leading" secondItem="4Sx-Y7-RZT" secondAttribute="trailing" constant="32" id="yBC-ys-SaS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tIH-LB-oQd">
                         <barButtonItem key="leftBarButtonItem" title="Analytics" id="tu5-ER-zzi">
@@ -510,6 +544,13 @@
             <point key="canvasLocation" x="1589.8550724637682" y="-1407.5892857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FGV.png" width="100" height="97"/>
+        <image name="Jerrold.png" width="100" height="100"/>
+        <image name="MGV.png" width="100" height="100"/>
+        <image name="Volland.png" width="100" height="100"/>
+        <image name="pandaprofile.png" width="1600" height="1600"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Fo4-2r-83b"/>
     </inferredMetricsTieBreakers>

@@ -57,7 +57,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         m.coreData.saveCurrentViews(id: self.id, views: count)
         self.loadRhyme()
         
-        let quiz = m.getQuiz(rhyme: self.id, level: 1)
+        let quiz = m.getQuiz(rhyme: self.id, level: 0)
         let hasQuiz = (quiz != [:])
         self.quizButton.isEnabled = hasQuiz
         
