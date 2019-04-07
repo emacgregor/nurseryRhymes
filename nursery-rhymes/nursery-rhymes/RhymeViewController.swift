@@ -11,6 +11,7 @@ import AVFoundation
 
 class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     var collectionName = String()
+    var count = 0
     @IBOutlet weak var rhymeLabel: UILabel!
     
     @IBOutlet weak var timeSlider: UISlider!
@@ -51,7 +52,9 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         m = Model.getModel()
         collectionName = m.getRhymeCollection(id: self.id)
-        
+        count = m.coreData.getCurrentViews(id: String(self.id)) ?? 0
+        count = count + 1
+        m.coreData.saveCurrentViews(id: self.id, views: count)
         self.loadRhyme()
         
         if (collectionName != "Volland") {

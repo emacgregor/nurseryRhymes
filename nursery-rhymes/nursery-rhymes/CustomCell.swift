@@ -11,6 +11,8 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     var message: String?
+    var score: Int?
+    var count: Int?
     var mainImage: UIImage?
     var homeExp = UILabel()
     var homeExpExists: Bool?
@@ -24,6 +26,23 @@ class CustomCell: UITableViewCell {
         label.textColor = UIColor.white
         return label
     }()
+    
+    var scoreView : UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
+        label.textColor = UIColor.white
+        return label
+    }()
+    
+    var countView : UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
+        label.textColor = UIColor.white
+        return label
+    }()
+    
     
     var mainImageView : UIImageView = {
         var imageView = UIImageView()
@@ -50,6 +69,8 @@ class CustomCell: UITableViewCell {
         
         self.addSubview(mainImageView)
         self.addSubview(messageView)
+        self.addSubview(scoreView)
+        self.addSubview(countView)
         self.addSubview(homeExpLabel)
         
         mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
@@ -60,9 +81,21 @@ class CustomCell: UITableViewCell {
         
         messageView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 10).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.homeExpLabel.leftAnchor).isActive = true
-        messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        messageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        //messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        messageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        //messageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
         
+        scoreView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 10).isActive = true
+        scoreView.rightAnchor.constraint(equalTo: self.homeExpLabel.leftAnchor, constant: 10).isActive = true
+//        scoreView.bottomAnchor.constraint(equalTo: self.countView.topAnchor, constant: -10).isActive = true
+        scoreView.topAnchor.constraint(equalTo: self.messageView.bottomAnchor, constant: 10).isActive = true
+        
+        countView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 10).isActive = true
+        countView.rightAnchor.constraint(equalTo: self.homeExpLabel.leftAnchor, constant: 10).isActive = true
+        countView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        countView.topAnchor.constraint(equalTo: self.scoreView.bottomAnchor, constant: 10).isActive = true
+//
         homeExpLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         homeExpLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         homeExpLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -77,6 +110,16 @@ class CustomCell: UITableViewCell {
         super.layoutSubviews()
         if message != nil {
             messageView.text = message
+        }
+        if score != nil {
+            scoreView.text = "Score: \(score!).0%"
+        }
+        if count != nil {
+            countView.text = "Read: \(count!) times"
+            print("Read: \(count!) times")
+        } else {
+            countView.text = "noCount"
+            print("noCount")
         }
         if mainImage != nil {
             mainImageView.image = mainImage

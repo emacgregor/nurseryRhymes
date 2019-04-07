@@ -11,6 +11,8 @@ struct cellData {
     let image: UIImage?
     let message: String?
     let id: Int?
+    let score: Int
+    let count: Int
 }
 class RhymesTableController : UITableViewController {
     var collectionName: String!
@@ -38,7 +40,9 @@ class RhymesTableController : UITableViewController {
                 data.append(cellData(
                     image: m.getRhymeImage(id: rhymeid),
                     message: m.getRhymeName(id: rhymeid),
-                    id: rhymeid
+                    id: rhymeid,
+                    score: m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0,
+                    count: m.coreData.getCurrentViews(id: String(rhymeid)) ?? 0
                 ))
             }
         }
@@ -64,7 +68,8 @@ class RhymesTableController : UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
         
         cell.homeExpExists = (m.getHomeExCount(id: data[indexPath.row].id!) > 0)
-           
+        cell.score = data[indexPath.row].score
+        cell.count = data[indexPath.row].count
         cell.mainImage = data[indexPath.row].image
         cell.message = data[indexPath.row].message
         cell.layoutSubviews()
