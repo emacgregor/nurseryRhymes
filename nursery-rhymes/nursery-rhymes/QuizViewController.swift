@@ -16,7 +16,7 @@ class QuizViewController : UIViewController {
     var m = Model()
     var id = Int()
     var message = String()
-    var level = 1
+    var level = 0
     var count = 0
     var jsonModel  = String()
   
@@ -66,8 +66,8 @@ class QuizViewController : UIViewController {
             return
         }
         level = level + 1
-        if (level > 4) {
-            level = 1
+        if (level > 3) {
+            level = 0
             count = -1
         }
         if labelA.titleLabel!.text == quizzes["Answer"]! {

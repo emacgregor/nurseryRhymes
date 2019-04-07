@@ -127,11 +127,11 @@ class Model {
         
         let stringRhyme = String(rhyme)
         // minus 1 since it originally started at 1, now json starts at 0.
-        let stringLevel = String(level - 1)
+        let stringLevel = String(level)
         print("\(level)")
         var rhymeQuiz: [String: String] = [:]
         for quiz in quizzes {
-            print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(level)")
+            print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(stringLevel)")
             if (quiz["RhymeID"] == stringRhyme && quiz["QuestionNo"] == stringLevel) {
                 rhymeQuiz = quiz
                 print("inside \(stringRhyme)")
