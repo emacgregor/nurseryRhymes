@@ -91,11 +91,13 @@ class RhymesTableController : UITableViewController {
             
             //Make sure rhyme files exist before we display it
             if (m.getRhymeTranscript(id: rhymeid) != "") {
+                let quiz = m.getQuiz(rhyme: rhymeid, level: 1)
+                let hasQuiz = (quiz != [:])
                 data.append(cellData(
                     image: m.getRhymeImage(id: rhymeid),
                     message: m.getRhymeName(id: rhymeid),
                     id: rhymeid,
-                    score: m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0,
+                    score: hasQuiz ? (m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0) : -1,
                     count: m.coreData.getCurrentViews(id: String(rhymeid)) ?? 0
                 ))
             }

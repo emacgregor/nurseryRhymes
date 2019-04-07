@@ -106,7 +106,7 @@ class Model {
     }
     
     func readQuizzesJson() {
-        if let path = Bundle.main.path(forResource: "quizDatabase", ofType: "json")
+        if let path = Bundle.main.path(forResource: "quizDatabaseV2", ofType: "json")
         {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
@@ -126,7 +126,8 @@ class Model {
     func getQuiz(rhyme: Int, level: Int) -> [String:String] {
         
         let stringRhyme = String(rhyme)
-        let stringLevel = String(10 + level)
+        // minus 1 since it originally started at 1, now json starts at 0.
+        let stringLevel = String(1 - level)
         print("\(level)")
         var rhymeQuiz: [String: String] = [:]
         for quiz in quizzes {
