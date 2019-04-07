@@ -29,7 +29,12 @@ class RhymesTableController : UITableViewController {
             formattedName = "Mother Goose Visit"
         } else if (formattedName == "FGV") {
             formattedName = "Father Goose Visit"
+        } else if (formattedName == "Volland") {
+            formattedName = "Mother Goose Rhymes"
+        } else if (formattedName == "Jerrold") {
+            formattedName = "Father Goose Rhymes"
         }
+        print("formatted \(formattedName)")
         collectionNameLabel.title = formattedName
         
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
