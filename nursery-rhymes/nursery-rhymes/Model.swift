@@ -127,7 +127,7 @@ class Model {
         
         let stringRhyme = String(rhyme)
         // minus 1 since it originally started at 1, now json starts at 0.
-        let stringLevel = String(1 - level)
+        let stringLevel = String(level - 1)
         print("\(level)")
         var rhymeQuiz: [String: String] = [:]
         for quiz in quizzes {
