@@ -112,7 +112,11 @@ class CustomCell: UITableViewCell {
             messageView.text = message
         }
         if score != nil {
-            scoreView.text = "Score: \(score!).0%"
+            if score! == -1 {
+                scoreView.text = "No Quiz"
+            } else {
+                scoreView.text = "Score: \(score!)%"
+            }
         }
         if count != nil {
             countView.text = "Read: \(count!) times"
