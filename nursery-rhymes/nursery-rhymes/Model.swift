@@ -106,7 +106,7 @@ class Model {
     }
     
     func readQuizzesJson() {
-        if let path = Bundle.main.path(forResource: "quizDatabase", ofType: "json")
+        if let path = Bundle.main.path(forResource: "quizDatabaseV2", ofType: "json")
         {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
