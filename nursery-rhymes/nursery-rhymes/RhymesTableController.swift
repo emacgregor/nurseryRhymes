@@ -31,30 +31,13 @@ class RhymesTableController : UITableViewController {
             formattedName = "Father Goose Visit"
         }
         collectionNameLabel.title = formattedName
-        let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
-        for id in Array(collectionRhymes.keys) {
-            let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
-            
-            //Make sure rhyme files exist before we display it
-            if (m.getRhymeTranscript(id: rhymeid) != "") {
-                data.append(cellData(
-                    image: m.getRhymeImage(id: rhymeid),
-                    message: m.getRhymeName(id: rhymeid),
-                    id: rhymeid,
-                    score: m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0,
-                    count: m.coreData.getCurrentViews(id: String(rhymeid)) ?? 0
-                ))
-            }
-        }
-        
-        data.sort { (a, b) -> Bool in
-            let comparison = a.message?.localizedCaseInsensitiveCompare(b.message ?? "")
-            return (comparison == ComparisonResult.orderedAscending)
-        }
         
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         self.tableView.rowHeight = 100
         self.tableView.estimatedRowHeight = 200
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.isTranslucent = false;
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
@@ -99,4 +82,29 @@ class RhymesTableController : UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.data = [cellData]()
+        let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
+        for id in Array(collectionRhymes.keys) {
+            let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
+            
+            //Make sure rhyme files exist before we display it
+            if (m.getRhymeTranscript(id: rhymeid) != "") {
+                data.append(cellData(
+                    image: m.getRhymeImage(id: rhymeid),
+                    message: m.getRhymeName(id: rhymeid),
+                    id: rhymeid,
+                    score: m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0,
+                    count: m.coreData.getCurrentViews(id: String(rhymeid)) ?? 0
+                ))
+            }
+        }
+        data.sort { (a, b) -> Bool in
+            let comparison = a.message?.localizedCaseInsensitiveCompare(b.message ?? "")
+            return (comparison == ComparisonResult.orderedAscending)
+        }
+
+        self.tableView.reloadData()
+    }
 }
