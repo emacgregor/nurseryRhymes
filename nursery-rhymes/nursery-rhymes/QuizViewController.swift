@@ -35,8 +35,10 @@ class QuizViewController : UIViewController {
         }
         
         level = m.coreData.getCurrentLevel(id: String(id)) ?? 0
+        count = m.coreData.getCurrentScore(id: String(id)) ?? 0
+
         
-        score.text = "\(count) / 4"
+        score.text = "\(count * 25) / 100"
         
         print("message \(message)")
         
@@ -64,12 +66,17 @@ class QuizViewController : UIViewController {
             return
         }
         level = level + 1
+        if (level > 4) {
+            level = 1
+            count = -1
+        }
         if labelA.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
-            score.text = "\(count) / 4"
+            score.text = "\(count * 25) / 100"
         }
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
+        m.coreData.saveCurrentScore(id: self.id, score: self.count)
         print(quizzes["Answer"])
         print(labelA.titleLabel!.text)
         questionLabel.text = quizzes["QuestionText"]
@@ -85,13 +92,18 @@ class QuizViewController : UIViewController {
     @IBAction func answerB(_ sender: Any) {
         
         level = level + 1
+        if (level > 4) {
+            level = 1
+            count = -1
+        }
         if labelB.titleLabel?.text == quizzes["Answer"] {
             count = count + 1
-            score.text = "\(count) / 4"
+            score.text = "\(count * 25) / 100"
             
         }
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
+        m.coreData.saveCurrentScore(id: self.id, score: self.count)
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
@@ -103,13 +115,18 @@ class QuizViewController : UIViewController {
     
     @IBAction func answerC(_ sender: Any) {
         level = level + 1
+        if (level > 4) {
+            level = 1
+            count = -1
+        }
         if labelC.titleLabel?.text == quizzes["Answer"] {
             count = count + 1
-            score.text = "\(count) / 4"
+            score.text = "\(count * 25) / 100"
             
         }
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
+        m.coreData.saveCurrentScore(id: self.id, score: self.count)
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
@@ -122,13 +139,18 @@ class QuizViewController : UIViewController {
     
     @IBAction func answerD(_ sender: Any) {
         level = level + 1
+        if (level > 4) {
+            level = 1
+            count = -1
+        }
         if labelD.titleLabel?.text == quizzes["Answer"] {
             count = count + 1
-            score.text = "\(count) / 4"
+            score.text = "\(count * 25) / 100"
             
         }
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
+        m.coreData.saveCurrentScore(id: self.id, score: self.count)
         questionLabel.text = quizzes["QuestionText"]
         labelA.setTitle(quizzes["A"], for: .normal)
         labelA.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])

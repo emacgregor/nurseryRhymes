@@ -131,7 +131,7 @@ class Model {
         var rhymeQuiz: [String: String] = [:]
         for quiz in quizzes {
             print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(level)")
-            if (quiz["RhymeID"] == "2" && quiz["QuestionNo"] == stringLevel) {
+            if (quiz["RhymeID"] == stringRhyme && quiz["QuestionNo"] == stringLevel) {
                 rhymeQuiz = quiz
                 print("inside \(stringRhyme)")
             }
