@@ -119,6 +119,7 @@
                         <outlet property="controlView" destination="UZD-w5-SQX" id="tIN-zJ-LS1"/>
                         <outlet property="homeExperienceBar" destination="NB5-R7-8F8" id="PcA-xt-pTS"/>
                         <outlet property="playButton" destination="arQ-4v-E1N" id="6GF-L6-bsZ"/>
+                        <outlet property="quizButton" destination="Ago-2E-9li" id="s08-zW-EoX"/>
                         <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
                         <outlet property="timeSlider" destination="Biz-xk-2lm" id="anm-mI-MKr"/>
                         <segue destination="oJ4-zM-WOr" kind="show" identifier="quiz" id="Fo4-2r-83b"/>

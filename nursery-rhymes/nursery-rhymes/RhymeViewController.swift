@@ -57,6 +57,10 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         m.coreData.saveCurrentViews(id: self.id, views: count)
         self.loadRhyme()
         
+        let quiz = m.getQuiz(rhyme: self.id, level: 1)
+        let hasQuiz = (quiz != [:])
+        self.quizButton.isEnabled = hasQuiz
+        
         if (collectionName != "Volland") {
             if (collectionName != "Jerrold") {
                 self.buildHomeExBar()
@@ -142,6 +146,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         playButton.setTitle("", for: UIControlState.normal) //Play Button
     }
     
+    @IBOutlet weak var quizButton: UIBarButtonItem!
     @IBAction func quizClick(_ sender: Any) {
         performSegue(withIdentifier: "quiz", sender: self)
     }
