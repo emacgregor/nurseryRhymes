@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		49944F522235AAA600CD794D /* HighlightingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944F512235AAA600CD794D /* HighlightingContainer.swift */; };
 		49944F5A2235FDD800CD794D /* quizDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = 49944F592235FDD800CD794D /* quizDatabase.json */; };
 		49944F5C22363AD700CD794D /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944F5B22363AD600CD794D /* CoreDataContainer.swift */; };
+=======
+		339CF45B2257A6A800E6EB7C /* quiz_resources in Resources */ = {isa = PBXBuildFile; fileRef = 339CF45A2257A6A700E6EB7C /* quiz_resources */; };
+>>>>>>> 4993cce5551ed1965222159c513c342f92cc5d87
 		49A694EE21F559BB002C984A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694ED21F559BB002C984A /* RoundButton.swift */; };
 		49A694F221F5659C002C984A /* RhymesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F121F5659C002C984A /* RhymesTableController.swift */; };
 		49A694F421F56698002C984A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A694F321F56698002C984A /* RegisterViewController.swift */; };
@@ -57,9 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		49944F512235AAA600CD794D /* HighlightingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightingContainer.swift; sourceTree = "<group>"; };
 		49944F592235FDD800CD794D /* quizDatabase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizDatabase.json; sourceTree = "<group>"; };
 		49944F5B22363AD600CD794D /* CoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+=======
+		339CF45A2257A6A700E6EB7C /* quiz_resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = quiz_resources; sourceTree = SOURCE_ROOT; };
+>>>>>>> 4993cce5551ed1965222159c513c342f92cc5d87
 		49A694ED21F559BB002C984A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		49A694F121F5659C002C984A /* RhymesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesTableController.swift; sourceTree = "<group>"; };
 		49A694F321F56698002C984A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 		ACF44A3F0000053B00B9A67C = {
 			isa = PBXGroup;
 			children = (
+				339CF45A2257A6A700E6EB7C /* quiz_resources */,
 				ACF44A4A0000054000B9A67C /* nursery-rhymes */,
 				ACF44A620000054100B9A67C /* nursery-rhymesTests */,
 				ACF44A6D0000054100B9A67C /* nursery-rhymesUITests */,
@@ -316,6 +325,7 @@
 				681D04212235E7BF0014D594 /* fontawesome-webfont.ttf in Resources */,
 				ACF44A560000054000B9A67C /* Assets.xcassets in Resources */,
 				ACF44A510000054000B9A67C /* Main.storyboard in Resources */,
+				339CF45B2257A6A800E6EB7C /* quiz_resources in Resources */,
 				49A6950021F56CE5002C984A /* pandaprofile.png in Resources */,
 				AC69EADF0000415700BD009C /* FileNames.txt in Resources */,
 				ACF44A8100000B5200B9A67C /* transcripts in Resources */,
