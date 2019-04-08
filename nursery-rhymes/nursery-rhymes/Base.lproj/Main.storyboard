@@ -90,12 +90,12 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NB5-R7-8F8" secondAttribute="trailing" id="8gh-Zd-FM4"/>
-                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="D1j-Hq-2JP"/>
-                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="TbO-ct-dmm"/>
+                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="OXc-Zz-oPF"/>
+                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="WoL-fF-bhK"/>
                             <constraint firstItem="tAk-UT-pbk" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leadingMargin" constant="16" id="cHb-q9-7f2"/>
                             <constraint firstItem="UZD-w5-SQX" firstAttribute="trailing" secondItem="0xN-aa-wf0" secondAttribute="trailingMargin" id="iUb-nG-mQh"/>
                             <constraint firstItem="NB5-R7-8F8" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leading" id="jjf-ff-acy"/>
-                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="UZD-w5-SQX" secondAttribute="bottom" id="m13-n8-vct"/>
+                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="UZD-w5-SQX" secondAttribute="bottom" id="l9R-Pu-qf0"/>
                             <constraint firstItem="tAk-UT-pbk" firstAttribute="top" secondItem="NB5-R7-8F8" secondAttribute="bottom" constant="16" id="tew-l7-Oba"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tAk-UT-pbk" secondAttribute="trailing" constant="16" id="vwr-vU-vLB"/>
                             <constraint firstItem="UZD-w5-SQX" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leadingMargin" id="ycN-LO-4sr"/>
@@ -128,6 +128,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4155.072463768116" y="-1407.5892857142856"/>
+        </scene>
+        <!--RhymeView-->
+        <scene sceneID="RpU-M4-7hn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rhyme" referencedIdentifier="RhymeView" id="dIH-CR-9Kw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kck-qc-Zjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2946" y="-927"/>
         </scene>
         <!--Volland-->
         <scene sceneID="LFc-iP-9Tr">
@@ -167,7 +175,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionNameLabel" destination="ora-9z-4My" id="do4-yf-2zn"/>
-                        <segue destination="UZ7-Sz-QO0" kind="show" identifier="cellSegue" id="UEc-oW-tuV"/>
+                        <segue destination="UZ7-Sz-QO0" kind="show" identifier="cellSegueOld" id="UEc-oW-tuV"/>
+                        <segue destination="dIH-CR-9Kw" kind="show" identifier="cellSegue" id="txD-bs-gze"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koH-3H-Dd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,7 +240,7 @@
         <!--Quiz View Controller-->
         <scene sceneID="zHe-cp-Oi6">
             <objects>
-                <viewController id="oJ4-zM-WOr" customClass="QuizViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizView" id="oJ4-zM-WOr" customClass="QuizViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oan-JL-C1T"/>
                         <viewControllerLayoutGuide type="bottom" id="3EP-Md-KlX"/>
@@ -241,13 +250,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mother Goose is WHO?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-XU-CzY">
-                                <rect key="frame" x="20" y="114" width="374" height="144"/>
+                                <rect key="frame" x="20" y="114" width="374" height="95"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-7F-Cw1" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="428" width="374" height="79"/>
+                                <rect key="frame" x="20" y="379" width="374" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="Lyr-uB-957"/>
                                 </constraints>
@@ -270,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-KS-tPd" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="637" width="374" height="79"/>
+                                <rect key="frame" x="20" y="588" width="374" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="qbL-Fr-F7Z"/>
                                 </constraints>
@@ -293,7 +302,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-uY-lyV" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="534" width="374" height="79"/>
+                                <rect key="frame" x="20" y="485" width="374" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="0pJ-5s-W8l"/>
                                 </constraints>
@@ -326,7 +335,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-gV-fUJ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="320" width="374" height="79"/>
+                                <rect key="frame" x="20" y="271" width="374" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="L8o-2U-UHQ"/>
                                 </constraints>
@@ -587,6 +596,6 @@
         <image name="pandaprofile.png" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SU6-SU-plg"/>
+        <segue reference="Fo4-2r-83b"/>
     </inferredMetricsTieBreakers>
 </document>

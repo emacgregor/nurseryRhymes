@@ -95,12 +95,19 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
+
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+
         m.audioContainer.stop()
         m.highlightingContainer.reset()
     }

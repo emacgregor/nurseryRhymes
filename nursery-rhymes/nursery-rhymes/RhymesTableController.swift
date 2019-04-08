@@ -69,7 +69,6 @@ class RhymesTableController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "cellSegue", sender: self)
         print(indexPath)
     }
