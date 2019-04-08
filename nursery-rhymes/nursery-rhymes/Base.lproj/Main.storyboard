@@ -230,12 +230,43 @@
                     <view key="view" contentMode="scaleToFill" id="hdB-UO-A52">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearatale Teacher Portal ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-Au-Cn2">
+                                <rect key="frame" x="52.5" y="216" width="309.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="XXXYYY" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-s0-E8Q">
+                                <rect key="frame" x="52" y="311.5" width="310" height="56"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see how this student is doing, go to teacherportal.hearatale.com." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6I-ry-pFI">
+                                <rect key="frame" x="8" y="431.5" width="398" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0D3-Au-Cn2" firstAttribute="centerX" secondItem="hdB-UO-A52" secondAttribute="centerX" id="BSw-6V-FGZ"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="centerX" secondItem="hdB-UO-A52" secondAttribute="centerX" id="IMo-Qv-8ZY"/>
+                            <constraint firstItem="0D3-Au-Cn2" firstAttribute="top" secondItem="L46-us-aPA" secondAttribute="bottom" constant="128" id="eTM-OS-zab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HOh-s0-E8Q" secondAttribute="trailing" constant="32" id="fvb-As-BBo"/>
+                            <constraint firstItem="HOh-s0-E8Q" firstAttribute="top" secondItem="0D3-Au-Cn2" secondAttribute="bottom" constant="64" id="jcn-na-sAj"/>
+                            <constraint firstAttribute="trailing" secondItem="a6I-ry-pFI" secondAttribute="trailing" constant="8" id="mt6-Vt-B36"/>
+                            <constraint firstItem="HOh-s0-E8Q" firstAttribute="leading" secondItem="hdB-UO-A52" secondAttribute="leadingMargin" constant="32" id="teX-NF-5v7"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="top" secondItem="HOh-s0-E8Q" secondAttribute="bottom" constant="64" id="u7k-wO-KlA"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="leading" secondItem="hdB-UO-A52" secondAttribute="leading" constant="8" id="vv7-Ap-bnv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MT-Bo-gOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1061" y="485"/>
+            <point key="canvasLocation" x="2499" y="-2147"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="zHe-cp-Oi6">
@@ -408,15 +439,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="10" y="560" width="160" height="276"/>
                                 <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hbU-w1-Hnd"/>
                                     <constraint firstAttribute="width" constant="160" id="prE-Oz-MMm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Mother Goose Visit" backgroundImage="MGV.png">
-                                    <color key="titleColor" red="0.57541108131408691" green="0.37389454245567322" blue="0.17202240228652954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Mother Goose     Visit" backgroundImage="MGV.png">
+                                    <color key="titleColor" red="0.20632648812647242" green="0.0" blue="0.34240164974619292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -429,20 +461,24 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="CxW-KF-AfL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="244" y="560" width="160" height="276"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="0uN-YI-Yj0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Gpe-Wp-hbw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Father Goose Visit" backgroundImage="FGV.png">
-                                    <color key="titleColor" red="0.47359472513198853" green="0.11247991770505905" blue="0.067981906235218048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Father Goose        Visit" backgroundImage="FGV.png">
+                                    <color key="titleColor" red="1" green="0.99926506717419261" blue="0.017493871086133539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -453,19 +489,25 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.98444992303848267" green="0.79876810312271118" blue="0.82202214002609253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.9948156476020813" green="0.97349435091018677" blue="0.28921100497245789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="openFatherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="N49-TH-VR3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="244" y="255" width="160" height="276"/>
                                 <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="omI-fa-gGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Father Goose Rhymes" backgroundImage="Jerrold.png">
-                                    <color key="titleColor" red="0.9389835000038147" green="0.93052858114242554" blue="0.9369015097618103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.96052199602127075" green="0.78364485502243042" blue="0.24805819988250732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -478,24 +520,28 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="openJerrold:" destination="5ra-40-eKe" eventType="touchUpInside" id="P6I-ys-wqK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pandaprofile.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
-                                <rect key="frame" x="57" y="105" width="300" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearatale.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
+                                <rect key="frame" x="-335.5" y="105" width="1085" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="p4t-CN-DZA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
                                 <rect key="frame" x="10" y="255" width="160" height="276"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="c2o-4s-Bl4"/>
                                     <constraint firstAttribute="height" constant="276" id="gTy-JL-NRg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Mother Goose Rhymes" backgroundImage="Volland.png">
                                     <color key="titleColor" red="0.90751343965530396" green="0.95039361715316772" blue="0.8355136513710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -510,6 +556,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="openVolland:" destination="5ra-40-eKe" eventType="touchUpInside" id="0eS-dl-F5L"/>
@@ -518,7 +567,6 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MSr-lG-i2h" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leadingMargin" constant="37" id="FEu-Ym-YDL"/>
                             <constraint firstItem="Jim-ot-jUf" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="top" id="Fee-YK-5Oy"/>
                             <constraint firstItem="4Sx-Y7-RZT" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="10" id="JTH-4g-6KX"/>
                             <constraint firstAttribute="trailing" secondItem="tHK-0J-Kt2" secondAttribute="trailing" constant="10" id="L91-Be-0ya"/>
@@ -538,6 +586,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Analytics" id="tu5-ER-zzi">
                             <connections>
                                 <action selector="popToHome:" destination="5ra-40-eKe" id="HPk-K3-uSw"/>
+                                <segue destination="gAr-p1-9ao" kind="show" id="SH2-bu-lSg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Account" id="LJ4-hf-N2N"/>
@@ -593,7 +642,7 @@
         <image name="Jerrold.png" width="100" height="100"/>
         <image name="MGV.png" width="100" height="100"/>
         <image name="Volland.png" width="100" height="100"/>
-        <image name="pandaprofile.png" width="1600" height="1600"/>
+        <image name="hearatale.png" width="1085" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Fo4-2r-83b"/>
