@@ -177,15 +177,19 @@
                                 <rect key="frame" x="0.0" y="138" width="414" height="575"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearatale Nursery Rhymes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4z-ef-V2e">
-                                        <rect key="frame" x="24.333333333333343" y="0.0" width="365.66666666666663" height="155"/>
+                                        <rect key="frame" x="24.333333333333343" y="0.0" width="365.66666666666663" height="135"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-Dk-Qus" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="195" width="300" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Rhyme Collections"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-Dk-Qus" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="175" width="314" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="jey-bR-rSq"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="-120" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="50" maxX="200" maxY="50"/>
+                                        <state key="normal" title="Rhyme Collections" image="rhyme_files/RhymeIcon.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="35"/>
@@ -201,10 +205,11 @@
                                             <segue destination="5ra-40-eKe" kind="show" id="Xok-T9-P9Y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-bL-EDQ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="335" width="300" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Settings"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-bL-EDQ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="395" width="314" height="180"/>
+                                        <inset key="titleEdgeInsets" minX="-120" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="50" maxX="200" maxY="50"/>
+                                        <state key="normal" title="Settings" image="rhyme_files/OptionsIcon.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="35"/>
@@ -217,31 +222,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39k-RM-S3B" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="475" width="300" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="IyA-u7-XSh"/>
-                                            <constraint firstAttribute="height" constant="100" id="pZu-Dp-sUA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Analytics"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="36"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="39k-RM-S3B" firstAttribute="height" secondItem="ds9-Dk-Qus" secondAttribute="height" id="l6Z-qc-enL"/>
+                                    <constraint firstItem="ds9-Dk-Qus" firstAttribute="leading" secondItem="fra-mJ-ebG" secondAttribute="leading" constant="50" id="DSC-XT-aMg"/>
+                                    <constraint firstAttribute="trailing" secondItem="ds9-Dk-Qus" secondAttribute="trailing" constant="50" id="VoT-bx-mjK"/>
                                     <constraint firstItem="DFn-bL-EDQ" firstAttribute="height" secondItem="ds9-Dk-Qus" secondAttribute="height" id="o5s-WM-ovp"/>
-                                    <constraint firstItem="39k-RM-S3B" firstAttribute="width" secondItem="ds9-Dk-Qus" secondAttribute="width" id="quf-Q4-gDl"/>
                                     <constraint firstItem="DFn-bL-EDQ" firstAttribute="width" secondItem="ds9-Dk-Qus" secondAttribute="width" id="xue-Ep-sEh"/>
                                 </constraints>
                             </stackView>
@@ -260,7 +245,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="analyticsButton" destination="39k-RM-S3B" id="tz2-Jf-2xH"/>
                         <outlet property="logout" destination="iup-uB-D8C" id="uep-Wa-U6A"/>
                         <outlet property="rhymesButton" destination="ds9-Dk-Qus" id="306-lM-UlC"/>
                         <outlet property="settingsButton" destination="DFn-bL-EDQ" id="Zl5-e1-SLQ"/>
@@ -551,6 +535,8 @@
         <image name="rhyme_files/FGV.png" width="16" height="16"/>
         <image name="rhyme_files/Jerrold.png" width="16" height="16"/>
         <image name="rhyme_files/MGV.png" width="16" height="16"/>
+        <image name="rhyme_files/OptionsIcon.png" width="16" height="16"/>
+        <image name="rhyme_files/RhymeIcon.png" width="16" height="16"/>
         <image name="rhyme_files/Volland.png" width="16" height="16"/>
     </resources>
 </document>

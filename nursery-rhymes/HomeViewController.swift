@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
        // self.rhymesButton.borderColor();
         self.settingsButton.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])
 
-        self.analyticsButton.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])
+        /*self.analyticsButton.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])*/
 
         
         
