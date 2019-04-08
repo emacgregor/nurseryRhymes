@@ -57,4 +57,8 @@ class CollectionViewController : UIViewController {
         self.collectionToOpen = "MGV"
         performSegue(withIdentifier: "collectionSegue", sender: self)
     }
+    @IBAction func openFatherGoose(_ sender: Any) {
+        self.collectionToOpen = "FGV"
+        performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
 }

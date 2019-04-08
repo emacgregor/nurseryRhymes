@@ -44,7 +44,7 @@ class RhymesTableController : UITableViewController {
         self.tableView.delegate = self;
         
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.isTranslucent = false;
+ //       self.navigationController?.navigationBar.isTranslucent = false;
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
     }
     
@@ -88,7 +88,8 @@ class RhymesTableController : UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationController?.navigationBar.isTranslucent = false;
+
         self.data = [cellData]()
         let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
         for id in Array(collectionRhymes.keys) {
