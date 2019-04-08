@@ -115,6 +115,7 @@
                         <outlet property="homeExperienceBar" destination="78S-zb-hbn" id="1SN-v2-FRe"/>
                         <outlet property="playButton" destination="rrG-lG-RV6" id="Ewq-sG-Fdo"/>
                         <outlet property="quizButton" destination="yGo-Ds-urz" id="Ja5-b2-RGy"/>
+                        <outlet property="rhymeImageView" destination="FEj-VJ-chY" id="9jJ-54-4SF"/>
                         <outlet property="rhymeLabel" destination="JUL-ki-9CR" id="SK7-Kv-FAi"/>
                         <outlet property="timeSlider" destination="FgA-Zq-P8z" id="Ntz-Qq-vEP"/>
                     </connections>

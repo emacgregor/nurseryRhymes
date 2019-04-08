@@ -13,6 +13,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     var collectionName = String()
     var count = 0
     @IBOutlet weak var rhymeLabel: UILabel!
+    @IBOutlet weak var rhymeImageView: UIImageView!
     
     @IBOutlet weak var timeSlider: UISlider!
     var updater: CADisplayLink!
@@ -74,6 +75,11 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
             m.audioContainer.setDelegate(delegate: self)
         }
         
+        let rhymeImage = m.getRhymeImage(id: self.id)
+        self.rhymeImageView.image = rhymeImage
+        let aspectWidth = (self.rhymeImageView.frame.height / rhymeImage.size.height) * rhymeImage.size.width
+        self.rhymeImageView.widthAnchor.constraint(equalToConstant: aspectWidth).isActive = true
+        
         self.navigationItem.title = message;
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -88,7 +94,6 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
-        
     
         m.audioContainer.play()
         playButton.setTitle("", for: UIControlState.normal) //Pause Button\
