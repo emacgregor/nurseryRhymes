@@ -59,6 +59,30 @@ class QuizViewController : UIViewController {
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
+        
+        let imageA = UIImage(named: "\(quizzes["A"]!).jpg") as UIImage?
+        if (imageA == nil) {
+            let  imageA = UIImage(named: "\(quizzes["A"]!).png") as UIImage?
+            if (imageA == nil) {
+                
+            }
+        }
+        labelA.setBackgroundImage(imageA, for: .normal)
+        let imageB = UIImage(named: "\(quizzes["B"]!).jpg") as UIImage?
+        if (imageB == nil) {
+            let  imageB = UIImage(named: "\(quizzes["B"]!).png") as UIImage?
+        }
+        labelB.setBackgroundImage(imageB, for: .normal)
+        let imageC = UIImage(named: "\(quizzes["C"]!).jpg") as UIImage?
+        if (imageC == nil) {
+            let  imageC = UIImage(named: "\(quizzes["C"]!).png") as UIImage?
+        }
+        labelC.setBackgroundImage(imageC, for: .normal)
+        let imageD = UIImage(named: "\(quizzes["D"]!).jpg") as UIImage?
+        if (imageD == nil) {
+            let  imageD = UIImage(named: "\(quizzes["D"]!).png") as UIImage?
+        }
+        labelD.setBackgroundImage(imageD, for: .normal)
     }
 
   
@@ -84,15 +108,36 @@ class QuizViewController : UIViewController {
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
         print(quizzes["Answer"])
         print(labelA.titleLabel!.text)
-        questionLabel.text = quizzes["QuestionText"]
+        questionLabel.text = quizzes["QuestionText"]!
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
-     
         
-        
+        let imageA = UIImage(named: "\(quizzes["A"]!).jpg") as UIImage?
+        if (imageA == nil) {
+            let  imageA = UIImage(named: "\(quizzes["A"]!).png") as UIImage?
+        }
+        labelA.setBackgroundImage(imageA, for: .normal)
+        let imageB = UIImage(named: "\(quizzes["B"]!).jpg") as UIImage?
+        if (imageB == nil) {
+            let  imageB = UIImage(named: "\(quizzes["B"]!).png") as UIImage?
+        }
+        labelB.setBackgroundImage(imageB, for: .normal)
+        let imageC = UIImage(named: "\(quizzes["C"]!).jpg") as UIImage?
+        if (imageC == nil) {
+            let  imageC = UIImage(named: "\(quizzes["C"]!).png") as UIImage?
+        }
+        labelC.setBackgroundImage(imageC, for: .normal)
+        let imageD = UIImage(named: "\(quizzes["D"]!).jpg") as UIImage?
+        if (imageD == nil) {
+            let  imageD = UIImage(named: "\(quizzes["D"]!).png") as UIImage?
+        }
+        labelD.setBackgroundImage(imageD, for: .normal)
     }
+        
+
+    
     
     @IBAction func answerB(_ sender: Any) {
         
@@ -106,19 +151,40 @@ class QuizViewController : UIViewController {
             count = 0
             
         }
-        score.text = "\(count * 25) / 100"
-
+        
         quizzes = m.getQuiz(rhyme: self.id, level: level)
+        score.text = "\(count * 25) / 100"
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
-        questionLabel.text = quizzes["QuestionText"]
+        questionLabel.text = quizzes["QuestionText"]!
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
-      
-        
+       
+        let imageA = UIImage(named: "\(quizzes["A"]!).jpg") as UIImage?
+        if (imageA == nil) {
+            let  imageA = UIImage(named: "\(quizzes["A"]!).png") as UIImage?
+        }
+        labelA.setBackgroundImage(imageA, for: .normal)
+        let imageB = UIImage(named: "\(quizzes["B"]!).jpg") as UIImage?
+        if (imageB == nil) {
+            let  imageB = UIImage(named: "\(quizzes["B"]!).png") as UIImage?
+        }
+        labelB.setBackgroundImage(imageB, for: .normal)
+        let imageC = UIImage(named: "\(quizzes["C"]!).jpg") as UIImage?
+        if (imageC == nil) {
+            let  imageC = UIImage(named: "\(quizzes["C"]!).png") as UIImage?
+        }
+        labelC.setBackgroundImage(imageC, for: .normal)
+        let imageD = UIImage(named: "\(quizzes["D"]!).jpg") as UIImage?
+        if (imageD == nil) {
+            let  imageD = UIImage(named: "\(quizzes["D"]!).png") as UIImage?
+        }
+        labelD.setBackgroundImage(imageD, for: .normal)
     }
+      
+
     
     @IBAction func answerC(_ sender: Any) {
         if labelC.titleLabel!.text == quizzes["Answer"]! {
@@ -136,22 +202,42 @@ class QuizViewController : UIViewController {
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
-        questionLabel.text = quizzes["QuestionText"]
+        questionLabel.text = quizzes["QuestionText"]!
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
+        
+        let imageA = UIImage(named: "\(quizzes["A"]!).jpg") as UIImage?
+        if (imageA == nil) {
+            let  imageA = UIImage(named: "\(quizzes["A"]!).png") as UIImage?
+        }
+        labelA.setBackgroundImage(imageA, for: .normal)
+        let imageB = UIImage(named: "\(quizzes["B"]!).jpg") as UIImage?
+        if (imageB == nil) {
+            let  imageB = UIImage(named: "\(quizzes["B"]!).png") as UIImage?
+        }
+        labelB.setBackgroundImage(imageB, for: .normal)
+        let imageC = UIImage(named: "\(quizzes["C"]!).jpg") as UIImage?
+        if (imageC == nil) {
+            let  imageC = UIImage(named: "\(quizzes["C"]!).png") as UIImage?
+        }
+        labelC.setBackgroundImage(imageC, for: .normal)
+        let imageD = UIImage(named: "\(quizzes["D"]!).jpg") as UIImage?
+        if (imageD == nil) {
+            let  imageD = UIImage(named: "\(quizzes["D"]!).png") as UIImage?
+        }
+        labelD.setBackgroundImage(imageD, for: .normal)
+    }
       
 
-        
-    }
+
     
     @IBAction func answerD(_ sender: Any) {
         if labelD.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
         }
-        
         level = level + 1
         if (level > 3) {
             level = 0
@@ -159,16 +245,36 @@ class QuizViewController : UIViewController {
             
         }
         score.text = "\(count * 25) / 100"
-
+        
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
-        questionLabel.text = quizzes["QuestionText"]
+        questionLabel.text = quizzes["QuestionText"]!
         labelA.setTitle(quizzes["A"], for: .normal)
-        labelA.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: [])
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
         labelD.setTitle(quizzes["D"], for: .normal)
+        
+        let imageA = UIImage(named: "\(quizzes["A"]!).jpg") as UIImage?
+        if (imageA == nil) {
+            let  imageA = UIImage(named: "\(quizzes["A"]!).png") as UIImage?
+        }
+        labelA.setBackgroundImage(imageA, for: .normal)
+        let imageB = UIImage(named: "\(quizzes["B"]!).jpg") as UIImage?
+        if (imageB == nil) {
+            let  imageB = UIImage(named: "\(quizzes["B"]!).png") as UIImage?
+        }
+        labelB.setBackgroundImage(imageB, for: .normal)
+        let imageC = UIImage(named: "\(quizzes["C"]!).jpg") as UIImage?
+        if (imageC == nil) {
+            let  imageC = UIImage(named: "\(quizzes["C"]!).png") as UIImage?
+        }
+        labelC.setBackgroundImage(imageC, for: .normal)
+        let imageD = UIImage(named: "\(quizzes["D"]!).jpg") as UIImage?
+        if (imageD == nil) {
+            let  imageD = UIImage(named: "\(quizzes["D"]!).png") as UIImage?
+        }
+        labelD.setBackgroundImage(imageD, for: .normal)
     }
 }
 
