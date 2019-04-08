@@ -34,9 +34,12 @@ class QuizViewController : UIViewController {
             return
         }
         
-        level = m.coreData.getCurrentLevel(id: String(id)) ?? 0
+        level = m.coreData.getCurrentLevel(id: String(id)) ?? 1
         count = m.coreData.getCurrentScore(id: String(id)) ?? 0
-
+        if (level > 3) {
+            level = 0
+            count = 0
+        }
         
         score.text = "\(count * 25) / 100"
         
@@ -47,10 +50,11 @@ class QuizViewController : UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
-        
+       
         quizzes = m.getQuiz(rhyme: self.id, level: level)
+        print("curlevel\(level)")
         questionLabel.text = quizzes["QuestionText"]
-        print(quizzes)
+        print("Quiza\(quizzes)")
         labelA.setTitle(quizzes["A"], for: .normal)
         labelB.setTitle(quizzes["B"], for: .normal)
         labelC.setTitle(quizzes["C"], for: .normal)
@@ -65,15 +69,16 @@ class QuizViewController : UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
+        if labelA.titleLabel!.text == quizzes["Answer"]! {
+            count = count + 1
+        }
         level = level + 1
         if (level > 3) {
             level = 0
-            count = -1
+            count = 0
+            
         }
-        if labelA.titleLabel!.text == quizzes["Answer"]! {
-            count = count + 1
-            score.text = "\(count * 25) / 100"
-        }
+        score.text = "\(count * 25) / 100"
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
@@ -91,16 +96,18 @@ class QuizViewController : UIViewController {
     
     @IBAction func answerB(_ sender: Any) {
         
-        level = level + 1
-        if (level > 4) {
-            level = 1
-            count = -1
-        }
-        if labelB.titleLabel?.text == quizzes["Answer"] {
+        if labelB.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+        }
+        level = level + 1
+        if (level > 3) {
+            level = 0
+            count = 0
             
         }
+        score.text = "\(count * 25) / 100"
+
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
@@ -114,16 +121,18 @@ class QuizViewController : UIViewController {
     }
     
     @IBAction func answerC(_ sender: Any) {
-        level = level + 1
-        if (level > 4) {
-            level = 1
-            count = -1
-        }
-        if labelC.titleLabel?.text == quizzes["Answer"] {
+        if labelC.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+        }
+        level = level + 1
+        if (level > 3) {
+            level = 0
+            count = 0
             
         }
+        score.text = "\(count * 25) / 100"
+
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
@@ -138,16 +147,19 @@ class QuizViewController : UIViewController {
     }
     
     @IBAction func answerD(_ sender: Any) {
-        level = level + 1
-        if (level > 4) {
-            level = 1
-            count = -1
-        }
-        if labelD.titleLabel?.text == quizzes["Answer"] {
+        if labelD.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+        }
+        
+        level = level + 1
+        if (level > 3) {
+            level = 0
+            count = 0
             
         }
+        score.text = "\(count * 25) / 100"
+
         quizzes = m.getQuiz(rhyme: self.id, level: level)
         m.coreData.saveCurrentLevel(id: self.id, level: self.level)
         m.coreData.saveCurrentScore(id: self.id, score: self.count)
