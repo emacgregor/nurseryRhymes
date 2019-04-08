@@ -110,6 +110,54 @@ class CoreDataContainer {
         return nil
     }
     
+    func saveScore(score: Int) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Quiz")
+       
+        do {
+            if let quiz = try managedContext.fetch(fetchRequest).first {
+                quiz.setValue(score, forKeyPath: "scoreAdded")
+                try managedContext.save()
+            } else {
+                let entity = NSEntityDescription.entity(forEntityName: "Quiz",
+                                                        in: managedContext)!
+                let quiz = NSManagedObject(entity: entity,
+                                           insertInto: managedContext)
+                quiz.setValue(score, forKeyPath: "scoreAdded")
+                try managedContext.save()
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func getScore() -> Int? {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return nil
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Quiz")
+      
+        do {
+            let currentLevel = try managedContext.fetch(fetchRequest).first?.value(forKeyPath: "scoreAdded")
+            print("CurrentScore: \(currentLevel ?? "--")")
+            return currentLevel as? Int
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+    
+    
     func saveCurrentViews(id: Int, views: Int) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return

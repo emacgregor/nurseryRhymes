@@ -212,12 +212,54 @@
                     <view key="view" contentMode="scaleToFill" id="VRc-9h-DzO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzL-FS-pOD">
+                                <rect key="frame" x="145" y="266" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-bY-llL">
+                                <rect key="frame" x="159" y="313" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coins Earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-xn-hfm">
+                                <rect key="frame" x="156" y="139" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-v0-U8Z">
+                                <rect key="frame" x="145" y="176" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OAB-0S-MLy">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0G4-yp-Cre"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="up5-BD-EZN">
+                            <connections>
+                                <action selector="saveButton:" destination="QEv-d9-52h" id="elU-uU-NWt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coinAmount" destination="SRz-v0-U8Z" id="xL4-PD-5Wl"/>
+                        <outlet property="fontSize" destination="oh3-bY-llL" id="y5y-ck-ekG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfZ-xQ-sOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1806" y="488"/>
+            <point key="canvasLocation" x="1868.1159420289857" y="-2130.1339285714284"/>
         </scene>
         <!--Analytics View Controller-->
         <scene sceneID="WQO-H4-0hH">
@@ -266,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MT-Bo-gOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="-2147"/>
+            <point key="canvasLocation" x="3408.6956521739135" y="-2147.5446428571427"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="zHe-cp-Oi6">
@@ -589,7 +631,11 @@
                                 <segue destination="gAr-p1-9ao" kind="show" id="SH2-bu-lSg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Account" id="LJ4-hf-N2N"/>
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="LJ4-hf-N2N">
+                            <connections>
+                                <segue destination="QEv-d9-52h" kind="show" id="mvi-O0-rGk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="back" destination="tu5-ER-zzi" id="9Wa-sR-arG"/>
@@ -636,6 +682,24 @@
             </objects>
             <point key="canvasLocation" x="1589.8550724637682" y="-1407.5892857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1L5-yB-fcW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nN-Em-Xum" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIe-Be-tKX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QEv-d9-52h" kind="relationship" relationship="rootViewController" id="LoG-le-iaI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kr-va-HYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="-2129.4642857142858"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FGV.png" width="100" height="97"/>
@@ -646,5 +710,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Fo4-2r-83b"/>
+        <segue reference="mvi-O0-rGk"/>
     </inferredMetricsTieBreakers>
 </document>

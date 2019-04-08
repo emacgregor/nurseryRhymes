@@ -95,6 +95,9 @@ class QuizViewController : UIViewController {
         }
         if labelA.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
+            var scoreAdded = m.coreData.getScore() ?? 0
+            scoreAdded = scoreAdded + 1
+            m.coreData.saveScore(score: self.count)
         }
         level = level + 1
         if (level > 3) {
@@ -144,6 +147,10 @@ class QuizViewController : UIViewController {
         if labelB.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+            var scoreAdded = m.coreData.getScore() ?? 0
+            scoreAdded = scoreAdded + 1
+             m.coreData.saveScore(score: self.count)
+            
         }
         level = level + 1
         if (level > 3) {
@@ -190,6 +197,9 @@ class QuizViewController : UIViewController {
         if labelC.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+            var scoreAdded = m.coreData.getScore() ?? 0
+            scoreAdded = scoreAdded + 1
+            m.coreData.saveScore(score: self.count)
         }
         level = level + 1
         if (level > 3) {
@@ -237,6 +247,9 @@ class QuizViewController : UIViewController {
         if labelD.titleLabel!.text == quizzes["Answer"]! {
             count = count + 1
             score.text = "\(count * 25) / 100"
+            var scoreAdded = m.coreData.getScore() ?? 0
+            scoreAdded = scoreAdded + 1
+            m.coreData.saveScore(score: self.count)
         }
         level = level + 1
         if (level > 3) {
