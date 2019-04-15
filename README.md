@@ -13,7 +13,7 @@
 * N/A
 ### Known bugs and defects:
 * Some UI elements can break.
-* Word highlighting in Jerrold collection is not always perfect, but will never crash the app.
+* Word highlighting in Volland collection is not always perfect, but will never crash the app.
 
 ## Install Guide
 ### Download From App Store
