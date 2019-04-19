@@ -20,4 +20,14 @@
 #### Pre-requisites:
 Must have an iOS device.
 #### Instructions:
-Search for “HearATale Nursery Rhymes” on the App Store and download “HearATale Nursery Rhymes”. Your iOS device will automatically download and install the application. You may run it by tapping on its application icon.
+Search for “Brainy Rhymes” on the App Store and download “Brainy Rhymes”. Your iOS device will automatically download and install the application. You may run it by tapping on its application icon.
+
+### Run Locally
+Must have a Macintosh computer.
+####Instructions
+1. Clone the Git Repository on your Macintosh using git clone https://gitlab.com/8343/nursery-rhymes.git on the command line
+2. Download XCode on Macintosh
+3. Open XCode
+4. You should recieve the option to check out an existing project. Select this.
+5. Navigate to nursery-rhymes\nursery-rhymes.xcodeproj and select it.
+6. This should open the project in XCode. If you want to run it locally on a simulator, you may select the run button (play icon) in the top left.
