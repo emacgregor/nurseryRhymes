@@ -1,4 +1,4 @@
-# Hearatale Nursery Rhymes iOS App
+# Brainy Rhymes iOS App
 
 ## Release Notes
 ### *v0.0.1*
