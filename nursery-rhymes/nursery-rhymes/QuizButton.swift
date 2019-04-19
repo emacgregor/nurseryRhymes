@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class RoundButton: UIButton {
+class QuizButton: UIButton {
     
     private var shadowLayer: CAShapeLayer!
     
@@ -30,15 +30,16 @@ class RoundButton: UIButton {
             shadowLayer.shadowRadius = 5
             shadowLayer.masksToBounds = true
             shadowLayer.masksToBounds = false
-            
             self.superview?.layer.insertSublayer(shadowLayer, at: 0)
             //self.superview?.bringSubview(toFront: self)
             
             //layer.insertSublayer(shadowLayer, at: 2)
             //layer.insertSublayer(shadowLayer, below: nil) // also works
         }
-    }
+        self.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
 
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
             self.layer.cornerRadius = cornerRadius

@@ -10,21 +10,31 @@ import UIKit
 import AVFoundation
 
 class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
+    var collectionName = String()
+    var count = 0
     @IBOutlet weak var rhymeLabel: UILabel!
-    @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet weak var rhymeImageView: UIImageView!
     
-    @IBOutlet weak var playButton: UIBarButtonItem!
-    @IBAction func rewindClicked(_ sender: Any) {
-    }
-    @IBAction func fastforwardClicked(_ sender: Any) {
-    }
-    @IBAction func playClicked(_ sender: Any) {
-        if (self.player?.isPlaying)! {
-            self.pauseRhyme()
-            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(RhymeViewController.playClicked))
+    @IBOutlet weak var timeSlider: UISlider!
+    var updater: CADisplayLink!
+    @IBOutlet weak var controlView: UIView!
+    
+    @IBOutlet var playButton: UIButton!
+    @IBAction func playTouched(_ sender: Any) {
+        //Play button is strictly for Rhyme Audio, not Home Experiences
+        if (m.getRhymeFileName(id: self.id) == m.audioContainer.getLoadedFilename()) {
+            if (m.audioContainer.isPlaying()) {
+                m.audioContainer.pause()
+                playButton.setTitle("", for: UIControlState.normal) //Play Button
+            } else {
+                m.audioContainer.play()
+                playButton.setTitle("", for: UIControlState.normal) //Pause Button
+            }
         } else {
-            self.playRhyme()
-            playButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.pause, target: self, action: #selector(RhymeViewController.playClicked))
+            m.audioContainer.stop()
+            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
+            m.audioContainer.play()
+            playButton.setTitle("", for: UIControlState.normal) //Pause Button
         }
     }
     
@@ -36,179 +46,140 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     
     var id = Int()
     var message = String()
-    var player: AVAudioPlayer?
-    var updater: CADisplayLink! = nil
-    var homeExBarItems = [UIBarButtonItem]()
-    
     var m = Model()
-    
-    var transcript = String()
-    var transcriptTimes = [(Float, Float)]()
-    var rhymeText = String()
-    var remainingText = String()
-    var wordIndex = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model.getModel()
-        self.transcript = m.getRhymeTranscript(id: self.id)
-        self.rhymeText = m.getRhymeText(id: self.id)
-        self.remainingText = self.rhymeText
-        self.parseTranscript()
+        collectionName = m.getRhymeCollection(id: self.id)
+        count = m.coreData.getCurrentViews(id: String(self.id)) ?? 0
+        count = count + 1
+        m.coreData.saveCurrentViews(id: self.id, views: count)
+        self.loadRhyme()
+        
+        let quiz = m.getQuiz(rhyme: self.id, level: 0)
+        let hasQuiz = (quiz != [:])
+        self.quizButton.isEnabled = hasQuiz
+        
+        if (collectionName != "Volland") {
+            if (collectionName != "Jerrold") {
+                self.buildHomeExBar()
+            }
+            self.rhymeLabel.text = m.getRhymeText(id: self.id)
+            
+            //Stuff that is handled by HighlightingContainer in the other case
+            self.updater = CADisplayLink(target: self , selector: #selector(self.trackAudio))
+            self.updater.preferredFramesPerSecond = 60
+            self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+            m.audioContainer.setDelegate(delegate: self)
+        }
+        
+        let rhymeImage = m.getRhymeImage(id: self.id)
+        self.rhymeImageView.image = rhymeImage
+        let aspectWidth = (self.rhymeImageView.frame.height / rhymeImage.size.height) * rhymeImage.size.width
+        self.rhymeImageView.widthAnchor.constraint(equalToConstant: aspectWidth).isActive = true
         
         self.navigationItem.title = message;
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true;
-        self.player = AVAudioPlayer()
+        self.homeExperienceBar.setBackgroundImage(UIImage(),
+                                        forToolbarPosition: .any,
+                                        barMetrics: .default)
+        self.homeExperienceBar.setShadowImage(UIImage(), forToolbarPosition: .any)
+        timeSlider.leftAnchor.constraint(equalTo: self.playButton.rightAnchor).isActive = true
+        timeSlider.rightAnchor.constraint(equalTo: self.controlView.rightAnchor).isActive = true
+        
         self.timeSlider.minimumValue = 0
         self.timeSlider.maximumValue = 100
-        
-        self.buildAttributedText(wordIndex: self.wordIndex)
-
-        self.buildHomeExBar()
-        //Make sure you do this after building home experience bar,
-        //or wrong audio will play
-        //self.preparePlayer()  <-- move into playRhyme now that we're reusing player for HE's
-        self.playRhyme()
+    
+        m.audioContainer.play()
+        playButton.setTitle("", for: UIControlState.normal) //Pause Button\
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
+
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     override func viewWillDisappear(_ animated: Bool) {
-        self.player?.stop()
-        self.updater.invalidate()
+        super.viewWillDisappear(animated)
+
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+
+        m.audioContainer.stop()
+        m.highlightingContainer.reset()
+    }
+    
+    func loadRhyme() {
+        if (collectionName == "Volland") {
+            m.highlightingContainer.loadRhyme(id: self.id, rhymeViewController: self)
+        } else {
+            m.audioContainer.loadFile(filename: m.getRhymeFileName(id: self.id))
+        }
     }
     
     func buildHomeExBar() {
-        var homeExCount = 0
-        var index = 1
-        
-        while (index != 0) {
-            //not actually using audio, just checking if it's there
-            let homeExAudio = m.getHomeExAudio(rhymeId: id, homeExId: index)
-            if (homeExAudio == nil) {
-                //End loop
-                homeExCount = index - 1
-                index = 0
+        var homeExBarItems = [UIBarButtonItem]()
+        let homeExCount = m.getHomeExCount(id: self.id)
+        homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                                   target: nil,
+                                                   action: nil))
+        if (homeExCount > 0) {
+            for i in 0..<homeExCount {
+                let heButton = UIBarButtonItem()
+                heButton.title = ""
+                heButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "FontAwesome", size: UIFont.buttonFontSize)!], for: UIControlState.normal)
+                heButton.target = self
+                heButton.action = #selector(RhymeViewController.playHomeExperience)
+                heButton.tag = i + 1
+                homeExBarItems.append(heButton)
             }
         }
-        
-        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+        homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                                    target: nil,
                                                    action: nil))
-        for i in 0...homeExCount {
-            let button = UIBarButtonItem(barButtonSystemItem: .play,
-                                                       target: self,
-                                                       action: #selector(RhymeViewController.playHomeExperience))
-            button.tag = i
-            self.homeExBarItems.append(button)
-        }
-        self.homeExBarItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-                                                   target: nil,
-                                                   action: nil))
+        self.homeExperienceBar.items = homeExBarItems
     }
     
     func playHomeExperience(sender: UIBarButtonItem) {
+        m.audioContainer.stop()
+        m.highlightingContainer.reset()
+        
         let homeExId = sender.tag
-        self.player = m.getHomeExAudio(rhymeId: id, homeExId: homeExId)
-        self.player?.delegate = self as AVAudioPlayerDelegate
-        self.player?.prepareToPlay()
-        self.player?.play()
+        m.audioContainer.loadFile(filename: m.getHomeExFilename(rhymeId: id, homeExId: homeExId))
+        m.audioContainer.play()
+        playButton.setTitle("", for: UIControlState.normal) //Play Button
     }
     
-    func buildAttributedText(wordIndex: Int) {
-        let difference = NSString(string: rhymeText).length - NSString(string: remainingText).length
-        
-        let attrText = NSMutableAttributedString(string: self.rhymeText)
-        let wordRange = getCurrentWordRange(wordIndex: wordIndex)
-        let correctedRange = NSMakeRange(wordRange.location + difference,
-                                         wordRange.length)
-        attrText.addAttribute(NSBackgroundColorAttributeName,
-                          value: UIColor.yellow,
-                          range: correctedRange)
-        self.rhymeLabel.attributedText = (attrText.copy() as! NSAttributedString)
-        
-        var newRemaining = NSString(string: remainingText)
-        
-        newRemaining = newRemaining.substring(with:
-            NSMakeRange(wordRange.length, newRemaining.length - wordRange.length)) as NSString
-        //make sure to trim whitespace
-        self.remainingText = (newRemaining as String).trimmingCharacters(in: .whitespacesAndNewlines)
+    @IBOutlet weak var quizButton: UIBarButtonItem!
+    @IBAction func quizClick(_ sender: Any) {
+        performSegue(withIdentifier: "quiz", sender: self)
     }
-    
-    func getCurrentWordRange(wordIndex: Int) -> NSRange {
-        let lines = self.transcript.characters.split(separator: "\n")
-        let words = lines[wordIndex].split(separator: " ")
-        
-        var word = String(words[1]).lowercased()
-        let end = word.index(word.endIndex, offsetBy: -1)
-        word = word.substring(to: end)
-        
-        // Search for word in remainingText
-        return (self.remainingText.lowercased() as NSString).range(of: word)
-    }
-    
-    func preparePlayer() {
-        self.updater = CADisplayLink(target: self, selector: #selector(RhymeViewController.trackAudio))
-        self.updater.preferredFramesPerSecond = 60
-        self.updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
-        
-        self.player = m.getRhymeAudio(id: self.id)
-        self.player?.delegate = self as AVAudioPlayerDelegate
-    }
-    
-    func playRhyme() {
-        self.preparePlayer()
-        self.player?.prepareToPlay()
-        self.player?.play()
-    }
-    
-    func pauseRhyme() {
-        self.player?.pause()
-    }
-    
-    func parseTranscript() {
-        let lines = self.transcript.characters.split(separator: "\n")
-        for (_, line) in lines.enumerated() {
-            let words = line.split(separator: " ")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("In")
+        if let vc = segue.destination as? QuizViewController {
+            print("VC")
             
-            if (words.count >= 6) {
-                var word = String(words[3])
-                //Remove comma
-                let end = word.index(word.endIndex, offsetBy: -1)
-                word = word.substring(to: end)
-                let startTime = Float(word)
-                let endTime = Float(String(words[5]))
-                transcriptTimes.append((startTime!,endTime!))
-            }
+            vc.id = self.id
+            vc.message = self.message
         }
     }
-    
+
     func trackAudio() {
-        let normalizedTime = Float((self.player?.currentTime)! * 100.0 / (player?.duration)!)
+        let normalizedTime = Float((m.audioContainer.player?.currentTime)! * 100.0
+            / (m.audioContainer.player?.duration)!)
         timeSlider.value = normalizedTime
-        
-        if (transcriptTimes[wordIndex].1 < Float((self.player?.currentTime)!) ) {
-            if (wordIndex < (transcriptTimes.count - 1)) {
-                wordIndex += 1
-                //rebuild the label only when word change is detected
-                self.buildAttributedText(wordIndex: self.wordIndex)
-            }
-        }
     }
     
     // From AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        //reset highlighting when audio finishes
-        self.wordIndex = 0
-        self.remainingText = self.rhymeText
-        self.preparePlayer()
-        self.buildAttributedText(wordIndex: self.wordIndex)
+        //Clean up after rhyme is finished
     }
 }

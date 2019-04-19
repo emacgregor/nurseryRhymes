@@ -11,28 +11,41 @@ struct cellData {
     let image: UIImage?
     let message: String?
     let id: Int?
+    let score: Int
+    let count: Int
 }
 class RhymesTableController : UITableViewController {
     var collectionName: String!
+    
+    @IBOutlet weak var collectionNameLabel: UINavigationItem!
+    
     var m = Model.getModel()
     
     var data = [cellData]()
     
     override func viewDidLoad() {
-        for (id, _) in m.getRhymesForCollection(collectionName: self.collectionName).enumerated() {
-            data.append(cellData(
-                image: m.getRhymeImage(id: id),
-                message: m.getRhymeName(id: id),
-                id: id
-            ))
+        var formattedName = collectionName
+        if (formattedName == "MGV") {
+            formattedName = "Mother Goose Visit"
+        } else if (formattedName == "FGV") {
+            formattedName = "Father Goose Visit"
+        } else if (formattedName == "Volland") {
+            formattedName = "Mother Goose Rhymes"
+        } else if (formattedName == "Jerrold") {
+            formattedName = "Father Goose Rhymes"
         }
+        print("formatted \(formattedName)")
+        collectionNameLabel.title = formattedName
+        
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = 100
         self.tableView.estimatedRowHeight = 200
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true;
+ //       self.navigationController?.navigationBar.isTranslucent = false;
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
     }
     
     @IBAction func popToCollectionList(_ sender: Any) {
@@ -41,6 +54,10 @@ class RhymesTableController : UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomCell
+        
+        cell.homeExpExists = (m.getHomeExCount(id: data[indexPath.row].id!) > 0)
+        cell.score = data[indexPath.row].score
+        cell.count = data[indexPath.row].count
         cell.mainImage = data[indexPath.row].image
         cell.message = data[indexPath.row].message
         cell.layoutSubviews()
@@ -52,7 +69,6 @@ class RhymesTableController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "cellSegue", sender: self)
         print(indexPath)
     }
@@ -70,4 +86,32 @@ class RhymesTableController : UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isTranslucent = false;
+
+        self.data = [cellData]()
+        let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
+        for id in Array(collectionRhymes.keys) {
+            let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
+            
+            //Make sure rhyme files exist before we display it
+            if (m.getRhymeTranscript(id: rhymeid) != "") {
+                let quiz = m.getQuiz(rhyme: rhymeid, level: 0)
+                let hasQuiz = (quiz != [:])
+                data.append(cellData(
+                    image: m.getRhymeImage(id: rhymeid),
+                    message: m.getRhymeName(id: rhymeid),
+                    id: rhymeid,
+                    score: hasQuiz ? (m.coreData.getCurrentScore(id: String(rhymeid)) ?? 0) * 25 : -1,
+                    count: m.coreData.getCurrentViews(id: String(rhymeid)) ?? 0
+                ))
+            }
+        }
+        data.sort { (a, b) -> Bool in
+            let comparison = a.message?.localizedCaseInsensitiveCompare(b.message ?? "")
+            return (comparison == ComparisonResult.orderedAscending)
+        }
+
+        self.tableView.reloadData()
+    }
 }

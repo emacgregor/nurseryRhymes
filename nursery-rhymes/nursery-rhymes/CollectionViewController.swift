@@ -50,11 +50,15 @@ class CollectionViewController : UIViewController {
         performSegue(withIdentifier: "collectionSegue", sender: self)
     }
     @IBAction func openJerrold(_ sender: Any) {
-        self.collectionToOpen = "Volland"
+        self.collectionToOpen = "Jerrold"
         performSegue(withIdentifier: "collectionSegue", sender: self)
     }
     @IBAction func openMotherGoose(_ sender: Any) {
-        self.collectionToOpen = "Volland"
+        self.collectionToOpen = "MGV"
+        performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
+    @IBAction func openFatherGoose(_ sender: Any) {
+        self.collectionToOpen = "FGV"
         performSegue(withIdentifier: "collectionSegue", sender: self)
     }
 }

@@ -9,23 +9,30 @@
 import Foundation
 import UIKit
 import AVFoundation
+import CoreData
 
 class Model {
     static var model: Model = Model()
-    
+   
     var jsonModel: Any
     var collections = [String: [String: String]]()
     var fileNameList = [String]()
-    var rhymes = [[String: String]]()
+    var rhymes = [Int: [String: String]]()
     
-    var player: AVAudioPlayer?
+    var audioContainer = AudioContainer()
+    var highlightingContainer = HighlightingContainer()
+    var quizzes = [[String: String]]()
+    var quizJson: Any
+    var coreData = CoreDataContainer()
+  
     
     init() {
+       
+        quizJson = String()
         jsonModel = String()
         collections["Volland"] = [String: String]()
-        player = AVAudioPlayer()
-
         readJSONModel()
+        readQuizzesJson()
     }
     
     func readJSONModel() {
@@ -33,7 +40,14 @@ class Model {
             do {
                 let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
                 jsonModel = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
-                rhymes = (jsonModel as! [[String:String]])
+                let rhymesData = (jsonModel as! [[String:String]])
+                
+                rhymes = [Int: [String:String]]();
+                for (_, rhyme) in rhymesData.enumerated() {
+                    let rhymeId = Int(rhyme["id"]!)
+                    rhymes[rhymeId!] = rhyme
+                }
+                
             } catch let error {
                 print(error)
             }
@@ -43,21 +57,15 @@ class Model {
     }
     
     func getRhymeFileName(id: Int) -> String {
-        var collectionName =  rhymes[id]["collection"]!
-        if (collectionName == "Father Goose Visit") {
-            collectionName = "FGV"
-        } else if (collectionName == "Mother Goose Visit") {
-            collectionName = "MGV"
-        }
-        return rhymes[id]["title"]! + collectionName
+        return getRhymeName(id: id) + getRhymeCollection(id: id)
     }
 
     func getRhymeName(id: Int) -> String {
-        return rhymes[id]["title"]!
+        return rhymes[id]?["title"]! ?? ""
     }
     
     func getRhymeText(id: Int) -> String {
-        return rhymes[id]["text"]!
+        return rhymes[id]?["text"]! ?? ""
     }
     
     func getRhymeTranscript(id: Int) -> String {
@@ -76,50 +84,7 @@ class Model {
             print("File not found: rhyme_files/"+filename+".transcript")
         }
         
-        return String()
-    }
-    
-    func getRhymeAudio(id: Int) -> AVAudioPlayer {
-        let filename = getRhymeFileName(id: id)
-        
-        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
-        {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                self.player = try AVAudioPlayer(contentsOf: url)
-                return self.player!
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("File not found: rhyme_files/"+filename+".jpg")
-        }
-        
-        print("Audio player error for rhyme_files/\(filename).mp3")
-        return self.player!
-    }
-    func getHomeExAudio(rhymeId: Int, homeExId: Int) -> AVAudioPlayer? {
-        var filename = getRhymeFileName(id: rhymeId)
-        filename = filename + "HE" + String(homeExId)
-        
-        if let url = Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files")
-        {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                self.player = try AVAudioPlayer(contentsOf: url)
-                return self.player
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("File not found: rhyme_files/"+filename+".mp3")
-        }
-        
-        return nil
+        return ""
     }
     
     func getRhymeImage(id: Int) -> UIImage {
@@ -136,14 +101,55 @@ class Model {
     }
     
     func getRhymeCollection(id: Int) -> String {
-        return rhymes[id]["collection"]!
+        let collectionName =  rhymes[id]?["collection"]
+        return collectionName ?? ""
     }
     
-    func getRhymesForCollection(collectionName: String) ->[[String: String]] {
-        var tempRhymes = self.rhymes
-        tempRhymes = tempRhymes.filter { (rhyme: [String : String]) -> Bool in
-            return rhyme["collection"] == collectionName
+    func readQuizzesJson() {
+        if let path = Bundle.main.path(forResource: "quizDatabaseV2", ofType: "json")
+        {
+            do {
+                let txtData = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                quizJson = try JSONSerialization.jsonObject(with: txtData.data(using: .utf8)!)
+                quizzes = (quizJson as! [[String:String]])
+                //print("in rhyme json \(quizzes)")
+            } catch let error {
+                print(error)
+            }
+        } else {
+            print("File not found: rhymeText.json")
         }
+    }
+    
+    //Takes in rhyme name
+    //Returns array with All Questions, 4 answer choices per question, with every i = 4 being the correct answer
+    func getQuiz(rhyme: Int, level: Int) -> [String:String] {
+        
+        let stringRhyme = String(rhyme)
+        // minus 1 since it originally started at 1, now json starts at 0.
+        let stringLevel = String(level)
+        print("\(level)")
+        var rhymeQuiz: [String: String] = [:]
+        for quiz in quizzes {
+            print("quizID \(quiz["RhymeID"]!) Equals \(stringRhyme) Question \(quiz["QuestionNo"]!) Equals \(stringLevel)")
+            if (quiz["RhymeID"] == stringRhyme && quiz["QuestionNo"] == stringLevel) {
+                rhymeQuiz = quiz
+                print("inside \(stringRhyme)")
+            }
+        }
+        print("\(rhymeQuiz)")
+        return rhymeQuiz
+    }
+    
+    func getRhymesForCollection(collectionName: String) ->[Int: [String: String]] {
+        var tempRhymes = [Int: [String: String]]()
+        let validRhymeIds = Array(self.rhymes.keys).filter { (key: Int) -> Bool in
+            return self.rhymes[key]?["collection"] == collectionName
+        }
+        for key in validRhymeIds {
+            tempRhymes[key] = self.rhymes[key]
+        }
+        
         return tempRhymes
     }
     /*
@@ -209,5 +215,33 @@ class Model {
     
     static func getModel() -> Model {
         return Model.model
+    }
+    
+    func getHomeExFilename(rhymeId: Int, homeExId: Int) -> String {
+        var filename = getRhymeFileName(id: rhymeId)
+        filename = filename + "HE" + String(homeExId)
+        //print("HOME \(filename)")
+        
+        if Bundle.main.url(forResource: filename, withExtension: "mp3", subdirectory: "rhyme_files") != nil {
+            return filename
+        } else {
+            return ""
+        }
+    }
+    
+    func getHomeExCount(id: Int) -> Int {
+        var index = 1
+        var homeExCount = 0
+        while (index != 0) {
+            let homeExFilename = getHomeExFilename(rhymeId: id, homeExId: index)
+            if (homeExFilename == "") {
+                //End loop
+                homeExCount = index - 1
+                index = 0
+            } else {
+                index = index + 1
+            }
+        }
+        return homeExCount
     }
 }

@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cs7-Qp-oiJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="fontawesome-webfont.ttf">
+            <string>FontAwesome</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="4pj-6C-ScJ">
+            <objects>
+                <viewController id="A66-e5-Pz6" customClass="RegisterViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSP-Mj-1op"/>
+                        <viewControllerLayoutGuide type="bottom" id="6RF-hT-Kf6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pl3-3J-NCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTe-WK-0zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1061" y="-206"/>
+        </scene>
+        <!--Little Tom Tucker-->
+        <scene sceneID="Plt-VB-0av">
+            <objects>
+                <viewController id="UZ7-Sz-QO0" customClass="RhymeViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lmu-GT-jka"/>
+                        <viewControllerLayoutGuide type="bottom" id="2T5-Q5-pyX"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="0xN-aa-wf0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-UT-pbk">
+                                <rect key="frame" x="36" y="148" width="342" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="dph-tE-7bM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NB5-R7-8F8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-w5-SQX">
+                                <rect key="frame" x="20" y="763" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-4v-E1N">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="8Yi-iV-auZ"/>
+                                            <constraint firstAttribute="height" constant="50" id="hxB-et-3y5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="24"/>
+                                        <state key="normal" title="P"/>
+                                        <connections>
+                                            <action selector="playTouched:" destination="UZ7-Sz-QO0" eventType="touchUpInside" id="mtH-24-pzp"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-xk-2lm">
+                                        <rect key="frame" x="139" y="12" width="118" height="31"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="arQ-4v-E1N" secondAttribute="bottom" id="FpB-yH-k6t"/>
+                                    <constraint firstAttribute="height" constant="50" id="b1u-p9-qDd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Biz-xk-2lm" secondAttribute="bottom" constant="8" id="bNM-G3-Hrz"/>
+                                    <constraint firstItem="arQ-4v-E1N" firstAttribute="leading" secondItem="UZD-w5-SQX" secondAttribute="leading" id="wyC-sG-z0x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NB5-R7-8F8" secondAttribute="trailing" id="8gh-Zd-FM4"/>
+                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="OXc-Zz-oPF"/>
+                            <constraint firstItem="NB5-R7-8F8" firstAttribute="top" secondItem="lmu-GT-jka" secondAttribute="bottom" id="WoL-fF-bhK"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leadingMargin" constant="16" id="cHb-q9-7f2"/>
+                            <constraint firstItem="UZD-w5-SQX" firstAttribute="trailing" secondItem="0xN-aa-wf0" secondAttribute="trailingMargin" id="iUb-nG-mQh"/>
+                            <constraint firstItem="NB5-R7-8F8" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leading" id="jjf-ff-acy"/>
+                            <constraint firstItem="2T5-Q5-pyX" firstAttribute="top" secondItem="UZD-w5-SQX" secondAttribute="bottom" id="l9R-Pu-qf0"/>
+                            <constraint firstItem="tAk-UT-pbk" firstAttribute="top" secondItem="NB5-R7-8F8" secondAttribute="bottom" constant="16" id="tew-l7-Oba"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tAk-UT-pbk" secondAttribute="trailing" constant="16" id="vwr-vU-vLB"/>
+                            <constraint firstItem="UZD-w5-SQX" firstAttribute="leading" secondItem="0xN-aa-wf0" secondAttribute="leadingMargin" id="ycN-LO-4sr"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Little Tom Tucker" id="9jj-gb-z2R">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="roL-VD-1Kb">
+                            <connections>
+                                <action selector="popToRhymeList:" destination="UZ7-Sz-QO0" id="eWb-gk-T2j"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Quiz" id="Ago-2E-9li">
+                            <connections>
+                                <action selector="quizClick:" destination="UZ7-Sz-QO0" id="352-8U-Q5B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="controlView" destination="UZD-w5-SQX" id="tIN-zJ-LS1"/>
+                        <outlet property="homeExperienceBar" destination="NB5-R7-8F8" id="PcA-xt-pTS"/>
+                        <outlet property="playButton" destination="arQ-4v-E1N" id="6GF-L6-bsZ"/>
+                        <outlet property="quizButton" destination="Ago-2E-9li" id="s08-zW-EoX"/>
+                        <outlet property="rhymeLabel" destination="tAk-UT-pbk" id="obJ-jN-rWa"/>
+                        <outlet property="timeSlider" destination="Biz-xk-2lm" id="anm-mI-MKr"/>
+                        <segue destination="oJ4-zM-WOr" kind="show" identifier="quiz" id="Fo4-2r-83b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-lm-vaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4155.072463768116" y="-1407.5892857142856"/>
+        </scene>
+        <!--RhymeView-->
+        <scene sceneID="RpU-M4-7hn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rhyme" referencedIdentifier="RhymeView" id="dIH-CR-9Kw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kck-qc-Zjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2946" y="-927"/>
+        </scene>
+        <!--Volland-->
+        <scene sceneID="LFc-iP-9Tr">
+            <objects>
+                <tableViewController id="ony-Ya-1N0" customClass="RhymesTableController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H5g-HR-6pd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6wg-QJ-AMK">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="6wg-QJ-AMK" id="sbs-Md-rWL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ony-Ya-1N0" id="dr9-FF-yjg"/>
+                            <outlet property="delegate" destination="ony-Ya-1N0" id="EPP-O5-hrS"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Volland" id="ora-9z-4My">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Hr8-FY-g37">
+                            <connections>
+                                <action selector="popToCollectionList:" destination="ony-Ya-1N0" id="OsF-a1-lGt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionNameLabel" destination="ora-9z-4My" id="do4-yf-2zn"/>
+                        <segue destination="UZ7-Sz-QO0" kind="show" identifier="cellSegueOld" id="UEc-oW-tuV"/>
+                        <segue destination="dIH-CR-9Kw" kind="show" identifier="cellSegue" id="txD-bs-gze"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koH-3H-Dd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3350.7246376811595" y="-1407.5892857142856"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hqV-Fl-o83">
+            <objects>
+                <viewController id="djM-ml-mcO" customClass="LoginViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKl-Rc-UtE"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Zu-wt-HcI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6kv-EQ-igS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63F-2X-H47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1754" y="-206"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="rSY-AY-RrR">
+            <objects>
+                <viewController id="QEv-d9-52h" customClass="SettingsViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQ9-DM-WuQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="OqQ-qF-2CX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRc-9h-DzO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzL-FS-pOD">
+                                <rect key="frame" x="145" y="266" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-bY-llL">
+                                <rect key="frame" x="159" y="313" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coins Earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-xn-hfm">
+                                <rect key="frame" x="156" y="139" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-v0-U8Z">
+                                <rect key="frame" x="145" y="176" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OAB-0S-MLy">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0G4-yp-Cre"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="up5-BD-EZN">
+                            <connections>
+                                <action selector="saveButton:" destination="QEv-d9-52h" id="elU-uU-NWt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coinAmount" destination="SRz-v0-U8Z" id="xL4-PD-5Wl"/>
+                        <outlet property="fontSize" destination="oh3-bY-llL" id="y5y-ck-ekG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfZ-xQ-sOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868.1159420289857" y="-2130.1339285714284"/>
+        </scene>
+        <!--Analytics View Controller-->
+        <scene sceneID="WQO-H4-0hH">
+            <objects>
+                <viewController id="gAr-p1-9ao" customClass="AnalyticsViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L46-us-aPA"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWW-WH-jyq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdB-UO-A52">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearatale Teacher Portal ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-Au-Cn2">
+                                <rect key="frame" x="52.5" y="216" width="309.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="XXXYYY" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-s0-E8Q">
+                                <rect key="frame" x="52" y="311.5" width="310" height="56"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see how this student is doing, go to teacherportal.hearatale.com." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6I-ry-pFI">
+                                <rect key="frame" x="8" y="431.5" width="398" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0D3-Au-Cn2" firstAttribute="centerX" secondItem="hdB-UO-A52" secondAttribute="centerX" id="BSw-6V-FGZ"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="centerX" secondItem="hdB-UO-A52" secondAttribute="centerX" id="IMo-Qv-8ZY"/>
+                            <constraint firstItem="0D3-Au-Cn2" firstAttribute="top" secondItem="L46-us-aPA" secondAttribute="bottom" constant="128" id="eTM-OS-zab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HOh-s0-E8Q" secondAttribute="trailing" constant="32" id="fvb-As-BBo"/>
+                            <constraint firstItem="HOh-s0-E8Q" firstAttribute="top" secondItem="0D3-Au-Cn2" secondAttribute="bottom" constant="64" id="jcn-na-sAj"/>
+                            <constraint firstAttribute="trailing" secondItem="a6I-ry-pFI" secondAttribute="trailing" constant="8" id="mt6-Vt-B36"/>
+                            <constraint firstItem="HOh-s0-E8Q" firstAttribute="leading" secondItem="hdB-UO-A52" secondAttribute="leadingMargin" constant="32" id="teX-NF-5v7"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="top" secondItem="HOh-s0-E8Q" secondAttribute="bottom" constant="64" id="u7k-wO-KlA"/>
+                            <constraint firstItem="a6I-ry-pFI" firstAttribute="leading" secondItem="hdB-UO-A52" secondAttribute="leading" constant="8" id="vv7-Ap-bnv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0MT-Bo-gOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3408.6956521739135" y="-2147.5446428571427"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="zHe-cp-Oi6">
+            <objects>
+                <viewController storyboardIdentifier="QuizView" id="oJ4-zM-WOr" customClass="QuizViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oan-JL-C1T"/>
+                        <viewControllerLayoutGuide type="bottom" id="3EP-Md-KlX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aZt-Dm-VkH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mother Goose is WHO?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-XU-CzY">
+                                <rect key="frame" x="20" y="114" width="374" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-7F-Cw1" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="379" width="374" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Lyr-uB-957"/>
+                                </constraints>
+                                <state key="normal" title="labelB">
+                                    <color key="titleColor" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerB:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="ntt-zw-MHm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-KS-tPd" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="588" width="374" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="qbL-Fr-F7Z"/>
+                                </constraints>
+                                <state key="normal" title="labelD">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerD:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="QhV-r9-I1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-uY-lyV" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="485" width="374" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="0pJ-5s-W8l"/>
+                                </constraints>
+                                <state key="normal" title="labelC">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerC:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="gbh-Mn-4dV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-UL-ObL">
+                                <rect key="frame" x="331" y="88" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Oy1-PN-K5x"/>
+                                    <constraint firstAttribute="width" constant="75" id="cOP-XA-HXT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-gV-fUJ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="271" width="374" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="L8o-2U-UHQ"/>
+                                </constraints>
+                                <state key="normal" title="labelA">
+                                    <color key="titleColor" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerA:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="a8k-oy-FTJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="trailing" secondItem="2fO-7F-Cw1" secondAttribute="trailing" id="9uB-cj-1tY"/>
+                            <constraint firstItem="LFq-uY-lyV" firstAttribute="leading" secondItem="lEK-KS-tPd" secondAttribute="leading" id="JLz-Gw-4Jb"/>
+                            <constraint firstItem="ozm-XU-CzY" firstAttribute="trailing" secondItem="aZt-Dm-VkH" secondAttribute="trailingMargin" id="OPg-95-gCh"/>
+                            <constraint firstItem="LFq-uY-lyV" firstAttribute="top" secondItem="2fO-7F-Cw1" secondAttribute="bottom" constant="27" id="RCi-XX-q1v"/>
+                            <constraint firstItem="ozm-XU-CzY" firstAttribute="leading" secondItem="aZt-Dm-VkH" secondAttribute="leadingMargin" id="S2y-bb-C1h"/>
+                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="trailing" secondItem="LFq-uY-lyV" secondAttribute="trailing" id="VSz-72-aLY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WG0-UL-ObL" secondAttribute="trailing" constant="-12" id="dGr-No-eYK"/>
+                            <constraint firstItem="WG0-UL-ObL" firstAttribute="top" secondItem="oan-JL-C1T" secondAttribute="bottom" id="eF9-IK-1lp"/>
+                            <constraint firstItem="LFq-uY-lyV" firstAttribute="trailing" secondItem="lEK-KS-tPd" secondAttribute="trailing" id="f54-wP-QYd"/>
+                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="leading" secondItem="2fO-7F-Cw1" secondAttribute="leading" id="g0k-BF-KnW"/>
+                            <constraint firstItem="ozm-XU-CzY" firstAttribute="leading" secondItem="5b6-gV-fUJ" secondAttribute="leading" id="jBI-9U-baa"/>
+                            <constraint firstItem="ozm-XU-CzY" firstAttribute="trailing" secondItem="5b6-gV-fUJ" secondAttribute="trailing" id="jPh-L0-XKb"/>
+                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="top" secondItem="5b6-gV-fUJ" secondAttribute="bottom" constant="29" id="mNb-wX-H7H"/>
+                            <constraint firstItem="ozm-XU-CzY" firstAttribute="top" secondItem="WG0-UL-ObL" secondAttribute="bottom" constant="5" id="nkS-aq-fPH"/>
+                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="leading" secondItem="LFq-uY-lyV" secondAttribute="leading" id="oPI-pD-zdr"/>
+                            <constraint firstItem="lEK-KS-tPd" firstAttribute="top" secondItem="LFq-uY-lyV" secondAttribute="bottom" constant="24" id="pms-MA-hgH"/>
+                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="top" secondItem="ozm-XU-CzY" secondAttribute="bottom" constant="62" id="rVP-QU-We2"/>
+                            <constraint firstItem="3EP-Md-KlX" firstAttribute="top" secondItem="lEK-KS-tPd" secondAttribute="bottom" constant="146" id="vfn-kA-SaB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1jq-jI-WkM">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="Onp-eB-ik2"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelA" destination="5b6-gV-fUJ" id="UcB-X7-omN"/>
+                        <outlet property="labelB" destination="2fO-7F-Cw1" id="SUV-rC-GPM"/>
+                        <outlet property="labelC" destination="LFq-uY-lyV" id="cWK-zn-rho"/>
+                        <outlet property="labelD" destination="lEK-KS-tPd" id="DP9-cz-2qP"/>
+                        <outlet property="questionLabel" destination="ozm-XU-CzY" id="0QP-Qv-nMH"/>
+                        <outlet property="score" destination="WG0-UL-ObL" id="NWt-Vt-2oS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6A-QY-NFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604.34782608695662" y="487.5"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="F4q-oR-ofd">
+            <objects>
+                <viewController id="5ra-40-eKe" customClass="CollectionViewController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rLZ-Pd-fh8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FSu-eF-5i3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Am0-Eu-0jS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="10" y="560" width="160" height="276"/>
+                                <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hbU-w1-Hnd"/>
+                                    <constraint firstAttribute="width" constant="160" id="prE-Oz-MMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Mother Goose     Visit" backgroundImage="MGV.png">
+                                    <color key="titleColor" red="0.20632648812647242" green="0.0" blue="0.34240164974619292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="CxW-KF-AfL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="244" y="560" width="160" height="276"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="0uN-YI-Yj0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Gpe-Wp-hbw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Father Goose        Visit" backgroundImage="FGV.png">
+                                    <color key="titleColor" red="1" green="0.99926506717419261" blue="0.017493871086133539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.9948156476020813" green="0.97349435091018677" blue="0.28921100497245789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openFatherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="N49-TH-VR3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="244" y="255" width="160" height="276"/>
+                                <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="omI-fa-gGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Father Goose Rhymes" backgroundImage="Jerrold.png">
+                                    <color key="titleColor" red="0.96052199602127075" green="0.78364485502243042" blue="0.24805819988250732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openJerrold:" destination="5ra-40-eKe" eventType="touchUpInside" id="P6I-ys-wqK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearatale.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
+                                <rect key="frame" x="-335.5" y="105" width="1085" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="p4t-CN-DZA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                <rect key="frame" x="10" y="255" width="160" height="276"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="c2o-4s-Bl4"/>
+                                    <constraint firstAttribute="height" constant="276" id="gTy-JL-NRg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Mother Goose Rhymes" backgroundImage="Volland.png">
+                                    <color key="titleColor" red="0.90751343965530396" green="0.95039361715316772" blue="0.8355136513710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openVolland:" destination="5ra-40-eKe" eventType="touchUpInside" id="0eS-dl-F5L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jim-ot-jUf" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="top" id="Fee-YK-5Oy"/>
+                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="10" id="JTH-4g-6KX"/>
+                            <constraint firstAttribute="trailing" secondItem="tHK-0J-Kt2" secondAttribute="trailing" constant="10" id="L91-Be-0ya"/>
+                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="top" secondItem="Jim-ot-jUf" secondAttribute="bottom" constant="29" id="O2t-L2-Mel"/>
+                            <constraint firstItem="MSr-lG-i2h" firstAttribute="top" secondItem="rLZ-Pd-fh8" secondAttribute="bottom" constant="17" id="TUL-ct-8m9"/>
+                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="4Sx-Y7-RZT" secondAttribute="bottom" constant="26" id="iwh-6m-iv4"/>
+                            <constraint firstItem="Jim-ot-jUf" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="10" id="nqf-EO-E38"/>
+                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="bottom" constant="29" id="r2s-ix-56C"/>
+                            <constraint firstItem="Jim-ot-jUf" firstAttribute="top" secondItem="MSr-lG-i2h" secondAttribute="bottom" constant="30" id="s92-hk-7yl"/>
+                            <constraint firstAttribute="trailing" secondItem="LEk-mM-k58" secondAttribute="trailing" constant="10" id="tok-Bp-iBb"/>
+                            <constraint firstItem="MSr-lG-i2h" firstAttribute="centerX" secondItem="Am0-Eu-0jS" secondAttribute="centerX" id="wGp-Mu-vIj"/>
+                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="top" secondItem="tHK-0J-Kt2" secondAttribute="top" id="wIg-wP-nPI"/>
+                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="tHK-0J-Kt2" secondAttribute="bottom" constant="26" id="wWf-1r-hYP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tIH-LB-oQd">
+                        <barButtonItem key="leftBarButtonItem" title="Analytics" id="tu5-ER-zzi">
+                            <connections>
+                                <action selector="popToHome:" destination="5ra-40-eKe" id="HPk-K3-uSw"/>
+                                <segue destination="gAr-p1-9ao" kind="show" id="SH2-bu-lSg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="LJ4-hf-N2N">
+                            <connections>
+                                <segue destination="QEv-d9-52h" kind="show" id="mvi-O0-rGk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="back" destination="tu5-ER-zzi" id="9Wa-sR-arG"/>
+                        <segue destination="ony-Ya-1N0" kind="show" identifier="collectionSegue" id="Ucq-2r-ai6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVW-6L-doi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498.5507246376815" y="-1407.5892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4D5-8G-lhe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rJA-hq-FfE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxG-m4-Bzn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oJ4-zM-WOr" kind="relationship" relationship="rootViewController" id="SU6-SU-plg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb7-aC-dNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302.89855072463769" y="487.50000000000006"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EF8-nt-cOj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cs7-Qp-oiJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3GF-lG-PNl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5ra-40-eKe" kind="relationship" relationship="rootViewController" id="Bg3-Mv-nVh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVA-zR-q3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.8550724637682" y="-1407.5892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1L5-yB-fcW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nN-Em-Xum" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIe-Be-tKX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QEv-d9-52h" kind="relationship" relationship="rootViewController" id="LoG-le-iaI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kr-va-HYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="-2129.4642857142858"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FGV.png" width="100" height="97"/>
+        <image name="Jerrold.png" width="100" height="100"/>
+        <image name="MGV.png" width="100" height="100"/>
+        <image name="Volland.png" width="100" height="100"/>
+        <image name="hearatale.png" width="1085" height="367"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fo4-2r-83b"/>
+        <segue reference="mvi-O0-rGk"/>
+    </inferredMetricsTieBreakers>
+</document>
