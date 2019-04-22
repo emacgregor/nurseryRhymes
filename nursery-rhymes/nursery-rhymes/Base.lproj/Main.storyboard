@@ -106,6 +106,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="roL-VD-1Kb">
                             <connections>
                                 <action selector="popToRhymeList:" destination="UZ7-Sz-QO0" id="eWb-gk-T2j"/>
+                                <segue destination="ony-Ya-1N0" kind="show" id="de2-pe-pmJ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Quiz" id="Ago-2E-9li">
@@ -142,7 +143,7 @@
             <objects>
                 <tableViewController id="ony-Ya-1N0" customClass="RhymesTableController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H5g-HR-6pd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,9 +248,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9N-uj-Q4v">
+                                <rect key="frame" x="131" y="660" width="152" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="FOX-2u-idU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Z9N-uj-Q4v" firstAttribute="centerX" secondItem="oh3-bY-llL" secondAttribute="centerX" id="2nm-nb-d5e"/>
                             <constraint firstItem="kzL-FS-pOD" firstAttribute="centerX" secondItem="oh3-bY-llL" secondAttribute="centerX" id="8Gm-uB-Loe"/>
                             <constraint firstItem="GVt-xn-hfm" firstAttribute="centerX" secondItem="VRc-9h-DzO" secondAttribute="centerX" id="DYG-Or-OQb"/>
                             <constraint firstItem="GVt-xn-hfm" firstAttribute="top" secondItem="PQ9-DM-WuQ" secondAttribute="bottom" constant="84" id="SWZ-ed-ud2"/>
@@ -258,6 +269,7 @@
                             <constraint firstItem="kzL-FS-pOD" firstAttribute="leading" secondItem="VRc-9h-DzO" secondAttribute="leadingMargin" constant="97" id="bcS-KS-WnH"/>
                             <constraint firstItem="SRz-v0-U8Z" firstAttribute="centerX" secondItem="kzL-FS-pOD" secondAttribute="centerX" id="cNn-F1-wMR"/>
                             <constraint firstItem="SRz-v0-U8Z" firstAttribute="top" secondItem="GVt-xn-hfm" secondAttribute="bottom" constant="17" id="eUZ-d2-MY6"/>
+                            <constraint firstItem="OqQ-qF-2CX" firstAttribute="top" secondItem="Z9N-uj-Q4v" secondAttribute="bottom" constant="181" id="gxc-eU-9Y4"/>
                             <constraint firstItem="GVt-xn-hfm" firstAttribute="centerX" secondItem="SRz-v0-U8Z" secondAttribute="centerX" id="nIN-aA-7qT"/>
                         </constraints>
                     </view>
@@ -276,6 +288,7 @@
                     <connections>
                         <outlet property="coinAmount" destination="SRz-v0-U8Z" id="xL4-PD-5Wl"/>
                         <outlet property="fontSize" destination="oh3-bY-llL" id="y5y-ck-ekG"/>
+                        <outlet property="savedLabel" destination="Z9N-uj-Q4v" id="dxu-y3-Gox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfZ-xQ-sOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,19 +308,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearatale Teacher Portal ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-Au-Cn2">
-                                <rect key="frame" x="52.5" y="172" width="309.5" height="31.5"/>
+                                <rect key="frame" x="52.5" y="216" width="309.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="XXXYYY" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-s0-E8Q">
-                                <rect key="frame" x="52" y="267.5" width="310" height="56"/>
+                                <rect key="frame" x="52" y="311.5" width="310" height="56"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see how this student is doing, go to teacherportal.hearatale.com." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6I-ry-pFI">
-                                <rect key="frame" x="8" y="387.5" width="398" height="41"/>
+                                <rect key="frame" x="8" y="431.5" width="398" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -503,7 +516,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="10" y="516" width="160" height="320"/>
+                                <rect key="frame" x="10" y="560" width="160" height="276"/>
                                 <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hbU-w1-Hnd"/>
@@ -533,7 +546,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="244" y="516" width="160" height="320"/>
+                                <rect key="frame" x="244" y="560" width="160" height="276"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="0uN-YI-Yj0"/>
@@ -563,7 +576,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="244" y="211" width="160" height="276"/>
+                                <rect key="frame" x="244" y="255" width="160" height="276"/>
                                 <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="omI-fa-gGg"/>
@@ -592,13 +605,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearatale.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
-                                <rect key="frame" x="-335.5" y="61" width="1085" height="120"/>
+                                <rect key="frame" x="-335.5" y="105" width="1085" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="p4t-CN-DZA"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="10" y="211" width="160" height="276"/>
+                                <rect key="frame" x="10" y="255" width="160" height="276"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="c2o-4s-Bl4"/>
@@ -730,8 +743,9 @@
         <image name="hearatale.png" width="1085" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RxV-4a-zxK"/>
+        <segue reference="ZDD-Z3-Iu4"/>
         <segue reference="Fo4-2r-83b"/>
         <segue reference="LoG-le-iaI"/>
+        <segue reference="de2-pe-pmJ"/>
     </inferredMetricsTieBreakers>
 </document>
