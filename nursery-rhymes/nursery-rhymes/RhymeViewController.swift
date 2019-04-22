@@ -181,5 +181,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     // From AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         //Clean up after rhyme is finished
+        //playButton.setTitle("", for: UIControlState.normal) //Play Button
+        playButton.setTitle("", for: UIControlState.normal) //Pause Button
     }
 }
