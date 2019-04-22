@@ -52,7 +52,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model.getModel()
-        self.rhymeLabel.font = rhymeLabel.font.withSize(CGFloat(m.coreData.getFont()!))
+        self.rhymeLabel.font = rhymeLabel.font.withSize(CGFloat(m.coreData.getFont() ?? 17))
 
         collectionName = m.getRhymeCollection(id: self.id)
         count = m.coreData.getCurrentViews(id: String(self.id)) ?? 0

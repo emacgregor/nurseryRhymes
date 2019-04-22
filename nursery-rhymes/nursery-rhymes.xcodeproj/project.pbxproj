@@ -5861,6 +5861,7 @@
 				TargetAttributes = {
 					ACF44A470000053C00B9A67C = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = E55286BQ76;
 						ProvisioningStyle = Automatic;
 					};
 					ACF44A5E0000054100B9A67C = {
@@ -7955,9 +7956,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = "nursery-rhymes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymes";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -7967,9 +7969,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = "nursery-rhymes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymes";
+				PRODUCT_BUNDLE_IDENTIFIER = "team8343.nursery-rhymess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

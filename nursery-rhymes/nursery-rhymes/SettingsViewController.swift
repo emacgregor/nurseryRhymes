@@ -16,7 +16,7 @@ class SettingsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fontSize.text = "\(m.coreData.getFont() ?? 17)"
-        coinAmount.font = coinAmount.font.withSize(CGFloat(m.coreData.getFont()!))
+        coinAmount.font = coinAmount.font.withSize(CGFloat(m.coreData.getFont() ?? 17))
         coinAmount.text = "\(m.coreData.getScore() ?? 0)"
         self.view.backgroundColor = UIColor(red:0.38, green:0.74, blue:0.98, alpha:1.0)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
