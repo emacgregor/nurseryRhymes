@@ -68,8 +68,14 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         let attrText = NSMutableAttributedString(string: self.rhymeText)
         let wordRange = getCurrentWordRange(wordIndex: wordIndex)
         if (wordRange.length > 0) {
-            let correctedRange = NSMakeRange(wordRange.location + difference - 1,
+            let correctedRange: NSRange
+            if (difference >= 1) {
+                correctedRange = NSMakeRange(wordRange.location + difference - 1,
                                              wordRange.length)
+            } else {
+                correctedRange = NSMakeRange(wordRange.location + difference,
+                                             wordRange.length)
+            }
             attrText.addAttribute(NSBackgroundColorAttributeName,
                                   value: UIColor.yellow,
                                   range: correctedRange)
@@ -111,6 +117,7 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         self.remainingText = self.rhymeText
         //self.preparePlayer()
         self.buildAttributedText(wordIndex: self.wordIndex)
+        self.rhymeViewController?.playButton.setTitle("", for: UIControlState.normal)
     }
     
     func getCurrentWordRange(wordIndex: Int) -> NSRange {
