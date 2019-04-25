@@ -5,6 +5,7 @@
         <attribute name="rhyme" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <entity name="Quiz" representedClassName="Quiz" syncable="YES" codeGenerationType="class">
+        <attribute name="font" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rhymeId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -14,7 +15,7 @@
     <entity name="Users" representedClassName="Users" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="Entity" positionX="-36" positionY="9" width="128" height="75"/>
-        <element name="Quiz" positionX="-90" positionY="-18" width="128" height="120"/>
+        <element name="Quiz" positionX="-90" positionY="-18" width="128" height="135"/>
         <element name="Users" positionX="-147.58203125" positionY="-84.8671875" width="128" height="45"/>
     </elements>
 </model>
