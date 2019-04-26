@@ -97,7 +97,7 @@ class QuizViewController : UIViewController {
             count = count + 1
             var scoreAdded = m.coreData.getScore() ?? 0
             scoreAdded = scoreAdded + 1
-            m.coreData.saveScore(score: self.count)
+            m.coreData.saveScore(score: scoreAdded)
         }
         level = level + 1
         if (level > 3) {
@@ -149,7 +149,7 @@ class QuizViewController : UIViewController {
             score.text = "\(count * 25) / 100"
             var scoreAdded = m.coreData.getScore() ?? 0
             scoreAdded = scoreAdded + 1
-             m.coreData.saveScore(score: self.count)
+            m.coreData.saveScore(score: scoreAdded)
             
         }
         level = level + 1
@@ -199,7 +199,7 @@ class QuizViewController : UIViewController {
             score.text = "\(count * 25) / 100"
             var scoreAdded = m.coreData.getScore() ?? 0
             scoreAdded = scoreAdded + 1
-            m.coreData.saveScore(score: self.count)
+            m.coreData.saveScore(score: scoreAdded)
         }
         level = level + 1
         if (level > 3) {
@@ -249,7 +249,7 @@ class QuizViewController : UIViewController {
             score.text = "\(count * 25) / 100"
             var scoreAdded = m.coreData.getScore() ?? 0
             scoreAdded = scoreAdded + 1
-            m.coreData.saveScore(score: self.count)
+            m.coreData.saveScore(score: scoreAdded)
         }
         level = level + 1
         if (level > 3) {

@@ -73,6 +73,8 @@ class RhymesTableController : UITableViewController {
         print(indexPath)
     }
     
+    @IBAction func backButton(_ sender: Any) {
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("In")

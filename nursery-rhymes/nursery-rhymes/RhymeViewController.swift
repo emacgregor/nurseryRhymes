@@ -52,6 +52,12 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         m = Model.getModel()
+        
+        
+        self.rhymeLabel.adjustsFontSizeToFitWidth = true
+        self.rhymeLabel.minimumScaleFactor = 0.2
+        self.rhymeLabel.font = rhymeLabel.font.withSize(CGFloat(m.coreData.getFont() ?? 17))
+        
         collectionName = m.getRhymeCollection(id: self.id)
         count = m.coreData.getCurrentViews(id: String(self.id)) ?? 0
         count = count + 1
@@ -181,5 +187,7 @@ class RhymeViewController: UIViewController, AVAudioPlayerDelegate {
     // From AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         //Clean up after rhyme is finished
+        playButton.setTitle("", for: UIControlState.normal) //Play Button
+        //playButton.setTitle("", for: UIControlState.normal) //Pause Button
     }
 }
