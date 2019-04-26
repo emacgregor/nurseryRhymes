@@ -241,6 +241,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coin gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-6n-t0U">
+                                <rect key="frame" x="98" y="120" width="50" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -708,6 +712,7 @@
         <image name="Jerrold.png" width="100" height="100"/>
         <image name="MGV.png" width="100" height="100"/>
         <image name="Volland.png" width="100" height="100"/>
+        <image name="coin gold.png" width="59" height="50"/>
         <image name="hearatale.png" width="1085" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
