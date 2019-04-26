@@ -71,6 +71,15 @@ class CoreDataContainer {
         fetchRequest.predicate = NSPredicate(format: "rhymeId = %@", String(id))
         do {
             if let quiz = try managedContext.fetch(fetchRequest).first {
+                print("Going to get current level")
+                let currentScore = getCurrentScore(id: String(id));
+                print("Got current score")
+                print(currentScore)
+                print(score)
+                if (currentScore as! Int) > score {
+                    print("Won't update")
+                    return;
+                }
                 quiz.setValue(score, forKeyPath: "score")
                 print("Updating \(id)")
                 try managedContext.save()
