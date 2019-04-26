@@ -1875,6 +1875,8 @@
 		572416782273B48F00534753 /* 76.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5724166C2273B48B00534753 /* 76.jpg */; };
 		572416792273B48F00534753 /* 152.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5724166D2273B48D00534753 /* 152.jpg */; };
 		5724167A2273B48F00534753 /* 1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5724166E2273B48E00534753 /* 1024.jpg */; };
+		5724167D2273B72200534753 /* 87.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5724167B2273B72100534753 /* 87.jpg */; };
+		5724167E2273B72200534753 /* 180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5724167C2273B72200534753 /* 180.jpg */; };
 		681D04212235E7BF0014D594 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 681D04202235E7BF0014D594 /* fontawesome-webfont.ttf */; };
 		681D042322363B1F0014D594 /* FileCacheContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D042222363B1F0014D594 /* FileCacheContainer.swift */; };
 		68E00E372259DD7100D42CCF /* quizDatabaseV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 68E00E362259DD7100D42CCF /* quizDatabaseV2.json */; };
@@ -3787,6 +3789,8 @@
 		5724166C2273B48B00534753 /* 76.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 76.jpg; sourceTree = "<group>"; };
 		5724166D2273B48D00534753 /* 152.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 152.jpg; sourceTree = "<group>"; };
 		5724166E2273B48E00534753 /* 1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1024.jpg; sourceTree = "<group>"; };
+		5724167B2273B72100534753 /* 87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 87.jpg; sourceTree = "<group>"; };
+		5724167C2273B72200534753 /* 180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 180.jpg; sourceTree = "<group>"; };
 		681D04202235E7BF0014D594 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		681D042222363B1F0014D594 /* FileCacheContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCacheContainer.swift; sourceTree = "<group>"; };
 		68E00E362259DD7100D42CCF /* quizDatabaseV2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizDatabaseV2.json; sourceTree = "<group>"; };
@@ -5721,14 +5725,16 @@
 		68E00E382259E81900D42CCF /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				5724167B2273B72100534753 /* 87.jpg */,
+				5724167C2273B72200534753 /* 180.jpg */,
 				572416692273B48700534753 /* 20.jpg */,
 				572416682273B48600534753 /* 29.jpg */,
 				572416652273B48100534753 /* 40.jpg */,
 				572416672273B48400534753 /* 58.jpg */,
 				5724166B2273B48A00534753 /* 60.jpg */,
 				5724166C2273B48B00534753 /* 76.jpg */,
-				5724166A2273B48900534753 /* 80.jpg */,
 				572416662273B48300534753 /* 120.jpg */,
+				5724166A2273B48900534753 /* 80.jpg */,
 				5724166D2273B48D00534753 /* 152.jpg */,
 				572416632273B47E00534753 /* 167.jpg */,
 				5724166E2273B48E00534753 /* 1024.jpg */,
@@ -5988,6 +5994,7 @@
 				49307E03225B093800F71CB4 /* Sailing.jpg in Resources */,
 				49308047225B093900F71CB4 /* question_412.mp3 in Resources */,
 				49307EE4225B093800F71CB4 /* Orange.jpg in Resources */,
+				5724167D2273B72200534753 /* 87.jpg in Resources */,
 				49307BFD225B093800F71CB4 /* Grumpybear.mp3 in Resources */,
 				49307BC7225B093800F71CB4 /* Wall.mp3 in Resources */,
 				49307F86225B093900F71CB4 /* nails.jpg in Resources */,
@@ -7023,6 +7030,7 @@
 				49307E80225B093800F71CB4 /* wilderness.jpg in Resources */,
 				49307E51225B093800F71CB4 /* Fibbed.jpg in Resources */,
 				49307C78225B093800F71CB4 /* 14.mp3 in Resources */,
+				5724167E2273B72200534753 /* 180.jpg in Resources */,
 				49307EC5225B093800F71CB4 /* queens.jpg in Resources */,
 				49308112225B093900F71CB4 /* question_269.mp3 in Resources */,
 				49307E1F225B093800F71CB4 /* licked.jpg in Resources */,
