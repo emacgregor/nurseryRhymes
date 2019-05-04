@@ -120,6 +120,7 @@ class CoreDataContainer {
     }
     
     func saveScore(score: Int) {
+        print("I am saving score " + String(score));
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }

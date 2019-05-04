@@ -60,6 +60,7 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
                 transcriptTimes.append((startTime!,endTime!))
             }
         }
+        print(transcriptTimes)
     }
     
     func buildAttributedText(wordIndex: Int) {
@@ -102,10 +103,15 @@ class HighlightingContainer: NSObject, AVAudioPlayerDelegate {
         self.rhymeViewController?.timeSlider.value = normalizedTime
         
         if (transcriptTimes[wordIndex].1 < Float((m.audioContainer.getCurrentTime())!) ) {
+            print("got h")
             if (wordIndex < (transcriptTimes.count - 1)) {
                 wordIndex += 1
+                print(wordIndex)
                 //rebuild the label only when word change is detected
-                self.buildAttributedText(wordIndex: self.wordIndex)
+                /*TODO
+                    UNCOMMENT THIS LINE IF YOU WANT TO REENABLE HIGHLIGHTING
+                */
+                //self.buildAttributedText(wordIndex: self.wordIndex)
             }
         }
     }

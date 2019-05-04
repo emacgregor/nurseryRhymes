@@ -99,11 +99,9 @@ class CustomCell: UITableViewCell {
         homeExpLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         homeExpLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         homeExpLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        homeExpLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        self.showConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant :50)
-        self.hideConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant :0)
-        self.hideConstraint?.isActive = true
+        self.showConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant : 50)
+        self.hideConstraint = homeExpLabel.widthAnchor.constraint(equalToConstant : 0)
     }
     
     override func layoutSubviews() {
@@ -113,7 +111,7 @@ class CustomCell: UITableViewCell {
         }
         if score != nil {
             if score! == -1 {
-                scoreView.text = "No Quiz"
+                scoreView.text = ""
             } else {
                 scoreView.text = "Score: \(score!)%"
             }

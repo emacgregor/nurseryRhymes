@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cs7-Qp-oiJ">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6RF-hT-Kf6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pl3-3J-NCh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -41,11 +41,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2T5-Q5-pyX"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="0xN-aa-wf0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-UT-pbk">
-                                <rect key="frame" x="32" y="148" width="311" height="400"/>
+                                <rect key="frame" x="36" y="104" width="342" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="dph-tE-7bM"/>
@@ -54,13 +54,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NB5-R7-8F8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-w5-SQX">
-                                <rect key="frame" x="16" y="679" width="343" height="50"/>
+                                <rect key="frame" x="20" y="763" width="374" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-4v-E1N">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -143,7 +143,7 @@
             <objects>
                 <tableViewController id="ony-Ya-1N0" customClass="RhymesTableController" customModule="nursery_rhymes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H5g-HR-6pd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,10 +151,10 @@
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6wg-QJ-AMK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="6wg-QJ-AMK" id="sbs-Md-rWL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,7 +194,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Zu-wt-HcI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6kv-EQ-igS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -212,11 +212,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OqQ-qF-2CX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VRc-9h-DzO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-bY-llL">
-                                <rect key="frame" x="154.66666666666666" y="355" width="97" height="30"/>
+                                <rect key="frame" x="158.5" y="310.5" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="zX2-t7-QyH"/>
                                 </constraints>
@@ -225,13 +225,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins Earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-xn-hfm">
-                                <rect key="frame" x="152" y="172" width="102" height="21"/>
+                                <rect key="frame" x="156" y="128" width="102" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-v0-U8Z">
-                                <rect key="frame" x="141" y="210" width="124" height="21"/>
+                                <rect key="frame" x="145" y="165.5" width="124" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="DKm-Tp-QJC"/>
                                 </constraints>
@@ -240,7 +240,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rhyme Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzL-FS-pOD">
-                                <rect key="frame" x="113" y="310" width="180" height="21"/>
+                                <rect key="frame" x="117" y="265.5" width="180" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="WOM-Ym-ZzR"/>
                                 </constraints>
@@ -249,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9N-uj-Q4v">
-                                <rect key="frame" x="127" y="576" width="152" height="21"/>
+                                <rect key="frame" x="131" y="660" width="152" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="FOX-2u-idU"/>
                                 </constraints>
@@ -257,9 +257,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coin gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-6n-t0U">
-                                <rect key="frame" x="98" y="120" width="50" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-6n-t0U">
+                                <rect key="frame" x="97" y="128" width="59" height="50"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -270,11 +269,13 @@
                             <constraint firstItem="GVt-xn-hfm" firstAttribute="top" secondItem="PQ9-DM-WuQ" secondAttribute="bottom" constant="84" id="SWZ-ed-ud2"/>
                             <constraint firstItem="kzL-FS-pOD" firstAttribute="top" secondItem="SRz-v0-U8Z" secondAttribute="bottom" constant="79" id="aAH-a7-Smd"/>
                             <constraint firstItem="oh3-bY-llL" firstAttribute="top" secondItem="kzL-FS-pOD" secondAttribute="bottom" constant="24" id="abU-iK-PUK"/>
-                            <constraint firstItem="kzL-FS-pOD" firstAttribute="leading" secondItem="VRc-9h-DzO" secondAttribute="leadingMargin" constant="97" id="bcS-KS-WnH"/>
                             <constraint firstItem="SRz-v0-U8Z" firstAttribute="centerX" secondItem="kzL-FS-pOD" secondAttribute="centerX" id="cNn-F1-wMR"/>
                             <constraint firstItem="SRz-v0-U8Z" firstAttribute="top" secondItem="GVt-xn-hfm" secondAttribute="bottom" constant="17" id="eUZ-d2-MY6"/>
                             <constraint firstItem="OqQ-qF-2CX" firstAttribute="top" secondItem="Z9N-uj-Q4v" secondAttribute="bottom" constant="181" id="gxc-eU-9Y4"/>
+                            <constraint firstItem="GVt-xn-hfm" firstAttribute="top" secondItem="GDN-6n-t0U" secondAttribute="top" id="khJ-m0-Ko9"/>
                             <constraint firstItem="GVt-xn-hfm" firstAttribute="centerX" secondItem="SRz-v0-U8Z" secondAttribute="centerX" id="nIN-aA-7qT"/>
+                            <constraint firstItem="GVt-xn-hfm" firstAttribute="leading" secondItem="GDN-6n-t0U" secondAttribute="trailing" id="nhT-n4-fuK"/>
+                            <constraint firstItem="GVt-xn-hfm" firstAttribute="top" secondItem="GDN-6n-t0U" secondAttribute="top" id="wKU-7I-oKG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="OAB-0S-MLy">
@@ -308,23 +309,23 @@
                         <viewControllerLayoutGuide type="bottom" id="FWW-WH-jyq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hdB-UO-A52">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearatale Teacher Portal ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-Au-Cn2">
-                                <rect key="frame" x="33" y="216" width="309.33333333333331" height="31.666666666666657"/>
+                                <rect key="frame" x="52.5" y="172" width="309" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="XXXYYY" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-s0-E8Q">
-                                <rect key="frame" x="48" y="311.66666666666669" width="279" height="56"/>
+                                <rect key="frame" x="52" y="267.5" width="310" height="56"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see how this student is doing, go to teacherportal.hearatale.com." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6I-ry-pFI">
-                                <rect key="frame" x="8" y="431.66666666666669" width="359" height="40.666666666666686"/>
+                                <rect key="frame" x="8" y="387.5" width="398" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -357,86 +358,17 @@
                         <viewControllerLayoutGuide type="bottom" id="3EP-Md-KlX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aZt-Dm-VkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mother Goose is WHO?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-XU-CzY">
-                                <rect key="frame" x="16" y="114" width="343" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="70" width="374" height="329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-7F-Cw1" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="16" y="425" width="161.66666666666666" height="161.33333333333337"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2fO-7F-Cw1" secondAttribute="height" multiplier="1:1" id="6Cr-vz-ro5"/>
-                                </constraints>
-                                <state key="normal" title="labelB">
-                                    <color key="titleColor" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="answerB:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="ntt-zw-MHm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-KS-tPd" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="197.66666666666663" y="425" width="161.33333333333337" height="161.33333333333337"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lEK-KS-tPd" secondAttribute="height" multiplier="1:1" id="fQI-Ed-fMQ"/>
-                                </constraints>
-                                <state key="normal" title="labelD">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="answerD:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="QhV-r9-I1f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-uY-lyV" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="197.66666666666663" y="234.33333333333337" width="161.33333333333337" height="161.66666666666663"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="LFq-uY-lyV" secondAttribute="height" multiplier="1:1" id="ryL-UV-ZAY"/>
-                                </constraints>
-                                <state key="normal" title="labelC">
-                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="answerC:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="gbh-Mn-4dV"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-UL-ObL">
-                                <rect key="frame" x="296" y="88" width="75" height="21"/>
+                                <rect key="frame" x="331" y="44" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Oy1-PN-K5x"/>
                                     <constraint firstAttribute="width" constant="75" id="cOP-XA-HXT"/>
@@ -445,56 +377,142 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-gV-fUJ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="16" y="234.33333333333337" width="161.66666666666666" height="161.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HU-UF-r2S">
+                                <rect key="frame" x="20" y="419" width="374" height="374"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5XN-1u-iEm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="177"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-gV-fUJ" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5b6-gV-fUJ" secondAttribute="height" multiplier="1:1" id="gt2-YR-DGi"/>
+                                                </constraints>
+                                                <state key="normal" title="labelA" backgroundImage="blank-white.jpg">
+                                                    <color key="titleColor" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerA:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="a8k-oy-FTJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-uY-lyV" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LFq-uY-lyV" secondAttribute="height" multiplier="1:1" id="ryL-UV-ZAY"/>
+                                                </constraints>
+                                                <state key="normal" title="labelC" backgroundImage="blank-white.jpg">
+                                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerC:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="gbh-Mn-4dV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-6B-C8P">
+                                        <rect key="frame" x="0.0" y="197" width="374" height="177"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-7F-Cw1" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2fO-7F-Cw1" secondAttribute="height" multiplier="1:1" id="6Cr-vz-ro5"/>
+                                                </constraints>
+                                                <state key="normal" title="labelB" backgroundImage="blank-white.jpg">
+                                                    <color key="titleColor" red="0.984449923" green="0.79876810310000002" blue="0.82202213999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerB:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="ntt-zw-MHm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-KS-tPd" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lEK-KS-tPd" secondAttribute="height" multiplier="1:1" id="fQI-Ed-fMQ"/>
+                                                </constraints>
+                                                <state key="normal" title="labelD" backgroundImage="blank-white.jpg">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerD:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="QhV-r9-I1f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5b6-gV-fUJ" secondAttribute="height" multiplier="1:1" id="gt2-YR-DGi"/>
+                                    <constraint firstAttribute="width" secondItem="7HU-UF-r2S" secondAttribute="height" multiplier="1:1" id="gFU-Cx-Ei3"/>
                                 </constraints>
-                                <state key="normal" title="labelA">
-                                    <color key="titleColor" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="answerA:" destination="oJ4-zM-WOr" eventType="touchUpInside" id="a8k-oy-FTJ"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lEK-KS-tPd" firstAttribute="trailing" secondItem="LFq-uY-lyV" secondAttribute="trailing" id="4qS-b9-FbW"/>
-                            <constraint firstItem="lEK-KS-tPd" firstAttribute="top" secondItem="2fO-7F-Cw1" secondAttribute="top" id="5no-Os-C30"/>
-                            <constraint firstItem="LFq-uY-lyV" firstAttribute="leading" secondItem="5b6-gV-fUJ" secondAttribute="trailing" constant="20" id="7QI-Zk-UDA"/>
-                            <constraint firstItem="lEK-KS-tPd" firstAttribute="width" secondItem="LFq-uY-lyV" secondAttribute="width" id="AOX-SP-0AA"/>
                             <constraint firstItem="ozm-XU-CzY" firstAttribute="trailing" secondItem="aZt-Dm-VkH" secondAttribute="trailingMargin" id="OPg-95-gCh"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7HU-UF-r2S" secondAttribute="trailing" constant="20" id="RXe-Vp-nv1"/>
                             <constraint firstItem="ozm-XU-CzY" firstAttribute="leading" secondItem="aZt-Dm-VkH" secondAttribute="leadingMargin" id="S2y-bb-C1h"/>
-                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="bottom" secondItem="LFq-uY-lyV" secondAttribute="bottom" id="YRP-6d-xyR"/>
-                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="width" secondItem="LFq-uY-lyV" secondAttribute="width" id="cFh-4C-zLn"/>
+                            <constraint firstItem="3EP-Md-KlX" firstAttribute="top" secondItem="7HU-UF-r2S" secondAttribute="bottom" constant="20" id="Xxg-zk-nA2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WG0-UL-ObL" secondAttribute="trailing" constant="-12" id="dGr-No-eYK"/>
                             <constraint firstItem="WG0-UL-ObL" firstAttribute="top" secondItem="oan-JL-C1T" secondAttribute="bottom" id="eF9-IK-1lp"/>
-                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="leading" secondItem="5b6-gV-fUJ" secondAttribute="leading" id="fas-wc-E6j"/>
-                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="top" secondItem="LFq-uY-lyV" secondAttribute="top" id="ito-Ac-kIw"/>
-                            <constraint firstItem="2fO-7F-Cw1" firstAttribute="top" secondItem="5b6-gV-fUJ" secondAttribute="bottom" constant="29" id="mNb-wX-H7H"/>
+                            <constraint firstItem="7HU-UF-r2S" firstAttribute="top" secondItem="ozm-XU-CzY" secondAttribute="bottom" constant="20" id="fXT-vF-XOC"/>
+                            <constraint firstItem="7HU-UF-r2S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aZt-Dm-VkH" secondAttribute="leading" constant="20" id="kP4-Qo-ecU"/>
                             <constraint firstItem="ozm-XU-CzY" firstAttribute="top" secondItem="WG0-UL-ObL" secondAttribute="bottom" constant="5" id="nkS-aq-fPH"/>
-                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="width" secondItem="LFq-uY-lyV" secondAttribute="width" id="nst-k3-qlN"/>
-                            <constraint firstItem="lEK-KS-tPd" firstAttribute="top" secondItem="LFq-uY-lyV" secondAttribute="bottom" constant="29" id="pms-MA-hgH"/>
-                            <constraint firstItem="LFq-uY-lyV" firstAttribute="trailing" secondItem="ozm-XU-CzY" secondAttribute="trailing" id="qIq-sy-bhO"/>
-                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="top" secondItem="ozm-XU-CzY" secondAttribute="bottom" constant="100" id="rVP-QU-We2"/>
-                            <constraint firstItem="3EP-Md-KlX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lEK-KS-tPd" secondAttribute="bottom" constant="20" id="vfn-kA-SaB"/>
-                            <constraint firstItem="5b6-gV-fUJ" firstAttribute="leading" secondItem="ozm-XU-CzY" secondAttribute="leading" id="zG7-B0-GHP"/>
+                            <constraint firstItem="7HU-UF-r2S" firstAttribute="centerX" secondItem="aZt-Dm-VkH" secondAttribute="centerX" id="ziW-II-HC5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1jq-jI-WkM">
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="Onp-eB-ik2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="Onp-eB-ik2">
+                            <connections>
+                                <segue destination="5ra-40-eKe" kind="show" id="inE-Pj-uj6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="labelA" destination="5b6-gV-fUJ" id="UcB-X7-omN"/>
@@ -518,150 +536,160 @@
                         <viewControllerLayoutGuide type="bottom" id="FSu-eF-5i3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Am0-Eu-0jS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="10" y="518" width="160" height="234"/>
-                                <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hbU-w1-Hnd"/>
-                                    <constraint firstAttribute="width" constant="160" id="prE-Oz-MMm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Mother Goose     Visit" backgroundImage="MGV.png">
-                                    <color key="titleColor" red="0.20632648812647242" green="0.0" blue="0.34240164974619292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="CxW-KF-AfL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="205" y="518" width="160" height="234"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="0uN-YI-Yj0"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Gpe-Wp-hbw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Father Goose        Visit" backgroundImage="FGV.png">
-                                    <color key="titleColor" red="1" green="0.99926506717419261" blue="0.017493871086133539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.9948156476020813" green="0.97349435091018677" blue="0.28921100497245789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openFatherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="N49-TH-VR3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="205" y="255" width="160" height="234"/>
-                                <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="omI-fa-gGg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Father Goose Rhymes" backgroundImage="Jerrold.png">
-                                    <color key="titleColor" red="0.96052199602127075" green="0.78364485502243042" blue="0.24805819988250732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openJerrold:" destination="5ra-40-eKe" eventType="touchUpInside" id="P6I-ys-wqK"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearatale.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-lG-i2h">
-                                <rect key="frame" x="-355" y="105" width="1085" height="120"/>
+                                <rect key="frame" x="-335.5" y="61" width="1085" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="p4t-CN-DZA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
-                                <rect key="frame" x="10" y="255" width="160" height="234"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWK-xW-QFt">
+                                <rect key="frame" x="20" y="221" width="374" height="552"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kJt-sz-kv6">
+                                        <rect key="frame" x="0.0" y="89" width="374" height="374"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ffG-Wu-ux2">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-ot-jUf" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <state key="normal" title="Mother Goose Rhymes" backgroundImage="Volland.png">
+                                                            <color key="titleColor" red="0.90751343965530396" green="0.95039361715316772" blue="0.8355136513710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="openVolland:" destination="5ra-40-eKe" eventType="touchUpInside" id="0eS-dl-F5L"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-mM-k58" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                        <rect key="frame" x="207" y="0.0" width="167" height="167"/>
+                                                        <color key="backgroundColor" red="0.57615172863006592" green="0.6945880651473999" blue="0.79428070783615112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <state key="normal" title="Father Goose Rhymes" backgroundImage="Jerrold.png">
+                                                            <color key="titleColor" red="0.96052199602127075" green="0.78364485502243042" blue="0.24805819988250732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="openJerrold:" destination="5ra-40-eKe" eventType="touchUpInside" id="P6I-ys-wqK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2Fp-IF-vdQ">
+                                                <rect key="frame" x="0.0" y="207" width="374" height="167"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Y7-RZT" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
+                                                        <color key="backgroundColor" red="0.51704949140548706" green="0.59121936559677124" blue="0.46010935306549072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <state key="normal" title="Mother Goose Visit" backgroundImage="MGV.png">
+                                                            <color key="titleColor" red="0.20632648812647242" green="0.0" blue="0.34240164974619292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.98837322000000005" green="0.80269044639999998" blue="0.82594442369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="openMotherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="CxW-KF-AfL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-0J-Kt2" customClass="RoundButton" customModule="nursery_rhymes" customModuleProvider="target">
+                                                        <rect key="frame" x="207" y="0.0" width="167" height="167"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <state key="normal" title="Father Goose Visit" backgroundImage="FGV.png">
+                                                            <color key="titleColor" red="1" green="0.99926506717419261" blue="0.017493871086133539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.9948156476020813" green="0.97349435091018677" blue="0.28921100497245789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="openFatherGoose:" destination="5ra-40-eKe" eventType="touchUpInside" id="N49-TH-VR3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kJt-sz-kv6" secondAttribute="height" multiplier="1:1" id="tPv-hW-SZW"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="c2o-4s-Bl4"/>
+                                    <constraint firstItem="kJt-sz-kv6" firstAttribute="centerY" secondItem="UWK-xW-QFt" secondAttribute="centerY" id="4HW-G1-raA"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kJt-sz-kv6" secondAttribute="trailing" id="7nn-Ax-Ot4"/>
+                                    <constraint firstItem="kJt-sz-kv6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UWK-xW-QFt" secondAttribute="leading" id="9Yu-KA-eU4"/>
+                                    <constraint firstItem="kJt-sz-kv6" firstAttribute="centerX" secondItem="UWK-xW-QFt" secondAttribute="centerX" id="CSm-JQ-ybQ"/>
+                                    <constraint firstItem="kJt-sz-kv6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UWK-xW-QFt" secondAttribute="top" id="UgH-Yy-fg5"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kJt-sz-kv6" secondAttribute="bottom" id="VxR-Ed-ROL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Mother Goose Rhymes" backgroundImage="Volland.png">
-                                    <color key="titleColor" red="0.90751343965530396" green="0.95039361715316772" blue="0.8355136513710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.39499139789999999" green="0.2027808726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.textAlignment">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openVolland:" destination="5ra-40-eKe" eventType="touchUpInside" id="0eS-dl-F5L"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jim-ot-jUf" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="top" id="Fee-YK-5Oy"/>
-                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="10" id="JTH-4g-6KX"/>
-                            <constraint firstAttribute="trailing" secondItem="tHK-0J-Kt2" secondAttribute="trailing" constant="10" id="L91-Be-0ya"/>
-                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="top" secondItem="Jim-ot-jUf" secondAttribute="bottom" constant="29" id="O2t-L2-Mel"/>
+                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="UWK-xW-QFt" secondAttribute="bottom" constant="40" id="1cn-UN-fPq"/>
+                            <constraint firstItem="UWK-xW-QFt" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="20" id="RX0-RW-y7R"/>
                             <constraint firstItem="MSr-lG-i2h" firstAttribute="top" secondItem="rLZ-Pd-fh8" secondAttribute="bottom" constant="17" id="TUL-ct-8m9"/>
-                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="height" secondItem="Jim-ot-jUf" secondAttribute="height" id="UIK-mS-M01"/>
-                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="4Sx-Y7-RZT" secondAttribute="bottom" constant="26" id="iwh-6m-iv4"/>
-                            <constraint firstItem="Jim-ot-jUf" firstAttribute="leading" secondItem="Am0-Eu-0jS" secondAttribute="leading" constant="10" id="nqf-EO-E38"/>
-                            <constraint firstItem="tHK-0J-Kt2" firstAttribute="top" secondItem="LEk-mM-k58" secondAttribute="bottom" constant="29" id="r2s-ix-56C"/>
-                            <constraint firstItem="Jim-ot-jUf" firstAttribute="top" secondItem="MSr-lG-i2h" secondAttribute="bottom" constant="30" id="s92-hk-7yl"/>
-                            <constraint firstAttribute="trailing" secondItem="LEk-mM-k58" secondAttribute="trailing" constant="10" id="tok-Bp-iBb"/>
+                            <constraint firstAttribute="trailing" secondItem="UWK-xW-QFt" secondAttribute="trailing" constant="20" id="dLp-fy-RDo"/>
+                            <constraint firstItem="UWK-xW-QFt" firstAttribute="top" secondItem="MSr-lG-i2h" secondAttribute="bottom" constant="40" id="uFS-kG-9fW"/>
                             <constraint firstItem="MSr-lG-i2h" firstAttribute="centerX" secondItem="Am0-Eu-0jS" secondAttribute="centerX" id="wGp-Mu-vIj"/>
-                            <constraint firstItem="4Sx-Y7-RZT" firstAttribute="top" secondItem="tHK-0J-Kt2" secondAttribute="top" id="wIg-wP-nPI"/>
-                            <constraint firstItem="FSu-eF-5i3" firstAttribute="top" secondItem="tHK-0J-Kt2" secondAttribute="bottom" constant="26" id="wWf-1r-hYP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tIH-LB-oQd">
@@ -684,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVW-6L-doi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="-1341"/>
+            <point key="canvasLocation" x="2287.1999999999998" y="-1341.1330049261085"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4D5-8G-lhe">
@@ -692,7 +720,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rJA-hq-FfE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxG-m4-Bzn">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -710,7 +738,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cs7-Qp-oiJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3GF-lG-PNl">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -728,7 +756,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nN-Em-Xum" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIe-Be-tKX">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -746,12 +774,13 @@
         <image name="Jerrold.png" width="100" height="100"/>
         <image name="MGV.png" width="100" height="100"/>
         <image name="Volland.png" width="100" height="100"/>
+        <image name="blank-white.jpg" width="256" height="256"/>
         <image name="coin gold.png" width="59" height="50"/>
         <image name="hearatale.png" width="1085" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bg3-Mv-nVh"/>
-        <segue reference="SU6-SU-plg"/>
+        <segue reference="inE-Pj-uj6"/>
+        <segue reference="Fo4-2r-83b"/>
         <segue reference="mvi-O0-rGk"/>
         <segue reference="Ucq-2r-ai6"/>
     </inferredMetricsTieBreakers>

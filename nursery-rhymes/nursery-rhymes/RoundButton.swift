@@ -31,7 +31,12 @@ class RoundButton: UIButton {
             shadowLayer.masksToBounds = true
             shadowLayer.masksToBounds = false
             
-            self.superview?.layer.insertSublayer(shadowLayer, at: 0)
+            /**
+             TODO:
+             Uncomment the next line to reenable shadows
+             These are disabled because they fail to reqize properly when orientation changes
+            */
+            //self.superview?.layer.insertSublayer(shadowLayer, at: 0)
             //self.superview?.bringSubview(toFront: self)
             
             //layer.insertSublayer(shadowLayer, at: 2)

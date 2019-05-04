@@ -65,6 +65,7 @@ class RhymesTableController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(data.count)
         return  data.count
     }
     
@@ -95,10 +96,12 @@ class RhymesTableController : UITableViewController {
         let collectionRhymes = m.getRhymesForCollection(collectionName: self.collectionName)
         for id in Array(collectionRhymes.keys) {
             let rhymeid = Int((collectionRhymes[id]?["id"]!)!)!
-            
+            print(rhymeid)
             //Make sure rhyme files exist before we display it
             if (m.getRhymeTranscript(id: rhymeid) != "") {
-                let quiz = m.getQuiz(rhyme: rhymeid, level: 0)
+                print("Rhyme name: " + m.getRhymeName(id: rhymeid))
+                let isVolland = self.collectionName == "Volland"
+                let quiz = isVolland ? m.getQuiz(rhyme: rhymeid, level: 0) : [:]
                 let hasQuiz = (quiz != [:])
                 data.append(cellData(
                     image: m.getRhymeImage(id: rhymeid),
